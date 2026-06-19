@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwyfJpn.Core", "src\GwyfJpn.Core\GwyfJpn.Core.csproj", "{C0B5C8B8-6AF9-45AC-A3C6-C728F77DB801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwyfJpn.Extractor", "src\GwyfJpn.Extractor\GwyfJpn.Extractor.csproj", "{84F46C4F-2E8C-49E5-9FB0-F5361DF3C0DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwyfJpn.Plugin", "src\GwyfJpn.Plugin\GwyfJpn.Plugin.csproj", "{01D8CB8E-493E-4482-A8D9-CB65CB47CEB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GwyfJpn.Core.Tests", "tests\GwyfJpn.Core.Tests\GwyfJpn.Core.Tests.csproj", "{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C0B5C8B8-6AF9-45AC-A3C6-C728F77DB801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0B5C8B8-6AF9-45AC-A3C6-C728F77DB801}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0B5C8B8-6AF9-45AC-A3C6-C728F77DB801}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0B5C8B8-6AF9-45AC-A3C6-C728F77DB801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84F46C4F-2E8C-49E5-9FB0-F5361DF3C0DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84F46C4F-2E8C-49E5-9FB0-F5361DF3C0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84F46C4F-2E8C-49E5-9FB0-F5361DF3C0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84F46C4F-2E8C-49E5-9FB0-F5361DF3C0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01D8CB8E-493E-4482-A8D9-CB65CB47CEB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D8CB8E-493E-4482-A8D9-CB65CB47CEB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D8CB8E-493E-4482-A8D9-CB65CB47CEB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D8CB8E-493E-4482-A8D9-CB65CB47CEB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

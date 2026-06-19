@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>GwyfJpn.Extractor</AssemblyName>
+    <RootNamespace>GwyfJpn.Extractor</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GwyfJpn.Core\GwyfJpn.Core.csproj" />
+    <PackageReference Include="dnlib" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\config\display_sinks.json" Link="config\display_sinks.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\config\asset_text_excludes.json" Link="config\asset_text_excludes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

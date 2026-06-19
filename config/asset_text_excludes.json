@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "description": "Asset extraction noise excludes. Add exactIds for context-specific noise, exactSources for unique one-off noise, and sourcePatterns for stable categories on re-extract.",
+  "exactIds": [
+    "dll-text:SceneMaterialAuditor:Scan:930d1f89",
+    "dll-text:ReasonDemo:Awake:0f29c2a6",
+    "dll-text:ReasonDemo:Awake:57251588",
+    "dll-text:ReasonDemo:Awake:5c47afa9",
+    "dll-text:ReasonDemo:Awake:0c4afe69",
+    "dll-text:CrapsSequenceConditionData:GetProgressText:cd5f729b",
+    "asset-text:level4:18927:716:c1892d9d",
+    "asset-text:level4:18927:428:f3526835",
+    "asset-text:resources.assets:57679:28:d38cb289",
+    "asset-text:resources.assets:57602:48:9865b509",
+    "asset-text:resources.assets:61370:88:f69717fd",
+    "asset-text:resources.assets:57600:44:f49cf79e",
+    "asset-text:resources.assets:59025:144:bd44f462",
+    "asset-text:level7:10968:88:2ffcbe05",
+    "asset-text:resources.assets:63237:144:b2d739e5",
+    "asset-text:level7:11145:88:c29e50cf",
+    "asset-text:resources.assets:57669:1328:10a76b25"
+  ],
+  "exactSources": [
+    "_Color",
+    "_MainTex",
+    "{000}",
+    "#FFC400",
+    "</color>",
+    "<Gamepad>",
+    "<Joystick>",
+    "<Keyboard>",
+    "<Mouse>",
+    "<none>",
+    "<Touchscreen>",
+    "${0}",
+    "033a03ef1caeacc43aa10deddc82bf72",
+    "0f8eb3f400726694eb47beb1a9f94ce8",
+    "1f601",
+    "1f603",
+    "1f604",
+    "1f605",
+    "1f606",
+    "1f609",
+    "1f60b",
+    "1f60d",
+    "1f60e",
+    "1f618",
+    "1f923",
+    "263a",
+    "2c5177b11d81d824dbb064f9ac8527da",
+    "2fea114e74ecf3c4f920e1d5cc1c4c40",
+    "32e1a9b06e983304a8a5e22976717e9c",
+    "46fbfdf3fc43db0458918377fd40293e",
+    "4ab13ae0fa1790f499a497428e77e04e",
+    "52eb9df5db46521439908db3a29a1bbb",
+    "62331db9d5c121d49981ca41fe720b42",
+    "81acb702559373d4fa7de52a0397fe06",
+    "8f586378b4e144a9851e7b34d9b748ee",
+    "BebasNeue-Regular SDF",
+    "BitField",
+    "border-box",
+    "box-sizing",
+    "Bungee-Regular SDF",
+    "CanvasGroup",
+    "center",
+    "ClearButtonPressed",
+    "CmdKeepCard0",
+    "CmdKeepCard1",
+    "CmdKeepCard2",
+    "CmdKeepCard3",
+    "CmdKeepCard4",
+    "column",
+    "CopyToClipboard",
+    "Dangrek-Regular SDF",
+    "DarumadropOne-Regular SDF",
+    "default",
+    "DOTweenSettings",
+    "down",
+    "Enum",
+    "false",
+    "flex-start",
+    "FMODStudioSettings",
+    "gap",
+    "Inconsolata-SemiBold SDF",
+    "inlineStyle",
+    "left",
+    "LiberationSans SDF",
+    "LiberationSans SDF - Fallback",
+    "localhost",
+    "Material Set Property",
+    "menu_call",
+    "menu_hit",
+    "menu_link",
+    "menu_play",
+    "menu_quit",
+    "MenuButtonPressed",
+    "MMF_Image",
+    "MMF_Scale",
+    "name",
+    "nowrap",
+    "npc_done",
+    "npc_drink",
+    "npc_slots",
+    "npc_smoke",
+    "offset",
+    "OnAction",
+    "OnBeginDrag",
+    "OnChooseNo",
+    "OnChooseYes",
+    "OnClick",
+    "OnDecrement",
+    "OnEndDrag",
+    "OnEyeButtonClicked",
+    "OnIncrement",
+    "OnPlayerInteract",
+    "OnQuotaChanged",
+    "OnScrollbarClicked",
+    "OnStuckClicked",
+    "OpenURL",
+    "package",
+    "playInEditor",
+    "prefix",
+    "Profiler",
+    "Quaternion",
+    "relative",
+    "Render",
+    "ResetDebugManager",
+    "right",
+    "row",
+    "SetBetAll",
+    "SetBetHalf",
+    "SetModePull",
+    "ShaderController",
+    "size",
+    "SpriteRenderer",
+    "stretch",
+    "suffix",
+    "Text_Dim",
+    "Tier_1",
+    "Tier_2",
+    "Tier_3",
+    "Tier_4",
+    "ToggleProfiler",
+    "TriggerRagdoll",
+    "TryEquipCosmetic",
+    "up",
+    "Vector2",
+    "Vector3",
+    "Vector4",
+    "VisualElementAsset",
+    "xsi",
+    "MoreMountains.Tools",
+    "MoreMountains.Feedbacks",
+    "Scale",
+    "Unity Events",
+    "SFXLocalPlayer, Assembly-CSharp",
+    "Floor1",
+    "Particles Play",
+    "Highlighted",
+    "Floor3",
+    "Floor4",
+    "Normal",
+    "Disabled",
+    "Pressed",
+    "Floor2",
+    "PlayFeedbacks",
+    "Scale Spring",
+    "Floating Text",
+    "Selected",
+    "Position",
+    "New Text",
+    "Assembly-CSharp",
+    "SFXComponent, Assembly-CSharp",
+    "UIButtonFeedback, Assembly-CSharp",
+    "GameBase, Assembly-CSharp",
+    "Image Alpha",
+    "TMP Color",
+    "ScreensVideos",
+    "RevertFeedback",
+    "PlayFeedback",
+    "Navigate",
+    "CosmeticWardrobe, Assembly-CSharp",
+    "Blackjack, Assembly-CSharp",
+    "Keypad, Assembly-CSharp",
+    "UnityEngine.UIElements",
+    "PlayerExpressionComponent, Assembly-CSharp",
+    "SetActive",
+    "ElevatorManager, Assembly-CSharp",
+    "UnityEngine.GameObject, UnityEngine",
+    "SettingsLayoutRuntimeUI, Assembly-CSharp",
+    "ShowTab",
+    "BasketballScoreboard, Assembly-CSharp",
+    "AppendDigit",
+    "FMODUnity.StudioGlobalParameterTrigger, FMODUnity",
+    "Poker, Assembly-CSharp",
+    "TriggerParameters",
+    "UnityEngine.UIElementsModule",
+    "DuckRace, Assembly-CSharp",
+    "Bat, Assembly-CSharp",
+    "Roulette, Assembly-CSharp",
+    "BodyShreddingMachine, Assembly-CSharp",
+    "Baccarat, Assembly-CSharp",
+    "Minesweeper, Assembly-CSharp",
+    "Unity.Cinemachine",
+    "BasketBallSpawner, Assembly-CSharp",
+    "SceneSwitcher, Assembly-CSharp",
+    "SaveSlotManager, Assembly-CSharp",
+    "PublicLobbyListUI, Assembly-CSharp",
+    "UnityEngine.Rendering.UI.DebugUIHandlerIntField, Unity.RenderPipelines.Core.Runtime",
+    "UnityEngine.Rendering.UI.DebugUIHandlerUIntField, Unity.RenderPipelines.Core.Runtime",
+    "WinSceneManager, Assembly-CSharp",
+    "MoreMountains.Tools.MMOpenURL, MoreMountains.Tools",
+    "CasinoBuilding, Assembly-CSharp",
+    "ItemStampManager, Assembly-CSharp",
+    "CrossyRoad, Assembly-CSharp",
+    "DebtZone, Assembly-CSharp",
+    "DiceGame, Assembly-CSharp",
+    "FMODUnity.StudioEventEmitter, FMODUnity",
+    "OfflineSplashCoinFlip, Assembly-CSharp",
+    "Bank, Assembly-CSharp",
+    "UnityEngine.Rendering.UI.DebugUIHandlerPanel, Unity.RenderPipelines.Core.Runtime",
+    "CoinFlip, Assembly-CSharp",
+    "MoreMountains.Tools.MMOpenSteamURL, MoreMountains.Tools",
+    "DragonTower, Assembly-CSharp",
+    "DiscordToasterUI, Assembly-CSharp",
+    "PlayerController, Assembly-CSharp",
+    "HiLoSlider, Assembly-CSharp",
+    "SteamAchievement_SteamworksNET, Assembly-CSharp",
+    "Crash, Assembly-CSharp",
+    "UnityEngine.Rendering.UI.DebugUIHandlerObjectPopupField, Unity.RenderPipelines.Core.Runtime",
+    "MoreMountains.FeedbacksForThirdParty",
+    "EscapeMenu, Assembly-CSharp",
+    "QuitGameComponent, Assembly-CSharp",
+    "BetSlider, Assembly-CSharp",
+    "ReturnToMainMenu, Assembly-CSharp",
+    "LobbyModeDropdownButton, Assembly-CSharp",
+    "ClawMachine, Assembly-CSharp",
+    "UnityEditor.UIElements",
+    "GachaMachine, Assembly-CSharp",
+    "InviteFriendsButton, Assembly-CSharp",
+    "SceneSkipper, Assembly-CSharp",
+    "UnityEngine.Rendering.UI.DebugUIHandlerButton, Unity.RenderPipelines.Core.Runtime",
+    "DiscordConnectionButtonUI, Assembly-CSharp",
+    "Anton Albiin Wilhelm Nylund Zorro Svardendahl Petter Henriksson",
+    "blazitt",
+    "Erik",
+    "Erik Lyding James Lee Olof Hogberg Karl Flodin",
+    "Face with tears of joy",
+    "Francisco Millan Hampus Pettersson Gabriel Blomqvist Fanny Ahrlin",
+    "Frank",
+    "Grinning face",
+    "Hello there Hello there Hello there Hello there Hello there Hello there",
+    "James",
+    "Marjoris Pirela Doruk Family Perfect Random Oro Interactive Gabriel Henricson",
+    "Millie Kempff Gametown Stockholm Hanna Fogelberg David Ruiz Franco",
+    "Musikarl",
+    "Nibor",
+    "Olof",
+    "Sand",
+    "SkyBrave",
+    "Smiling face with smiling eyes",
+    "The achievement's description goes here ipsum dolor lorem sit amet ipsum dolor sit amet ipsum dolor sit amet",
+    "WahWah",
+    "Wrong Organ Mike Klubnika Friendly Foe The Sledding Corporation Diabolical Studios Omer Faruk Kalkinc",
+    "Yigit Doruk Erik Levin de Verdier James Lee",
+    "YIGIT DORUK FATIH GORGUC DORUK SASMAZ ROBIN EKSTROM FRANCISCO MILLAN"
+  ],
+  "sourcePatterns": [
+    {
+      "reason": "shader-prop",
+      "pattern": "^_(Color|MainTex|BumpMap|EmissionColor|Cutoff)$"
+    },
+    {
+      "reason": "font-asset",
+      "pattern": "(?i) SDF( - Fallback)?$"
+    },
+    {
+      "reason": "md5-hash",
+      "pattern": "^[0-9a-f]{32}$"
+    },
+    {
+      "reason": "emoji-code",
+      "pattern": "^[0-9a-f]{4,8}$"
+    },
+    {
+      "reason": "input-device-tag",
+      "pattern": "^</?[A-Za-z][^>]*>$"
+    },
+    {
+      "reason": "input-control-scheme-list",
+      "pattern": "^(?:;(?:Keyboard&Mouse|Gamepad|Touch|Joystick|XR)(?:;(?:Keyboard&Mouse|Gamepad|Touch|Joystick|XR))*|(?:Keyboard&Mouse|Gamepad|Touch|Joystick|XR)(?:;(?:Keyboard&Mouse|Gamepad|Touch|Joystick|XR))+)$"
+    },
+    {
+      "reason": "input-value-type",
+      "pattern": "^\\d+DVector$"
+    },
+    {
+      "reason": "tmp-markup-only-fragment",
+      "pattern": "^(?:<[^>]+>)+$"
+    },
+    {
+      "reason": "input-pen-glyph",
+      "pattern": "^<Pen>/"
+    },
+    {
+      "reason": "literal-keyword",
+      "pattern": "^(?i)(true|false|null|default|none)$"
+    },
+    {
+      "reason": "color-hex",
+      "pattern": "^#([0-9A-Fa-f]{3,8})$"
+    },
+    {
+      "reason": "unity-callback",
+      "pattern": "^(On[A-Z][A-Za-z0-9]+|Cmd[A-Z][A-Za-z0-9]+|Rpc[A-Z][A-Za-z0-9]+|Server[A-Z][A-Za-z0-9]+)$"
+    },
+    {
+      "reason": "engine-settings",
+      "pattern": "^(?i)(DOTweenSettings|FMODStudioSettings|Render|VisualElementAsset|ShaderController|Profiler|MMF_.+)$"
+    },
+    {
+      "reason": "unity-type-name",
+      "pattern": "^(?i)(Vector[234]|Quaternion|CanvasGroup|SpriteRenderer|Enum|BitField|Material Set Property)$"
+    },
+    {
+      "reason": "internal-key",
+      "pattern": "^(?i)(menu_[a-z]+|npc_[a-z]+|playInEditor|Text_Dim|SR_|Tier_[0-9])$"
+    },
+    {
+      "reason": "dev-tool",
+      "pattern": "^(?i)(ClearButtonPressed|MenuButtonPressed|ResetDebugManager|ToggleProfiler|OpenURL|CopyToClipboard)$"
+    },
+    {
+      "reason": "placeholder-template",
+      "pattern": "^\\$\\{\\d+\\}$"
+    },
+    {
+      "reason": "placeholder-brace",
+      "pattern": "^\\{[0-9A-Fa-f]{3,}\\}$"
+    },
+    {
+      "reason": "asset-namespace-or-type",
+      "pattern": "^(MoreMountains\\.(Tools|Feedbacks|FeedbacksForThirdParty)(\\..*)?(, MoreMountains\\.Tools)?|Unity Events|Unity\\.Cinemachine|UnityEngine\\..*|UnityEditor\\..*|FMODUnity\\.(StudioGlobalParameterTrigger|StudioEventEmitter), FMODUnity)$"
+    },
+    {
+      "reason": "assembly-csharp-type-name",
+      "pattern": "^([A-Za-z_][A-Za-z0-9_]*, Assembly-CSharp|Assembly-CSharp)$"
+    },
+    {
+      "reason": "feedback-or-ui-state-name",
+      "pattern": "^(Scale|Scale Spring|Particles Play|PlayFeedbacks?|RevertFeedback|Floating Text|New Text|Image Alpha|TMP Color|Position|Highlighted|Normal|Disabled|Pressed|Selected|Navigate|SetActive|ShowTab|AppendDigit|TriggerParameters|ScreensVideos|Floor[1-4])$"
+    },
+    {
+      "reason": "srdebugger",
+      "pattern": "(?i)^SRDebugger"
+    },
+    {
+      "reason": "uitoolkit-uss-class",
+      "pattern": "^(window-root|top-bar-row|chip-bar|chip-bar-scroll|chipBar|chipBarScroll|settings-scroll|settingsScroll|refresh-button|search-field|horizontal-scrollbar-visibility|show-horizontal-scroller|nv-constant-template|nv-emphasis-template|nv-pattern-template|editor-extension-mode|font-weight|background-color|scale-and-crop|Foldout)$"
+    },
+    {
+      "reason": "postfx-volume-override",
+      "pattern": "^(FilmGrain|DepthOfField|MotionBlur|Tonemapping|ColorAdjustments|LensDistortion|WhiteBalance|ChannelMixer|LiftGammaGain|PaniniProjection|DitherVol|DangrekOutline)$"
+    },
+    {
+      "reason": "font-family-name",
+      "pattern": "^(?i)(Liberation Sans|Bebas Neue|Inconsolata|Dangrek|Darumadrop One|EmojiOne|WDXL Lubrifont SC|ChineseFont|JapaneseFont|RussianFont|SemiBold)$"
+    },
+    {
+      "reason": "tmp-meta",
+      "pattern": "^(TMP Settings|TMP Text|Default Style Sheet|LineBreaking (Leading|Following) Characters|\\.notdef)$"
+    },
+    {
+      "reason": "numeric-garbage",
+      "pattern": "^(FPS: [0-9.]+|\\d+ms \\(\\d+FPS\\)|wave a=[0-9.]+|[0-9]+(?:,[0-9]+)* POSITION [0-9.]+ SOMETHING [0-9.]+ POSITION)$"
+    },
+    {
+      "reason": "profiler-heap-size",
+      "pattern": "^Heap Size:"
+    },
+    {
+      "reason": "settings-mono-class",
+      "pattern": "^(CameraSettings|GraphicsSettings|GameSettings|DebugSettings|SecuritySettings|VoiceSettings|SoundSettings|ChatRoomSettings|ItemPriceSettings|LobbySettings|PlayerSettings|SpawnableSettings|ChallengeSettings|SettingsLayout|MouseSettingsTitle|AudioInputTitle|LobbySettingsTitle|InputBindings|InputReader|ColorSettings|SystemInformation)$"
+    },
+    {
+      "reason": "script-method-id",
+      "pattern": "^(TryStartGame|StartGame|TakeStep|IncreaseScore|ResetScores|ResetBets|SetCategoryByIndex|SetBetMinimum|SetBetQuarter|SetModePut|SetOver|ConfirmTransaction|PlaceBetOnPlayer|PlaceBetOnDealer|PlaceBetOnTie|SelectNextItem|SelectPreviousItem|ShowAboutTab|DefaultTabActive|NextPage|PreviousPage|OpenSaveSelection|CloseSaveSelection|CloseAndDestroy|RefreshPage|ClearInput|ResetSetting|UnlockAchievement|ToggleLid|TogglesUpdated|TriggerCleanup|TriggerCollection|LeaveByCar|CarDoorsOpen|RetrieveBasketball|UpgradeBonusDraw|UpgradeInsurance|UpgradeStakeHolder|VoiceManipulator|TestCoinFlip|TestDuckRace|DevConsole|DevWahWah|GC Collect|BugReporter|GoToNext|GoToPrevious)$"
+    },
+    {
+      "reason": "input-action-camelcase",
+      "pattern": "^(MoveForward|MoveBackward|MoveLeft|MoveRight|InvertX|InvertY|MouseSensitivity|MasterVolume|SFXVolume|MusicVolume|InputVolume|MicrophoneDevice|MaxFramerate|QualityLevel|FramerateProvider|CameraBobbing)$"
+    },
+    {
+      "reason": "srdebugger-extended",
+      "pattern": "(?i)(SRDebugger|SROptions|stompyrobot|Powered by SR|Stompy Robot|Unity profiler is currently|Logging is currently disabled)"
+    },
+    {
+      "reason": "debugger-template-placeholder",
+      "pattern": "(?i)^(Achievement Title|Panel Title|Some Value|Some Enum|Some Header|Some Property|Here Is The Value|Test Text Header|Message text|Prompt Text Here|Info Text|Tab Header Text|Test Console Log Message|Stack Trace Message Stack Trace Stack Goes Here \\(\\) One Two Three\\(\\))$"
+    },
+    {
+      "reason": "garbage-or-corrupted",
+      "pattern": "(?i)^(ErrorError|Microphonee|awasd|uie|Hello there Hello there|Bet 125/23154 total\\.d+|empowers held items(empowers held items)+|yigit: add an interactable random gambling game here)$"
+    },
+    {
+      "reason": "guid",
+      "pattern": "^\\{[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\\}$"
+    },
+    {
+      "reason": "json-blob",
+      "pattern": "^\\{\\s*\"[^\"]+\"\\s*:.*\\}\\s*$"
+    },
+    {
+      "reason": "unicode-range",
+      "pattern": "^[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}(,[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4})*$"
+    },
+    {
+      "reason": "dev-comment-or-typo",
+      "pattern": "^(?i)(Action Test|Toggle Test|Greed Test|Teleport to skybravessssss|YEE-git|New (Drinking|Slots|Smoking) Socket Action)$"
+    },
+    {
+      "reason": "config-file-name",
+      "pattern": "^(?i)(credits|settings)\\.json$"
+    }
+  ]
+}

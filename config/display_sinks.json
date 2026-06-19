@@ -1,0 +1,466 @@
+{
+  "schemaVersion": 3,
+  "game": {
+    "title": "Gamble With Your Friends",
+    "dataFolderName": "Gamble With Your Friends_Data",
+    "mainAssembly": "Assembly-CSharp.dll",
+    "excludedSerializedFiles": [
+      "globalgamemanagers",
+      "globalgamemanagers.assets"
+    ]
+  },
+  "builtinTextTypePatterns": [
+    "TMPro.",
+    "TextMeshPro",
+    "TMP_Text",
+    "UnityEngine.UI.Text"
+  ],
+  "builtinSinks": [
+    {
+      "typeFullName": "UnityEngine.UIElements.Label",
+      "memberKind": "constructor",
+      "methodName": ".ctor",
+      "stringParams": ["text"]
+    },
+    {
+      "typePattern": "TMP_Text",
+      "methodNames": ["set_text", "SetText"]
+    }
+  ],
+  "gameSinks": [
+    {
+      "typeName": "ConsoleButton",
+      "methodName": "SetText",
+      "stringParams": ["text"],
+      "runtimePatch": {
+        "kind": "replaceStringArg",
+        "contextId": "ConsoleButton.SetText"
+      }
+    },
+    {
+      "typeName": "ConfirmationDialog",
+      "methodName": "Show",
+      "stringParams": ["question", "confirmLabel", "cancelLabel"],
+      "runtimePatch": {
+        "kind": "replaceStringArgs",
+        "contexts": {
+          "question": "ConfirmationDialog.question",
+          "confirmLabel": "ConfirmationDialog.confirmLabel",
+          "cancelLabel": "ConfirmationDialog.cancelLabel"
+        }
+      }
+    },
+    {
+      "typeName": "InteractionUIPanel",
+      "methodName": "SetTooltip",
+      "stringParams": ["tooltip"],
+      "runtimePatch": {
+        "kind": "replaceStringArg",
+        "contextId": "InteractionUIPanel.SetTooltip"
+      }
+    },
+    {
+      "typeName": "InteractionUIPanel",
+      "methodName": "SetItemNameText",
+      "stringParams": ["itemName"],
+      "runtimePatch": {
+        "kind": "replaceStringArg",
+        "contextId": "InteractionUIPanel.SetItemNameText"
+      }
+    },
+    {
+      "typeName": "SettingsLayoutRuntimeUI",
+      "methodName": "SetLabel",
+      "stringParams": [],
+      "runtimePatch": {
+        "kind": "replaceTransformChildren",
+        "transformParam": "root",
+        "contextId": "SettingsLayoutRuntimeUI.SetLabel"
+      }
+    },
+    {
+      "typeName": "SettingsLayoutRuntimeUI",
+      "methodName": "CreateTitleEntry",
+      "stringParams": []
+    },
+    {
+      "typeName": "SettingsLayoutRuntimeUI",
+      "methodName": "CreateDropdownEntry",
+      "stringParams": []
+    },
+    {
+      "typeName": "SettingsLayoutRuntimeUI",
+      "methodName": "CreateSliderEntry",
+      "stringParams": []
+    },
+    {
+      "typeName": "SettingsLayoutRuntimeUI",
+      "methodName": "CreateResetEntry",
+      "stringParams": []
+    },
+    {
+      "typeName": "SettingsLayoutRuntimeUI",
+      "methodName": "CreateRebindEntry",
+      "stringParams": []
+    },
+    {
+      "typeName": "BugReportFormUI",
+      "methodName": "SetMessage",
+      "stringParams": ["msg"]
+    },
+    {
+      "typeName": "HeldItemActionPanel",
+      "methodName": "CreateActionElement",
+      "stringParams": ["key", "actionText"]
+    },
+    {
+      "typeName": "UpgradeEntryUI",
+      "methodName": "SetUpgradeEntry",
+      "stringParams": []
+    },
+    {
+      "typeName": "SaveSlotUI",
+      "methodName": "PopulateSlot",
+      "stringParams": ["saveName"],
+      "runtimePatch": {
+        "kind": "replaceComponentChildren",
+        "contextId": "SaveSlotUI.PopulateSlot"
+      }
+    },
+    {
+      "typeName": "ChallengeEntryUI",
+      "methodName": "SetData",
+      "stringParams": [],
+      "runtimePatch": {
+        "kind": "replaceComponentChildren",
+        "contextId": "ChallengeEntryUI.SetData"
+      }
+    },
+    {
+      "typeName": "LoadingQuotes",
+      "methodName": "ShowRandomQuote",
+      "stringParams": [],
+      "runtimePatch": {
+        "kind": "replaceComponentChildren",
+        "contextId": "LoadingQuotes.ShowRandomQuote"
+      }
+    },
+    {
+      "typeName": "GameUI",
+      "methodName": "SetDaysText",
+      "stringParams": []
+    },
+    {
+      "typeName": "GameUI",
+      "methodName": "SetFloorText",
+      "stringParams": []
+    }
+  ],
+  "knownDisplayFields": [
+    {
+      "typeName": "InteractableBase",
+      "fieldNames": ["tooltipMessage", "interactableName"]
+    }
+  ],
+  "promotedDisplayTypes": [
+    "GoOnlineClient",
+    "SaveSlotManager",
+    "MerchantBuyButton",
+    "TooltipKeySetup",
+    "LoadingQuotes",
+    "ItemDescriptionCanvas",
+    "ConfirmationDialogManager",
+    "HeldItemActionPanel",
+    "Keypad",
+    "PhoneBooth",
+    "SaveSlotUI",
+    "QuitGameComponent",
+    "GameUI",
+    "LobbyManager",
+    "ChallengeEntryUI",
+    "DaySummaryUI",
+    "DaySummaryQuotaSlider",
+    "ProfitConditionData",
+    "Challenge"
+  ],
+  "supplementalDisplaySources": [
+    "Control",
+    "Default",
+    "Left Button",
+    "Middle Button",
+    "Press",
+    "<noparse></noparse>Press ",
+    "Right Button",
+    "Shift",
+    "Space",
+    "Invalid amount",
+    "Invalid bet amount",
+    "Doors Opened!",
+    "On call...",
+    "Yes, delete",
+    "GamblersConfidence",
+    "Stakeholder",
+    "heads or taıls?",
+    "publıshed by tenstack",
+    "day ends ın",
+    "wıth your ",
+    "ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence",
+    "Gives random item.",
+    "Reroll Challenge ({0} Ticket)",
+    "{0} Ticket",
+    "Min: {0} Max: {1}",
+    "Bet a total of {0} across all games",
+    " Buy 1 Item(s) ({0} tickets)",
+    "{0} Tickets",
+    "DAY {0}",
+    "DAY X ENDED",
+    "'s Lobby",
+    " | {0}'s Lobby",
+    "{0} | {1}'s Lobby",
+    "Reroll",
+    "[E] Reroll",
+    "[E] Buy 1 Item(s) ({0} tickets)",
+    "<shake>DEBT</shake>",
+    "Quota (100%)",
+    "Stats for day {0}",
+    "Are you sure you want to delete the save from {0}? This action cannot be undone.",
+    "THNX FOR PLAYING! (TENSTACK, 2026)",
+    "Bet at least {0} on roulette and profit",
+    "FLOOR {0}",
+    "FLOOR {0} BUTTON",
+    "Quota Excess Reward ({0}%)",
+    "All on Red (Challenge)",
+    "Buy {0} Item(s) ({1} tickets)",
+    "Double \nor\nnothing\n\n",
+    "Pay \nyour \ndebt\n",
+    "Pay\n"
+  ],
+  "tmpMarkup": {
+    "noparseTag": "<noparse></noparse>"
+  },
+  "displayLiteralVariants": [
+    {
+      "base": "Yes, quit",
+      "variants": ["<noparse></noparse>Yes, quit"]
+    },
+    {
+      "base": "Yes, I am",
+      "variants": ["<noparse></noparse>Yes, I am"]
+    },
+    {
+      "base": "Spin for a chance to revert your last <color=red>loss $</color>.",
+      "variants": ["<noparse></noparse>Spin for a chance to revert your last <color=red>loss $</color>."]
+    },
+    {
+      "base": "Gives <rainb>random</rainb> item.",
+      "variants": ["Gives random item.", "<noparse></noparse>Gives random item."]
+    },
+    {
+      "base": "No, cancel",
+      "variants": ["<noparse></noparse>No, cancel"]
+    },
+    {
+      "base": "DAY X ENDED",
+      "variants": ["<noparse></noparse>DAY X ENDED"]
+    },
+    {
+      "base": "Reroll",
+      "variants": ["<noparse></noparse>Reroll", " Reroll"]
+    },
+    {
+      "base": "Double or nothing",
+      "variants": ["Double \nor\nnothing\n\n"]
+    },
+    {
+      "base": "Pay your debt",
+      "variants": ["Pay \nyour \ndebt\n", "Pay\n"]
+    },
+    {
+      "base": "Quota Excess Reward ({0}%)",
+      "variants": ["<noparse></noparse>Quota Excess Reward ({0}%)"]
+    },
+    {
+      "base": "Stats for day {0}",
+      "variants": ["<noparse></noparse>Stats for day {0}"]
+    },
+    {
+      "base": "All on Red",
+      "variants": ["All on Red (Challenge)"]
+    }
+  ],
+  "displayVariantRules": [
+    {
+      "id": "leading-space-fragment",
+      "kind": "prefix",
+      "prefix": " ",
+      "sourceKinds": ["derived_display_fragment"],
+      "maxLength": 48,
+      "skipIfSourceStartsWith": ["[", "<", "\"", " "],
+      "requiresTranslatableEnglish": true
+    },
+    {
+      "id": "noparse-wrap-trusted-ui",
+      "kind": "wrap",
+      "wrapper": "noparse",
+      "sourceKinds": ["derived_display_fragment", "dll_promoted_ldstr", "configured_display_source"],
+      "maxLength": 220,
+      "skipIfSourceStartsWith": ["<noparse"],
+      "skipIfSourceContains": ["["],
+      "requiresTranslatableEnglish": true
+    },
+    {
+      "id": "rebind-label-trailing-space",
+      "kind": "suffix",
+      "suffix": " ",
+      "sourceKinds": ["configured_display_source"],
+      "maxLength": 16,
+      "skipIfSourceContains": [" "]
+    },
+    {
+      "id": "rebind-label-noparse-trailing-space",
+      "kind": "wrapSuffix",
+      "wrapper": "noparse",
+      "suffix": " ",
+      "sourceKinds": ["configured_display_source"],
+      "maxLength": 16,
+      "skipIfSourceContains": [" "]
+    },
+    {
+      "id": "rainb-strip",
+      "kind": "regexReplace",
+      "match": "<rainb>(.*?)</rainb>",
+      "replace": "$1"
+    },
+    {
+      "id": "eye-ticket-rich",
+      "kind": "literalWhenMatch",
+      "match": "^Eye\\s+7\\s+Ticket\\s+Mouth\\s+5\\s+Ticket\\s+Body\\s+10\\s+Ticket$",
+      "literal": "Eye\n<color=yellow>7 Ticket</color>\nMouth\n<color=yellow>5 Ticket</color>\nBody\n<color=yellow>10 Ticket</color>"
+    },
+    {
+      "id": "reroll-challenge-newline",
+      "kind": "regexLiteral",
+      "match": "^Reroll Challenge \\((\\d+) Ticket\\)$",
+      "literal": "Reroll Challenge \n($1 Ticket)"
+    },
+    {
+      "id": "bet-total-template",
+      "kind": "template",
+      "match": "^Bet a total of .+ across all games$",
+      "template": "Bet a total of {0} across all games",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "min-max-template",
+      "kind": "template",
+      "match": "^Min: .+(?:\\n| )Max: .+$",
+      "template": "Min: {0} Max: {1}",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "buy-item-template",
+      "kind": "template",
+      "match": "^ ?Buy 1 Item\\(s\\) \\(.+ tickets\\)$",
+      "template": " Buy 1 Item(s) ({0} tickets)",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "ticket-count-template",
+      "kind": "template",
+      "match": "^\\d+ Tickets$",
+      "template": "{0} Tickets",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "ticket-count-singular-template",
+      "kind": "template",
+      "match": "^\\d+ Ticket$",
+      "template": "{0} Ticket",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "reroll-challenge-ticket-template",
+      "kind": "template",
+      "match": "^Reroll Challenge \\(\\d+ Ticket\\)$",
+      "template": "Reroll Challenge ({0} Ticket)",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "lobby-title-template",
+      "kind": "template",
+      "match": "^ \\| .+'s Lobby$",
+      "template": " | {0}'s Lobby",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "lobby-code-template",
+      "kind": "template",
+      "match": "^\\d+ \\| .+'s Lobby$",
+      "template": "{0} | {1}'s Lobby",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "buy-item-interaction-template",
+      "kind": "template",
+      "match": "^\\[E\\] Buy 1 Item\\(s\\) \\(.+ tickets\\)$",
+      "template": "[E] Buy 1 Item(s) ({0} tickets)",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "challenge-bet-template",
+      "kind": "template",
+      "match": "^Bet at least .+ on roulette and profit$",
+      "template": "Bet at least {0} on roulette and profit",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "delete-save-template",
+      "kind": "template",
+      "match": "^Are you sure you want to delete the save from .+\\? This action cannot be undone\\.$",
+      "template": "Are you sure you want to delete the save from {0}? This action cannot be undone.",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "day-instance-template",
+      "kind": "template",
+      "match": "^DAY \\d+$",
+      "template": "DAY {0}",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "floor-instance-template",
+      "kind": "template",
+      "match": "^FLOOR \\d+$",
+      "template": "FLOOR {0}",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "floor-button-instance-template",
+      "kind": "template",
+      "match": "^FLOOR \\d+ BUTTON$",
+      "template": "FLOOR {0} BUTTON",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "stats-day-instance-template",
+      "kind": "template",
+      "match": "^Stats for day \\d+$",
+      "template": "Stats for day {0}",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "quota-excess-template",
+      "kind": "template",
+      "match": "^Quota Excess Reward \\(.+%\\)$",
+      "template": "Quota Excess Reward ({0}%)",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
+      "id": "buy-n-items-template",
+      "kind": "template",
+      "match": "^ ?Buy \\d+ Item\\(s\\) \\(.+ tickets\\)$",
+      "template": "Buy {0} Item(s) ({1} tickets)",
+      "resultKind": "dll_display_flow_template"
+    }
+  ]
+}
