@@ -34,7 +34,7 @@
 
 1. [Releases](https://github.com/KoutaChan/Gwyf-JPN/releases/latest) から最新の zip をダウンロードする
 2. [BepInEx 5](https://github.com/bepinex/bepinex/releases) の `BepInEx_win_x64_*.zip` をゲームフォルダに展開する（未導入の場合）
-3. **Steam から一度起動**し、`BepInEx/` フォルダができることを確認する
+3. **Steam から一度起動**し、`BepInEx/plugins/` フォルダができることを確認する
 4. [Releases](https://github.com/KoutaChan/Gwyf-JPN/releases/latest) の zip を展開し、中身を **`BepInEx/plugins/`** に入れる
 5. 再度 Steam から起動して動作確認する
 
