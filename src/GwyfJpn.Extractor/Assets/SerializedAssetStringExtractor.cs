@@ -32,8 +32,10 @@ internal static class SerializedAssetStringExtractor
                 continue;
             }
 
+            var rawStringIndex = 0;
             foreach (var serializedString in UnityLengthPrefixedStringScanner.Extract(bytes, (int)objectStart, obj.ByteSize))
             {
+                var currentRawStringIndex = rawStringIndex++;
                 var source = SourceTextClassifier.NormalizeCandidate(serializedString.Value);
                 if (!SourceTextClassifier.IsMechanicallyReadableText(source))
                 {
@@ -60,6 +62,11 @@ internal static class SerializedAssetStringExtractor
                         File = relativeFile,
                         PathId = obj.PathId,
                         ClassId = obj.ClassId,
+                        SerializedTypeId = obj.TypeId,
+                        ScriptTypeIndex = obj.ScriptTypeIndex,
+                        ScriptId = obj.ScriptId,
+                        OldTypeHash = obj.OldTypeHash,
+                        RawStringIndex = currentRawStringIndex,
                         StringOffset = serializedString.Offset,
                         Type = UnityClassNames.GetName(obj.ClassId)
                     }

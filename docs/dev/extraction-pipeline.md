@@ -61,14 +61,19 @@ Python / UnityPy は不要です。
 
 ```json
 {
-  "id": "asset-text:level3:8784:88:c2ee0d44",
-  "source": "Wheel of Fortune",
+  "id": "asset-text:resources.assets:57508:48:8dea670e",
+  "source": "Big Spender",
   "sourceKind": "asset_review_string",
   "context": {
-    "file": "level3",
-    "pathId": 8784,
+    "file": "resources.assets",
+    "pathId": 57508,
     "classId": 114,
-    "stringOffset": 88,
+    "serializedTypeId": 65,
+    "scriptTypeIndex": 15,
+    "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+    "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+    "rawStringIndex": 1,
+    "stringOffset": 48,
     "type": "MonoBehaviour"
   }
 }
@@ -100,6 +105,7 @@ Python / UnityPy は不要です。
 | `dll_promoted_ldstr` | `gameSinks` / `promotedDisplayTypes` に一致する `ldstr` の昇格 |
 | `configured_display_source` | `supplementalDisplaySources` の手動追加候補 |
 | `derived_display_fragment` | `[E] Pick Up` → `Pick Up` などの断片 |
+| `derived_template_instantiation` | asset 由来の source set と display template の組み合わせ。例: `Big Spender` + `{0} (Challenge)` → `Big Spender (Challenge)` |
 | `mapping-variant` | `displayVariantRules` による派生 |
 
 ルール:

@@ -11,47 +11,88 @@
       }
     },
     {
-      "id": "derived-variant:6961e2e8:84ec4a09",
+      "id": "mapping-variant:3597fbc5:6961e2e8:84ec4a09",
       "source": " Answer",
       "ja": "回答"
     },
     {
-      "id": "derived-variant:cb7b19a2:888501b6",
+      "id": "mapping-variant:3597fbc5:cb7b19a2:888501b6",
       "source": " Bet",
       "ja": "ベット"
     },
     {
-      "id": "derived-variant:8c48d20a:4ea3a215",
-      "source": " Buy 1 Item(s) ({0} tickets)",
-      "ja": " アイテム1個を購入 (チケット{0}枚)",
-      "context": {
-        "method": "display_seen",
-        "type": "TMPro.TextMeshProUGUI"
-      }
+      "id": "mapping-variant:3597fbc5:0536afe3:b281c064",
+      "source": " buy a random cosmetic",
+      "ja": "ランダムなコスメを購入"
     },
     {
-      "id": "derived-variant:020ab587:00133409",
+      "id": "mapping-variant:3597fbc5:020ab587:00133409",
       "source": " buy items",
       "ja": "アイテムを購入"
     },
     {
-      "id": "derived-variant:b6373e6a:2be45509",
+      "id": "mapping-variant:3597fbc5:b6373e6a:2be45509",
       "source": " Buy Items",
       "ja": "アイテムを購入"
     },
     {
-      "id": "derived-variant:315ee538:6a06847a",
+      "id": "mapping-variant:3597fbc5:315ee538:6a06847a",
       "source": " Choose",
       "ja": "選択"
     },
     {
-      "id": "derived-variant:2485c367:24254279",
+      "id": "mapping-variant:3597fbc5:8ca9d58a:f6181454",
+      "source": " deselect",
+      "ja": "選択解除"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:2485c367:24254279",
       "source": " Equip",
       "ja": "装備する"
     },
     {
-      "id": "derived-variant:ffd6a172:66a41bcb",
+      "id": "mapping-variant:3597fbc5:1988ca2a:fb431755",
+      "source": " Interact",
+      "ja": "操作"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:b901d7fe:d379c22c",
+      "source": " Let it ride!",
+      "ja": "そのまま勝負！"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:2eeee88c:66d240d7",
+      "source": " No save slots assigned!",
+      "ja": "セーブスロットが割り当てられていません！"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:be1a0910:33b71578",
+      "source": " open/close door",
+      "ja": "ドアの開閉"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:72ae96ae:40558077",
+      "source": " PAY YOUR DEBT",
+      "ja": "借金を返す"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:83909252:96b76a8b",
+      "source": " pick up",
+      "ja": "拾う"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:bf867ed0:665469eb",
+      "source": " Pick up",
+      "ja": "拾う"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:ffd6a172:66a41bcb",
       "source": " Pick Up",
+      "ja": "拾う"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:3645b4af:ad54c8af",
+      "source": " pickup",
       "ja": "拾う"
     },
     {
@@ -67,34 +108,209 @@
       }
     },
     {
-      "id": "derived-variant:853b01c6:c889727d",
+      "id": "mapping-variant:3597fbc5:853b01c6:c889727d",
       "source": " Reroll Items",
       "ja": "アイテムをリロール"
     },
     {
-      "id": "derived-variant:2913a2e6:385a0c6f",
+      "id": "mapping-variant:3597fbc5:a32eca95:55370930",
+      "source": " Reset Score",
+      "ja": "スコアをリセット"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:90e92803:30484bc4",
+      "source": " Retrieve Ball",
+      "ja": "ボールを回収"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:2913a2e6:385a0c6f",
       "source": " Retrieve Items",
       "ja": "アイテムを回収"
     },
     {
-      "id": "derived-variant:5d02f1a2:c241d86f",
+      "id": "mapping-variant:3597fbc5:5d02f1a2:c241d86f",
       "source": " retrieve items",
       "ja": "アイテムを回収"
     },
     {
-      "id": "derived-variant:76538394:ec5fb950",
+      "id": "mapping-variant:3597fbc5:143cc125:7cd111a2",
+      "source": " Reveal",
+      "ja": "めくる"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:89e205f2:9755892f",
+      "source": " Select",
+      "ja": "選択"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:db35b380:0c227d4f",
+      "source": " select",
+      "ja": "選択"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:a798d0c6:fc334fee",
+      "source": " set color",
+      "ja": "色を設定"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:8ceaeb35:48310253",
+      "source": " Shred",
+      "ja": "粉砕"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:1d35f9b0:0d7b86a0",
+      "source": " slide",
+      "ja": "スライド"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:3a3a71d8:d560e6bf",
+      "source": " Switch",
+      "ja": "切り替え"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:d0c63f46:8140760b",
+      "source": " to buy a random cosmetic",
+      "ja": "ランダムなコスメを購入する"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:4522f027:f6e909b6",
+      "source": " to Buy Items",
+      "ja": "アイテムを購入する"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:b246b852:5f1da5b9",
+      "source": " to deselect",
+      "ja": "選択解除する"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:76538394:ec5fb950",
       "source": " to Interact",
       "ja": "操作する"
     },
     {
-      "id": "derived-variant:d2ad3df6:49d88dab",
+      "id": "mapping-variant:3597fbc5:d2ad3df6:49d88dab",
       "source": " to open/close door",
       "ja": "ドアの開閉"
     },
     {
-      "id": "derived-variant:3f42fe8a:f4136578",
+      "id": "mapping-variant:3597fbc5:db8c4425:c7f45498",
+      "source": " to pick up",
+      "ja": "拾う"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:8b08c20e:0284163a",
+      "source": " to pickup",
+      "ja": "拾う"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:696d9dd9:dbc821d6",
+      "source": " to select",
+      "ja": "選択する"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:3204424f:b8412535",
+      "source": " to set color",
+      "ja": "色を設定する"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:b6d0d48f:c0fa8cf3",
+      "source": " to slide",
+      "ja": "スライドする"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:3f42fe8a:f4136578",
       "source": " Wake Up",
       "ja": "起きる"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:7201254f:9737bcc5",
+      "source": " Withdraw",
+      "ja": "引き出す"
+    },
+    {
+      "id": "dll-text:CasinoOffersManager:UpdateText:0d534d0f",
+      "source": "- [Blackjack] Lose {0} times ({1}/{2}) with a hand of {3}+, earn ${4}",
+      "ja": "- [ブラックジャック] 手札{3}以上で{0}回負ける（{1}/{2}）と${4}獲得"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:9b217d9f",
+      "source": "- $100B",
+      "ja": "- $100B"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:a22188a4",
+      "source": "- $100K",
+      "ja": "- $100K"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:a021857e",
+      "source": "- $100M",
+      "ja": "- $100M"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:5c89675d",
+      "source": "- $10B",
+      "ja": "- $10B"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:53895932",
+      "source": "- $10K",
+      "ja": "- $10K"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:4d894fc0",
+      "source": "- $10M",
+      "ja": "- $10M"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:9251fa57",
+      "source": "- $1B",
+      "ja": "- $1B"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:8951ec2c",
+      "source": "- $1K",
+      "ja": "- $1K"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:8751e906",
+      "source": "- $1M",
+      "ja": "- $1M"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:9537d0a1",
+      "source": "- $1Qa",
+      "ja": "- $1Qa"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:8d37c409",
+      "source": "- $1Qi",
+      "ja": "- $1Qi"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:a0521061",
+      "source": "- $1T",
+      "ja": "- $1T"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:7a30c4c9",
+      "source": "- 1 Ticket",
+      "ja": "- チケット1枚"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:c6814f3b",
+      "source": "- 10 Ticket",
+      "ja": "- チケット10枚"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:6559a425",
+      "source": "- 5 Ticket",
+      "ja": "- チケット5枚"
+    },
+    {
+      "id": "dll-text:DevilsReel:OnPickedUp:79ba98c2",
+      "source": "-{0} | +{1}",
+      "ja": "-{0} | +{1}"
     },
     {
       "id": "configured-source:eb7f5b4b",
@@ -191,6 +407,11 @@
       "ja": "「急げ、見つかる前に」 - 高利貸し"
     },
     {
+      "id": "asset-text:level0:208:1172:75bd77a9",
+      "source": "\"I always go all in\" -Olof Högberg",
+      "ja": "「俺はいつだってオールインだ」 - オロフ・ホーグベリ"
+    },
+    {
       "id": "asset-text:level0:208:1748:5dc7c879",
       "source": "\"I bet, therefore I am\" -Descartes",
       "ja": "「我賭ける、ゆえに我あり」 - デカルト"
@@ -241,11 +462,6 @@
       "ja": "「運は与えない。ただ貸し付けるだけだ」 - スウェーデンのことわざ"
     },
     {
-      "id": "asset-text:level0:208:1792:d6c1a9be",
-      "source": "\"Quit while you're ahead. All the best gamblers do.\" -Baltasar Gracián y Morale",
-      "ja": "「勝っているうちに引き上げろ。名うての博徒は皆そうする」 - バルタサル・グラシアン"
-    },
-    {
       "id": "asset-text:level0:208:2560:b69abe92",
       "source": "\"Mmmmm, mmm mmmm mm\" -Your friend who sold their mouth",
       "ja": "「んー、んん、んーんん」 - 口を売り払った友達"
@@ -259,6 +475,11 @@
       "id": "asset-text:level0:208:664:97d610d0",
       "source": "\"Poker? I hardly know her!\" -Unknown",
       "ja": "「ポーカー？ まだ知り合ったばかりだぞ！」 - 作者不詳"
+    },
+    {
+      "id": "asset-text:level0:208:1792:d6c1a9be",
+      "source": "\"Quit while you're ahead. All the best gamblers do.\" -Baltasar Gracián y Morale",
+      "ja": "「勝っているうちに引き上げろ。名うての博徒は皆そうする」 - バルタサル・グラシアン"
     },
     {
       "id": "asset-text:level0:208:1476:5b56efc1",
@@ -281,9 +502,9 @@
       "ja": "「カジノはいつだって君を大歓迎だ！」 - ブース氏"
     },
     {
-      "id": "runtime-import:dfda1bbe",
-      "source": "\"The odds are low… but never zero\"\\n\\n-Dad",
-      "ja": "「確率は低い…だがゼロではない」\n\n-父"
+      "id": "asset-text:level0:208:304:5c4e1dfb",
+      "source": "\"The odds are low… but never zero\" -Dad",
+      "ja": "「勝ち目は薄い…でもゼロじゃない」\n\n-父"
     },
     {
       "id": "asset-text:level0:208:708:00281640",
@@ -314,6 +535,16 @@
       "id": "asset-text:level0:208:1300:1f7007a0",
       "source": "\"You can only lose %100 of your money, but you could win %999999\" -Unknown",
       "ja": "「失うのは所持金の100%まで。でも勝ちは999999%まである」 - 作者不詳"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowChallengesForFloor:8c45cd84",
+      "source": "(No challenges for floor {0})",
+      "ja": "（{0}階のチャレンジなし）"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowChallengesMenu:97ff8cad",
+      "source": "(No challenges in settings)",
+      "ja": "（設定内にチャレンジなし）"
     },
     {
       "id": "asset-text:resources.assets:58501:148:182d8232",
@@ -463,9 +694,9 @@
       }
     },
     {
-      "id": "dll-text:SaveSlotUI:OnDeleteClicked:8ade59c5",
-      "source": "[SaveSlotUI] ConfirmationDialogManager not found. Deleting save without confirmation.",
-      "ja": "[SaveSlotUI] ConfirmationDialogManager が見つかりません。確認なしでセーブを削除します。"
+      "id": "dll-text:GameUI:SetTimerText:21f2049d",
+      "source": "{0:#0}:{1:00}",
+      "ja": "{0:#0}:{1:00}"
     },
     {
       "id": "dll-text:TimeConditionData:GetProgressText:e11df1a5",
@@ -488,9 +719,34 @@
       "ja": "{0:F1}x倍率"
     },
     {
-      "id": "dll-text:Baccarat:GetRankName:378a23d9",
+      "id": "dll-text:AllPlayersTriggerZone/<CountdownTextRoutine>d__22:MoveNext:378a23d9",
       "source": "{0}",
       "ja": "{0}"
+    },
+    {
+      "id": "dll-text:CasinoOffersManager:UpdateText:744063f8",
+      "source": "{0} - [Slots] Lose {1} times consecutively ({2}/{3}) to increase the jackpot (${4})",
+      "ja": "{0} - [スロット] {1}連敗する（{2}/{3}）とジャックポット増加（${4}）"
+    },
+    {
+      "id": "dll-text:PublicLobbyListUI:AddEntry:00455d33",
+      "source": "{0} ({1})",
+      "ja": "{0} ({1})"
+    },
+    {
+      "id": "dll-text:PublicLobbyListUI:AddEntry:8886cea2",
+      "source": "{0} ({1}/{2})",
+      "ja": "{0} ({1}/{2})"
+    },
+    {
+      "id": "dll-text:DaySummaryUI/<DaySummaryRoutine>d__44:MoveNext:be6a3d39",
+      "source": "{0} (Challenge)",
+      "ja": "{0}（チャレンジ）"
+    },
+    {
+      "id": "dll-text:DebtZone:OnBagAmountChanged:5d4342db",
+      "source": "{0} / {1}",
+      "ja": "{0} / {1}"
     },
     {
       "id": "configured-source:942cfe90",
@@ -505,6 +761,16 @@
       "id": "dll-text:RefreshRateProvider:GetOptions:b5a314c9",
       "source": "{0} Hz",
       "ja": "{0} Hz"
+    },
+    {
+      "id": "dll-text:Minesweeper:OnMinesCountChanged:218cf7d1",
+      "source": "{0} Mines",
+      "ja": "地雷{0}個"
+    },
+    {
+      "id": "dll-text:GameSettingsManager:UpdateSettingsList:42b678d2",
+      "source": "{0} settings are not assigned!",
+      "ja": "{0}の設定が割り当てられていません！"
     },
     {
       "id": "configured-source:4f6f0933",
@@ -523,6 +789,26 @@
         "method": "CreateRebindEntry",
         "type": "SettingsLayoutRuntimeUI"
       }
+    },
+    {
+      "id": "dll-text:GameUI:SetTimerText:dfeeaab8",
+      "source": "{0}:{1}",
+      "ja": "{0}:{1}"
+    },
+    {
+      "id": "dll-text:ReasonDemo:GenerateExampleOutput:65769dd5",
+      "source": "{0}.",
+      "ja": "{0}。"
+    },
+    {
+      "id": "dll-text:Bank:UpdateLastModificationLabel:9ecb2d16",
+      "source": "{0}{1:F1}%",
+      "ja": "{0}{1:F1}%"
+    },
+    {
+      "id": "dll-text:DaySummaryUI/<>c__DisplayClass44_0:<DaySummaryRoutine>b__6:b568a738",
+      "source": "{0}{1}",
+      "ja": "{0}{1}"
     },
     {
       "id": "dll-text:CrapsSequenceConditionData:GetProgressText:3d74a13e",
@@ -550,9 +836,29 @@
       "ja": "{0}/{1}勝"
     },
     {
+      "id": "dll-text:Bank:UpdateLastModificationLabel:6a76a5b4",
+      "source": "{0}%",
+      "ja": "{0}%"
+    },
+    {
+      "id": "dll-text:Bank:UpdateMarketStatusLabel:3dccc398",
+      "source": "{0}m {1}s",
+      "ja": "{0}分 {1}秒"
+    },
+    {
+      "id": "dll-text:Bank:UpdateMarketStatusLabel:1876249e",
+      "source": "{0}s",
+      "ja": "{0}秒"
+    },
+    {
       "id": "dll-text:TimeConditionData:GetProgressText:2a1224ea",
       "source": "{0}s remaining",
       "ja": "残り {0}秒"
+    },
+    {
+      "id": "dll-text:Coordinator:UserCode_RpcSetText__Int64__Double:0f761673",
+      "source": "{0}x",
+      "ja": "{0}倍"
     },
     {
       "id": "dll-text:PayoutMultiplierConditionData:GetProgressText:feb9108b",
@@ -565,6 +871,11 @@
       "ja": "{0}x / {1}x"
     },
     {
+      "id": "dll-text:Crash:Cashout:62dfd636",
+      "source": "{0}x ${1}",
+      "ja": "{0}倍 ${1}"
+    },
+    {
       "id": "dll-text:PayoutMultiplierConditionData:GetProgressText:44e132ca",
       "source": "{0}x multiplier",
       "ja": "{0}x倍率"
@@ -575,9 +886,99 @@
       "ja": "{0}x{1}"
     },
     {
+      "id": "dll-text:MoneyDisplayAndFeedbacks:<OnQuotaChanged>b__45_1:b6f079cc",
+      "source": "/ {0}",
+      "ja": "/ {0}"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:a8b29175",
+      "source": "+ $100B",
+      "ja": "+ $100B"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:afb29c7a",
+      "source": "+ $100K",
+      "ja": "+ $100K"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:a9b29308",
+      "source": "+ $100M",
+      "ja": "+ $100M"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:7d0d3b9f",
+      "source": "+ $10B",
+      "ja": "+ $10B"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:840d46a4",
+      "source": "+ $10K",
+      "ja": "+ $10K"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:820d437e",
+      "source": "+ $10M",
+      "ja": "+ $10M"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:8cbd715d",
+      "source": "+ $1B",
+      "ja": "+ $1B"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:83bd6332",
+      "source": "+ $1K",
+      "ja": "+ $1K"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:7dbd59c0",
+      "source": "+ $1M",
+      "ja": "+ $1M"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:ba597bef",
+      "source": "+ $1Qa",
+      "ja": "+ $1Qa"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:c2598887",
+      "source": "+ $1Qi",
+      "ja": "+ $1Qi"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:96bd811b",
+      "source": "+ $1T",
+      "ja": "+ $1T"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:b784a4a7",
+      "source": "+ 1 Ticket",
+      "ja": "+ チケット1枚"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:beaa19d5",
+      "source": "+ 10 Ticket",
+      "ja": "+ チケット10枚"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:c3c0027b",
+      "source": "+ 5 Ticket",
+      "ja": "+ チケット5枚"
+    },
+    {
       "id": "dll-text:BankTier:GetFluctuationDisplay:d265936f",
       "source": "+{0:F0}% / -{1:F0}%",
       "ja": "+{0:F0}% / -{1:F0}%"
+    },
+    {
+      "id": "dll-text:DaySummaryTicketEntry:Setup:c34831dc",
+      "source": "+{0}",
+      "ja": "+{0}"
+    },
+    {
+      "id": "dll-text:Bank:UpdateLastModificationLabel:63a6aafb",
+      "source": "+{0}%",
+      "ja": "+{0}%"
     },
     {
       "id": "asset-text:resources.assets:57669:140:50afa22c",
@@ -614,6 +1015,91 @@
       "ja": "うっとうしい友達を<color=red>ぶっ倒す</color>。"
     },
     {
+      "id": "mapping-variant:bda789e7:f31320b9:f922862e",
+      "source": "<noparse></noparse> | {0}'s Lobby",
+      "ja": "<noparse></noparse> | {0}のロビー"
+    },
+    {
+      "id": "mapping-variant:bda789e7:72f2a1de:ecce7df8",
+      "source": "<noparse></noparse>'s Lobby",
+      "ja": "<noparse></noparse>のロビー"
+    },
+    {
+      "id": "mapping-variant:bda789e7:aa999e53:3ac5167d",
+      "source": "<noparse></noparse>{0} | {1}'s Lobby",
+      "ja": "<noparse></noparse>{0} | {1}のロビー"
+    },
+    {
+      "id": "mapping-variant:bda789e7:18eb568a:60b18efc",
+      "source": "<noparse></noparse>{0} Ticket",
+      "ja": "<noparse></noparse>チケット{0}枚"
+    },
+    {
+      "id": "mapping-variant:bda789e7:4c1cca97:c6836b1d",
+      "source": "<noparse></noparse>{0} Tickets",
+      "ja": "<noparse></noparse>チケット{0}枚"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b578f0ad:b4742edf",
+      "source": "<noparse></noparse>All bets are in!",
+      "ja": "<noparse></noparse>ベットはすべて完了！"
+    },
+    {
+      "id": "mapping-variant:bda789e7:9d5e3d0a:3bbee685",
+      "source": "<noparse></noparse>All on Red (Challenge)",
+      "ja": "<noparse></noparse>赤に全賭け（チャレンジ）"
+    },
+    {
+      "id": "mapping-variant:bda789e7:70c6ee99:451d2413",
+      "source": "<noparse></noparse>Are you sure you want to delete the save from {0}? This action cannot be undone.",
+      "ja": "<noparse></noparse>{0}のセーブを削除しますか？この操作は取り消せません。"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b1102075:5ad19aac",
+      "source": "<noparse></noparse>Bet a total of {0} across all games",
+      "ja": "<noparse></noparse>全ゲーム合計で{0}をベットする"
+    },
+    {
+      "id": "mapping-variant:bda789e7:2b37426b:ff5eaff7",
+      "source": "<noparse></noparse>Bet at least {0} on roulette and profit",
+      "ja": "<noparse></noparse>ルーレットで{0}以上ベットして黒字にする"
+    },
+    {
+      "id": "mapping-variant:bda789e7:5d04ce1c:50d26cf0",
+      "source": "<noparse></noparse>Buy {0} Item(s) ({1} tickets)",
+      "ja": "<noparse></noparse>アイテム{0}個を購入 (チケット{1}枚)"
+    },
+    {
+      "id": "mapping-variant:bda789e7:0536afe3:61bbca63",
+      "source": "<noparse></noparse>buy a random cosmetic",
+      "ja": "<noparse></noparse>ランダムなコスメを購入"
+    },
+    {
+      "id": "mapping-variant:bda789e7:020ab587:8742278e",
+      "source": "<noparse></noparse>buy items",
+      "ja": "<noparse></noparse>アイテムを購入"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b6373e6a:06140b8e",
+      "source": "<noparse></noparse>Buy Items",
+      "ja": "<noparse></noparse>アイテムを購入"
+    },
+    {
+      "id": "mapping-variant:bda789e7:cb611fd0:0757661f",
+      "source": "<noparse></noparse>Cannot show confirmation dialog - ConfirmationDialog is not assigned!",
+      "ja": "<noparse></noparse>確認ダイアログを表示できません - ConfirmationDialog が割り当てられていません！"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b5d810a3:8ec8a5d6",
+      "source": "<noparse></noparse>DAY {0}",
+      "ja": "<noparse></noparse>{0}日目"
+    },
+    {
+      "id": "mapping-variant:bda789e7:12db8c8c:76d4f535",
+      "source": "<noparse></noparse>day ends ın",
+      "ja": "<noparse></noparse>一日の終わりまで"
+    },
+    {
       "id": "mapping-variant:9517de55:f8419897:fedb2390",
       "source": "<noparse></noparse>DAY X ENDED",
       "ja": "<noparse></noparse>DAY X 終了",
@@ -626,13 +1112,83 @@
       }
     },
     {
-      "id": "derived-variant:022313db:098450ac",
+      "id": "mapping-variant:bda789e7:97597ab7:6e3d184a",
+      "source": "<noparse></noparse>Dealing the cards...",
+      "ja": "<noparse></noparse>カードを配っています..."
+    },
+    {
+      "id": "mapping-variant:bda789e7:991b7f76:bc8abb1f",
+      "source": "<noparse></noparse>Doors Opened!",
+      "ja": "<noparse></noparse>ドアが開いた！"
+    },
+    {
+      "id": "mapping-variant:bda789e7:7d8704f0:b185011f",
+      "source": "<noparse></noparse>Double \nor\nnothing\n\n",
+      "ja": "<noparse></noparse>倍か\nゼロか\n\n"
+    },
+    {
+      "id": "mapping-variant:bda789e7:3e10c45b:dbb38812",
+      "source": "<noparse></noparse>FLOOR {0}",
+      "ja": "<noparse></noparse>{0}階"
+    },
+    {
+      "id": "mapping-variant:bda789e7:bf08fa8f:e6fe2856",
+      "source": "<noparse></noparse>FLOOR {0} BUTTON",
+      "ja": "<noparse></noparse>{0}階ボタン"
+    },
+    {
+      "id": "mapping-variant:1d4921b8:ed690033:098450ac",
       "source": "<noparse></noparse>Gives random item.",
       "ja": "<noparse></noparse>ランダムなアイテムをくれる。",
       "context": {
         "method": "CreateRebindEntry",
         "type": "SettingsLayoutRuntimeUI"
       }
+    },
+    {
+      "id": "mapping-variant:bda789e7:d6778710:be7f1d7a",
+      "source": "<noparse></noparse>heads or taıls?",
+      "ja": "<noparse></noparse>表か裏か？"
+    },
+    {
+      "id": "mapping-variant:bda789e7:c74f12f8:d2757cab",
+      "source": "<noparse></noparse>Invalid amount",
+      "ja": "<noparse></noparse>無効な金額"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b382fe59:79aac56e",
+      "source": "<noparse></noparse>Invalid bet amount",
+      "ja": "<noparse></noparse>無効なベット額"
+    },
+    {
+      "id": "mapping-variant:bda789e7:82c4925b:b6a9deed",
+      "source": "<noparse></noparse>Left Button",
+      "ja": "<noparse></noparse>左ボタン"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b901d7fe:7c515899",
+      "source": "<noparse></noparse>Let it ride!",
+      "ja": "<noparse></noparse>そのまま勝負！"
+    },
+    {
+      "id": "mapping-variant:bda789e7:59760360:ce93341d",
+      "source": "<noparse></noparse>Middle Button",
+      "ja": "<noparse></noparse>中央ボタン"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b256cac8:dfa18653",
+      "source": "<noparse></noparse>Middle Click",
+      "ja": "<noparse></noparse>中央クリック"
+    },
+    {
+      "id": "mapping-variant:bda789e7:2660597f:4b09b2b9",
+      "source": "<noparse></noparse>Min: {0} Max: {1}",
+      "ja": "<noparse></noparse>最低 {0}\n最高 {1}"
+    },
+    {
+      "id": "mapping-variant:bda789e7:2eeee88c:e22a0948",
+      "source": "<noparse></noparse>No save slots assigned!",
+      "ja": "<noparse></noparse>セーブスロットが割り当てられていません！"
     },
     {
       "id": "mapping-variant:b5e59d3c:068897ce:624ea2df",
@@ -644,17 +1200,197 @@
       }
     },
     {
-      "id": "configured-source:d671e554:noparse",
+      "id": "mapping-variant:bda789e7:da6f3dd9:6fdf8e75",
+      "source": "<noparse></noparse>On call...",
+      "ja": "<noparse></noparse>通話中..."
+    },
+    {
+      "id": "mapping-variant:bda789e7:be1a0910:dc489583",
+      "source": "<noparse></noparse>open/close door",
+      "ja": "<noparse></noparse>ドアの開閉"
+    },
+    {
+      "id": "mapping-variant:bda789e7:d9e38389:891f2e54",
+      "source": "<noparse></noparse>Pay \nyour \ndebt\n",
+      "ja": "<noparse></noparse>借金を\n返す\n"
+    },
+    {
+      "id": "mapping-variant:bda789e7:72ae96ae:d78c94f0",
+      "source": "<noparse></noparse>PAY YOUR DEBT",
+      "ja": "<noparse></noparse>借金を返す"
+    },
+    {
+      "id": "mapping-variant:bda789e7:83909252:ddd46a40",
+      "source": "<noparse></noparse>pick up",
+      "ja": "<noparse></noparse>拾う"
+    },
+    {
+      "id": "mapping-variant:bda789e7:bf867ed0:b83f71e0",
+      "source": "<noparse></noparse>Pick up",
+      "ja": "<noparse></noparse>拾う"
+    },
+    {
+      "id": "mapping-variant:bda789e7:ffd6a172:b7efc000",
+      "source": "<noparse></noparse>Pick Up",
+      "ja": "<noparse></noparse>拾う"
+    },
+    {
+      "id": "configured-source:9bdc21ff",
       "source": "<noparse></noparse>Press ",
       "ja": "<noparse></noparse>押す"
     },
     {
-      "id": "asset-text:resources.assets:57669:1176:d45b75d3:noparse",
+      "id": "mapping-variant:bda789e7:e09a532a:9f12a5e2",
+      "source": "<noparse></noparse>publıshed by tenstack",
+      "ja": "<noparse></noparse>TENSTACK 制作"
+    },
+    {
+      "id": "mapping-variant:bda789e7:f7a6f4d6:dd445ce3",
+      "source": "<noparse></noparse>Quota (100%)",
+      "ja": "<noparse></noparse>ノルマ (100%)"
+    },
+    {
+      "id": "mapping-variant:2530f3ef:0d88adbe:df5f4ef8",
+      "source": "<noparse></noparse>Quota Excess Reward ({0}%)",
+      "ja": "<noparse></noparse>ノルマ超過報酬 ({0}%)"
+    },
+    {
+      "id": "mapping-variant:bda789e7:e575c1b1:8e94c256",
+      "source": "<noparse></noparse>Reroll Challenge ({0} Ticket)",
+      "ja": "<noparse></noparse>チャレンジをリロール (チケット{0}枚)"
+    },
+    {
+      "id": "mapping-variant:bda789e7:853b01c6:60bfff70",
+      "source": "<noparse></noparse>Reroll Items",
+      "ja": "<noparse></noparse>アイテムをリロール"
+    },
+    {
+      "id": "mapping-variant:bda789e7:a32eca95:30339de7",
+      "source": "<noparse></noparse>Reset Score",
+      "ja": "<noparse></noparse>スコアをリセット"
+    },
+    {
+      "id": "mapping-variant:bda789e7:90e92803:48a5e833",
+      "source": "<noparse></noparse>Retrieve Ball",
+      "ja": "<noparse></noparse>ボールを回収"
+    },
+    {
+      "id": "mapping-variant:bda789e7:2913a2e6:7a0f2abe",
+      "source": "<noparse></noparse>Retrieve Items",
+      "ja": "<noparse></noparse>アイテムを回収"
+    },
+    {
+      "id": "mapping-variant:bda789e7:5d02f1a2:79107a7e",
+      "source": "<noparse></noparse>retrieve items",
+      "ja": "<noparse></noparse>アイテムを回収"
+    },
+    {
+      "id": "mapping-variant:bda789e7:c16c2b05:aae36600",
+      "source": "<noparse></noparse>Right Button",
+      "ja": "<noparse></noparse>右ボタン"
+    },
+    {
+      "id": "mapping-variant:bda789e7:f1f45822:c356e863",
+      "source": "<noparse></noparse>Rolling the dice...",
+      "ja": "<noparse></noparse>サイコロを振っています..."
+    },
+    {
+      "id": "mapping-variant:bda789e7:a798d0c6:7b9b9acd",
+      "source": "<noparse></noparse>set color",
+      "ja": "<noparse></noparse>色を設定"
+    },
+    {
+      "id": "mapping-variant:bda789e7:acc22a82:618f4822",
+      "source": "<noparse></noparse>Shuffling the deck...",
+      "ja": "<noparse></noparse>デッキをシャッフル中..."
+    },
+    {
+      "id": "mapping-variant:d45b75d3:7e4f1c5b:d00222a4",
       "source": "<noparse></noparse>Spin for a chance to revert your last <color=red>loss $</color>.",
       "ja": "<noparse></noparse>スピンして、直近の<color=red>負け額</color>を取り戻すチャンスを狙う。"
     },
     {
-      "id": "derived-variant:c7dcb5d4:baea5c2e",
+      "id": "mapping-variant:bda789e7:fcc3e99d:1ce716d0",
+      "source": "<noparse></noparse>Stacking the chips...",
+      "ja": "<noparse></noparse>チップを積んでいます..."
+    },
+    {
+      "id": "mapping-variant:e69d8ab7:67083f86:8b304826",
+      "source": "<noparse></noparse>Stats for day {0}",
+      "ja": "<noparse></noparse>{0}日目の統計"
+    },
+    {
+      "id": "mapping-variant:bda789e7:6ab13050:e39194e6",
+      "source": "<noparse></noparse>THNX FOR PLAYING! (TENSTACK, 2026)",
+      "ja": "<noparse></noparse>遊んでくれてありがとう！ (TENSTACK, 2026)"
+    },
+    {
+      "id": "mapping-variant:bda789e7:d0c63f46:0323c462",
+      "source": "<noparse></noparse>to buy a random cosmetic",
+      "ja": "<noparse></noparse>ランダムなコスメを購入する"
+    },
+    {
+      "id": "mapping-variant:bda789e7:4522f027:b06785cf",
+      "source": "<noparse></noparse>to Buy Items",
+      "ja": "<noparse></noparse>アイテムを購入する"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b246b852:cd1a1556",
+      "source": "<noparse></noparse>to deselect",
+      "ja": "<noparse></noparse>選択解除する"
+    },
+    {
+      "id": "mapping-variant:bda789e7:76538394:afb7a11b",
+      "source": "<noparse></noparse>to Interact",
+      "ja": "<noparse></noparse>操作する"
+    },
+    {
+      "id": "mapping-variant:bda789e7:d2ad3df6:468fe5ba",
+      "source": "<noparse></noparse>to open/close door",
+      "ja": "<noparse></noparse>ドアを開閉する"
+    },
+    {
+      "id": "mapping-variant:bda789e7:db8c4425:730d7031",
+      "source": "<noparse></noparse>to pick up",
+      "ja": "<noparse></noparse>拾う"
+    },
+    {
+      "id": "mapping-variant:bda789e7:8b08c20e:ae4e5d29",
+      "source": "<noparse></noparse>to pickup",
+      "ja": "<noparse></noparse>拾う"
+    },
+    {
+      "id": "mapping-variant:bda789e7:696d9dd9:6e9cc379",
+      "source": "<noparse></noparse>to select",
+      "ja": "<noparse></noparse>選択する"
+    },
+    {
+      "id": "mapping-variant:bda789e7:3204424f:75653df8",
+      "source": "<noparse></noparse>to set color",
+      "ja": "<noparse></noparse>色を設定する"
+    },
+    {
+      "id": "mapping-variant:bda789e7:b6d0d48f:a4d9cec2",
+      "source": "<noparse></noparse>to slide",
+      "ja": "<noparse></noparse>スライドする"
+    },
+    {
+      "id": "mapping-variant:bda789e7:3f42fe8a:0350097f",
+      "source": "<noparse></noparse>Wake Up",
+      "ja": "<noparse></noparse>起きる"
+    },
+    {
+      "id": "mapping-variant:bda789e7:68427545:8223fbdb",
+      "source": "<noparse></noparse>wıth your ",
+      "ja": "<noparse></noparse>友達と "
+    },
+    {
+      "id": "mapping-variant:bda789e7:466e19ec:536099aa",
+      "source": "<noparse></noparse>Yes, delete",
+      "ja": "<noparse></noparse>はい、削除"
+    },
+    {
+      "id": "mapping-variant:25c3c67b:162f679d:baea5c2e",
       "source": "<noparse></noparse>Yes, I am",
       "ja": "<noparse></noparse>はい、そうです"
     },
@@ -676,6 +1412,26 @@
       "id": "asset-text:level2:146:88:3e666226",
       "source": "<WAVE>COIN FLIP, ON FAIL IT CLOSES THE GAME!!!</>",
       "ja": "<WAVE>コイントス。失敗するとゲームが閉じる!!!</>"
+    },
+    {
+      "id": "dll-text:CrossyRoad:OnMultiplierChanged:97b0ec7f",
+      "source": "${0:N0}",
+      "ja": "${0:N0}"
+    },
+    {
+      "id": "dll-text:Bank:.ctor:a6814b1f",
+      "source": "${0}",
+      "ja": "${0}"
+    },
+    {
+      "id": "dll-text:DebtZone:Start:c5c7f21e",
+      "source": "$0 / {0}",
+      "ja": "$0 / {0}"
+    },
+    {
+      "id": "dll-text:AngelsReel:OnPickedUp:5a4409b6",
+      "source": "$0 | +{0}",
+      "ja": "$0 | +{0}"
     },
     {
       "id": "asset-text:resources.assets:66849:88:d103cc0e",
@@ -706,6 +1462,11 @@
       "id": "asset-text:level9:15414:88:323fc133",
       "source": "$bet x multiplier $payout",
       "ja": "$bet × 倍率 = $payout"
+    },
+    {
+      "id": "dll-text:AngelsReel:OnResultRegistered:51b64958",
+      "source": "0 | +{0}",
+      "ja": "0 | +{0}"
     },
     {
       "id": "asset-text:level12:14919:88:c615ad6a",
@@ -798,7 +1559,7 @@
       "ja": "完全に映画"
     },
     {
-      "id": "dll-promoted:GoOnlineClient:HandleGameOwnershipFailure:7de400e3",
+      "id": "dll-text:GoOnlineClient:HandleGameOwnershipFailure:7de400e3",
       "source": "Access Denied: You do not own this game.",
       "ja": "アクセス拒否：このゲームを所有していません。",
       "context": {
@@ -827,6 +1588,11 @@
       "ja": "有効 (✓)"
     },
     {
+      "id": "dll-text:NewConsole:ShowChallengesMenu:788be221",
+      "source": "Active: {0}",
+      "ja": "有効: {0}"
+    },
+    {
       "id": "asset-text:resources.assets:57669:1300:55a36235",
       "source": "Adorable, chunky cat.",
       "ja": "愛らしい、ずんぐりした猫。"
@@ -847,9 +1613,23 @@
       "ja": "赤に全賭け"
     },
     {
-      "id": "configured-source:0aca476a",
+      "id": "derived-template:ffb704cf:4a6c2fb3:0aca476a",
       "source": "All on Red (Challenge)",
-      "ja": "赤に全賭け（チャレンジ）"
+      "ja": "赤に全賭け（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57514,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:66105:88:c1cf922b",
@@ -877,6 +1657,11 @@
       "ja": "天使のリール"
     },
     {
+      "id": "dll-text:GameSettingsManager:CreateFieldForType:8996c978",
+      "source": "AnimationCurve (read-only)",
+      "ja": "AnimationCurve（読み取り専用）"
+    },
+    {
       "id": "asset-text:resources.assets:57560:76:e7a86010",
       "source": "Anisotropic Filtering",
       "ja": "異方性フィルタリング"
@@ -892,6 +1677,11 @@
         "stringOffset": 72,
         "type": "MonoBehaviour"
       }
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:ef567781",
+      "source": "Apply Random Cosmetic",
+      "ja": "ランダムなコスメを適用"
     },
     {
       "id": "asset-text:level1:212:88:522322e3",
@@ -972,6 +1762,11 @@
       "ja": "戻る"
     },
     {
+      "id": "dll-text:NewConsole:ShowCameramanMenu:c2954bc2",
+      "source": "Back",
+      "ja": "戻る"
+    },
+    {
       "id": "asset-text:resources.assets:65939:88:4b7a788b",
       "source": "Balance",
       "ja": "残高"
@@ -980,6 +1775,25 @@
       "id": "asset-text:resources.assets:57549:44:89f8a9e3",
       "source": "Ball in Motion",
       "ja": "動いているボール"
+    },
+    {
+      "id": "derived-template:ffb704cf:29454748:e134c8df",
+      "source": "Ball in Motion (Challenge)",
+      "ja": "動いているボール（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57549,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:57284:28:434bac93",
@@ -1249,19 +2063,14 @@
       "ja": "合計ベット 0/{0}"
     },
     {
-      "id": "asset-text:resources.assets:57508:76:abfd8f19",
-      "source": "Bet a total of [minAmount] across all games",
-      "ja": "全ゲーム合計で[minAmount]をベットする"
-    },
-    {
       "id": "asset-text:resources.assets:57518:76:f7287395",
       "source": "Bet a total of [minAmount] across all games.",
       "ja": "全ゲーム合計で[minAmount]をベットする"
     },
     {
-      "id": "derived-variant:6f89477e:66bc7251",
+      "id": "configured-source:66bc7251",
       "source": "Bet a total of {0} across all games",
-      "ja": "全ゲームで合計{0}をベットする",
+      "ja": "全ゲーム合計で{0}をベットする",
       "context": {
         "file": "resources.assets",
         "pathId": 60845,
@@ -1271,19 +2080,9 @@
       }
     },
     {
-      "id": "asset-text:resources.assets:60845:88:77a40d1f",
-      "source": "Bet a total of $220 across all games",
-      "ja": "全ゲーム合計で$220をベットする"
-    },
-    {
-      "id": "asset-text:resources.assets:57514:72:0daee9f6",
-      "source": "Bet at least [minAmount] on roulette and profit",
-      "ja": "ルーレットで[minAmount]以上ベットして黒字にする"
-    },
-    {
       "id": "configured-source:79240a0a",
       "source": "Bet at least {0} on roulette and profit",
-      "ja": "ルーレットで最低{0}ベットして利益を出す",
+      "ja": "ルーレットで{0}以上ベットして黒字にする",
       "context": {
         "method": "CreateRebindEntry",
         "type": "SettingsLayoutRuntimeUI"
@@ -1308,6 +2107,25 @@
       "id": "asset-text:resources.assets:57508:48:8dea670e",
       "source": "Big Spender",
       "ja": "大金使い"
+    },
+    {
+      "id": "derived-template:ffb704cf:2d422872:c6c6d8d2",
+      "source": "Big Spender (Challenge)",
+      "ja": "大金使い（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57508,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:57508:28:080184ac",
@@ -1510,6 +2328,11 @@
       "ja": "バフ必須"
     },
     {
+      "id": "dll-text:BugReportFormUI:OnSubmit:af69f84b",
+      "source": "Bug report client not configured.",
+      "ja": "バグ報告クライアントが未設定です。"
+    },
+    {
       "id": "asset-text:resources.assets:57681:68:79503fd9",
       "source": "Bungee",
       "ja": "バンジー"
@@ -1532,6 +2355,11 @@
     {
       "id": "asset-text:level12:14927:88:ea8af88b",
       "source": "BUY",
+      "ja": "購入"
+    },
+    {
+      "id": "dll-text:BodyShreddingMachine:UserCode_RpcToggleLever__Boolean:cada780b",
+      "source": "Buy",
       "ja": "購入"
     },
     {
@@ -1621,6 +2449,16 @@
       "id": "asset-text:resources.assets:57563:48:95e1402f",
       "source": "cameraBobbing",
       "ja": "カメラボビング"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMainMenu:e4878f6d",
+      "source": "Cameraman: OFF",
+      "ja": "カメラマン: OFF"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMainMenu:5f98d751",
+      "source": "Cameraman: ON",
+      "ja": "カメラマン: ON"
     },
     {
       "id": "asset-text:resources.assets:57564:56:6e8308fb",
@@ -1727,6 +2565,11 @@
       "ja": "チャレンジ"
     },
     {
+      "id": "dll-text:NewConsole:ShowMainMenu:a324b657",
+      "source": "Challenges",
+      "ja": "チャレンジ"
+    },
+    {
       "id": "asset-text:resources.assets:65375:88:729d01bd",
       "source": "change",
       "ja": "変更"
@@ -1779,9 +2622,33 @@
       "ja": "クリーンフォール"
     },
     {
+      "id": "derived-template:ffb704cf:09c1cb29:c6b1ac8b",
+      "source": "Clean Fall (Challenge)",
+      "ja": "クリーンフォール（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57526,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:58064:336:04a57fc2",
       "source": "Clear",
       "ja": "クリア"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowChallengesMenu:7c308239",
+      "source": "Clear All Challenges",
+      "ja": "すべてのチャレンジをクリア"
     },
     {
       "id": "asset-text:sharedassets0.assets:64:2876:023a1a0f",
@@ -1804,6 +2671,16 @@
       "ja": "服"
     },
     {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:a3544a98",
+      "source": "Cloud Save: Available",
+      "ja": "クラウドセーブ: 利用可能"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:b1ea77db",
+      "source": "Cloud Save: None",
+      "ja": "クラウドセーブ: なし"
+    },
+    {
       "id": "asset-text:level7:10960:88:b25471ff",
       "source": "Coin Flip",
       "ja": "コイントス"
@@ -1819,6 +2696,11 @@
       "ja": "色"
     },
     {
+      "id": "dll-text:SkipUI:Awake:97cc1ae5",
+      "source": "ColorSettings",
+      "ja": "色設定"
+    },
+    {
       "id": "asset-text:resources.assets:63776:88:c1f9a242",
       "source": "COMPLETE",
       "ja": "達成"
@@ -1829,13 +2711,9 @@
       "ja": "完了"
     },
     {
-      "id": "derived-fragment:79ebe0bd:3870979c",
-      "source": "ConfirmationDialogManager not found. Deleting save without confirmation.",
-      "ja": "ConfirmationDialogManagerが見つかりません。確認なしでセーブを削除します。",
-      "context": {
-        "method": "OnDeleteClicked",
-        "type": "SaveSlotUI"
-      }
+      "id": "dll-text:NewConsole:ShowChallengesMenu:48a4e3a1",
+      "source": "Complete All Active",
+      "ja": "有効中をすべて完了"
     },
     {
       "id": "asset-text:level3:8883:88:aae0ccf9",
@@ -1846,6 +2724,11 @@
       "id": "asset-text:level3:9772:96:db89a899",
       "source": "Connect",
       "ja": "接続"
+    },
+    {
+      "id": "dll-text:DiscordConnectionButtonUI:.ctor:c4ded4a9",
+      "source": "Connect Discord",
+      "ja": "Discord に接続"
     },
     {
       "id": "asset-text:level3:9772:80:7bf69370",
@@ -1866,6 +2749,11 @@
       "id": "configured-source:8347bf3e",
       "source": "Control",
       "ja": "コントロール"
+    },
+    {
+      "id": "mapping-variant:133238a0:b5759821:c7f1dc3a",
+      "source": "Control ",
+      "ja": "操作"
     },
     {
       "id": "asset-text:resources.assets:57567:84:99aa333e",
@@ -3028,6 +3916,16 @@
       "ja": "現在の使用法はこのビルドではサポートされていません。"
     },
     {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:2181b996",
+      "source": "Customization",
+      "ja": "カスタマイズ"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowTeleportMenu:8feb977e",
+      "source": "CutsceneDebtPaid",
+      "ja": "借金返済カットシーン"
+    },
+    {
       "id": "asset-text:resources.assets:67609:68:ca0fab3c",
       "source": "Dance",
       "ja": "ダンス"
@@ -3057,7 +3955,7 @@
       "ja": "一日終了。"
     },
     {
-      "id": "configured-source:dcf3deec",
+      "id": "asset-text:resources.assets:63151:88:dcf3deec",
       "source": "day ends ın",
       "ja": "一日の終わり",
       "context": {
@@ -3123,8 +4021,13 @@
       "ja": "DEF"
     },
     {
-      "id": "dll-text:SettingsSystem.MicrophoneSettingsApplier:ApplyMicrophoneDeviceName:19dc307e",
+      "id": "configured-source:19dc307e",
       "source": "Default",
+      "ja": "デフォルト"
+    },
+    {
+      "id": "mapping-variant:133238a0:70b7b3b9:13a023fa",
+      "source": "Default ",
       "ja": "デフォルト"
     },
     {
@@ -3141,6 +4044,11 @@
       "id": "asset-text:resources.assets:57336:28:fe45d8ff",
       "source": "Deliveryman",
       "ja": "配達員"
+    },
+    {
+      "id": "dll-text:Bank:UpdateModeLabel:95f76a55",
+      "source": "Deposit",
+      "ja": "預け入れ"
     },
     {
       "id": "asset-text:resources.assets:58510:148:1f855d0d",
@@ -3190,6 +4098,16 @@
       "id": "asset-text:resources.assets:57337:28:e01f9a32",
       "source": "Digital Resurrection",
       "ja": "デジタル復活"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCameramanMenu:f95d31c1",
+      "source": "Disable Cameraman Mode",
+      "ja": "カメラマンモードを無効化"
+    },
+    {
+      "id": "dll-text:DiscordConnectionButtonUI:.ctor:5b947a88",
+      "source": "Discord Connected",
+      "ja": "Discord 接続済み"
     },
     {
       "id": "asset-text:resources.assets:57338:28:f9b9ac53",
@@ -3296,6 +4214,21 @@
       "ja": "飲む"
     },
     {
+      "id": "dll-text:StatusConditionData:GetProgressText:ec59cac4",
+      "source": "Drink buff active (✓)",
+      "ja": "ドリンクバフ有効 (✓)"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:f0b9b6f3",
+      "source": "Drink buff not allowed",
+      "ja": "ドリンクバフ禁止"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:0f706dd3",
+      "source": "Drink buff required",
+      "ja": "ドリンクバフ必須"
+    },
+    {
       "id": "asset-text:level12:14917:88:8250062f",
       "source": "Drinking",
       "ja": "飲酒"
@@ -3351,7 +4284,7 @@
       "ja": "エモートホイールモード"
     },
     {
-      "id": "dll-promoted:UpgradeEntryUI:SetUpgradeEntry:3cd22ed8",
+      "id": "dll-text:UpgradeEntryUI:SetUpgradeEntry:3cd22ed8",
       "source": "Empowers held items",
       "ja": "所持アイテムを強化",
       "context": {
@@ -3370,9 +4303,19 @@
       "ja": "有効化"
     },
     {
+      "id": "dll-text:NewConsole:ShowCameramanMenu:6dc4dc4e",
+      "source": "Enable Cameraman Mode",
+      "ja": "カメラマンモードを有効化"
+    },
+    {
       "id": "asset-text:resources.assets:60473:144:6373f31b",
       "source": "Enable Logging",
       "ja": "ログを有効化"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:c5c31289",
+      "source": "EnableFloors",
+      "ja": "階層を有効化"
     },
     {
       "id": "asset-text:level3:8847:88:88929276",
@@ -3414,6 +4357,11 @@
       }
     },
     {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:8c5631d0",
+      "source": "ERROR: CosmeticsUnlockManager not found!",
+      "ja": "エラー: CosmeticsUnlockManager が見つかりません！"
+    },
+    {
       "id": "asset-text:level9:15455:88:51bc2351",
       "source": "Even",
       "ja": "偶数"
@@ -3424,9 +4372,9 @@
       "ja": "目"
     },
     {
-      "id": "derived-variant:ab4a3971:6ab34792",
-      "source": "Eye\n<color=yellow>7 Ticket</color>\nMouth\n<color=yellow>5 Ticket</color>\nBody\n<color=yellow>10 Ticket</color>",
-      "ja": "目\n<color=yellow>チケット7枚</color>\n口\n<color=yellow>チケット5枚</color>\n体\n<color=yellow>チケット10枚</color>"
+      "id": "dll-text:BodyShreddingMachine:UserCode_RpcSetPrices__Int32__Int32__Int32:1d506aea",
+      "source": "Eye <color=yellow>{0} Ticket</color> Mouth <color=yellow>{1} Ticket</color> Body <color=yellow>{2} Ticket</color>",
+      "ja": "目\n<color=yellow>チケット{0}枚</color>\n口\n<color=yellow>チケット{1}枚</color>\n体\n<color=yellow>チケット{2}枚</color>"
     },
     {
       "id": "asset-text:resources.assets:63063:88:36e21672",
@@ -3457,6 +4405,16 @@
       "id": "asset-text:resources.assets:67392:808:5c438d2d",
       "source": "FAIL",
       "ja": "失敗"
+    },
+    {
+      "id": "dll-text:BugReportFormUI:<OnSubmit>b__25_0:5b472700",
+      "source": "Failed: {0}",
+      "ja": "失敗: {0}"
+    },
+    {
+      "id": "dll-text:BugReportFormUI:<OnSubmit>b__25_0:1be4547a",
+      "source": "Failed: Unknown error",
+      "ja": "失敗: 不明なエラー"
     },
     {
       "id": "asset-text:resources.assets:57344:28:d3175ed1",
@@ -3507,6 +4465,25 @@
       "id": "asset-text:resources.assets:57541:48:7625f59e",
       "source": "Flameproof",
       "ja": "耐火"
+    },
+    {
+      "id": "derived-template:ffb704cf:293a658c:776ec622",
+      "source": "Flameproof (Challenge)",
+      "ja": "耐火（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57541,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:61098:68:56ffedef",
@@ -3564,6 +4541,11 @@
       "ja": "4階ボタン"
     },
     {
+      "id": "dll-text:Poker:GetHandDescription:58b1033d",
+      "source": "Flush",
+      "ja": "フラッシュ"
+    },
+    {
       "id": "asset-text:level3:8816:88:a759b384",
       "source": "Follow Us",
       "ja": "公式リンク"
@@ -3572,6 +4554,16 @@
       "id": "asset-text:level13:210:88:16e61adf",
       "source": "Follow US!",
       "ja": "公式リンク！"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowTeleportMenu:15a2f104",
+      "source": "FollowUs",
+      "ja": "フォロー"
+    },
+    {
+      "id": "dll-text:Poker:GetHandDescription:0fdcd595",
+      "source": "Four of a Kind",
+      "ja": "フォーカード"
     },
     {
       "id": "asset-text:resources.assets:57572:28:f3cda0fc",
@@ -3597,6 +4589,11 @@
       "id": "asset-text:level3:8811:88:92c433fa",
       "source": "FRIENDS",
       "ja": "フレンド"
+    },
+    {
+      "id": "dll-text:Poker:GetHandDescription:06c4afc8",
+      "source": "Full House",
+      "ja": "フルハウス"
     },
     {
       "id": "asset-text:resources.assets:57570:68:3d2aca78",
@@ -3658,6 +4655,16 @@
       "ja": "ギャンブル"
     },
     {
+      "id": "dll-text:NewConsole:ShowTeleportMenu:c2762327",
+      "source": "Game",
+      "ja": "ゲーム"
+    },
+    {
+      "id": "dll-text:GameOverUI/<GameOverRoutine>d__37:MoveNext:b3d872e2",
+      "source": "Game Complete",
+      "ja": "ゲーム完了"
+    },
+    {
       "id": "asset-text:resources.assets:66987:88:73cbe046",
       "source": "Game Name",
       "ja": "ゲーム名"
@@ -3665,6 +4672,16 @@
     {
       "id": "asset-text:resources.assets:63078:88:da17c1ef",
       "source": "GAME OVER",
+      "ja": "ゲームオーバー"
+    },
+    {
+      "id": "dll-text:GameOverUI/<GameOverRoutine>d__37:MoveNext:31d5296f",
+      "source": "Game Over",
+      "ja": "ゲームオーバー"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:89fec41d",
+      "source": "GameOver",
       "ja": "ゲームオーバー"
     },
     {
@@ -3715,6 +4732,66 @@
       "ja": "ストリートクラップスの初回ロールで7か11を出す"
     },
     {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:1f9852cd",
+      "source": "Get Flush",
+      "ja": "フラッシュを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:20550a2e",
+      "source": "Get Flush and win",
+      "ja": "フラッシュを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:58ffe3eb",
+      "source": "Get Flush without locking cards",
+      "ja": "カードをロックせずにフラッシュを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:5f5a3a28",
+      "source": "Get Flush without locking cards and win",
+      "ja": "カードをロックせずにフラッシュを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:0a592e85",
+      "source": "Get Four of a Kind",
+      "ja": "フォーカードを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:a9eccc36",
+      "source": "Get Four of a Kind and win",
+      "ja": "フォーカードを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:4188b303",
+      "source": "Get Four of a Kind without locking cards",
+      "ja": "カードをロックせずにフォーカードを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:db3a1190",
+      "source": "Get Four of a Kind without locking cards and win",
+      "ja": "カードをロックせずにフォーカードを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:cde20418",
+      "source": "Get Full House",
+      "ja": "フルハウスを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:16811363",
+      "source": "Get Full House and win",
+      "ja": "フルハウスを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:0b19722e",
+      "source": "Get Full House without locking cards",
+      "ja": "カードをロックせずにフルハウスを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:710bb17d",
+      "source": "Get Full House without locking cards and win",
+      "ja": "カードをロックせずにフルハウスを出して勝つ"
+    },
+    {
       "id": "asset-text:level3:8866:88:f47b356e",
       "source": "GET HELP (GAMBLE HOTLINE)",
       "ja": "助けを呼ぶ（ギャンブル相談窓口）"
@@ -3723,6 +4800,26 @@
       "id": "asset-text:level6:51755:88:8dc502ca",
       "source": "GET IN!!!!",
       "ja": "乗れ!!!!"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:c6ffc481",
+      "source": "Get Pair",
+      "ja": "ペアを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:0c562042",
+      "source": "Get Pair and win",
+      "ja": "ペアを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:7b98373f",
+      "source": "Get Pair without locking cards",
+      "ja": "カードをロックせずにペアを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:53b8992c",
+      "source": "Get Pair without locking cards and win",
+      "ja": "カードをロックせずにペアを出して勝つ"
     },
     {
       "id": "dll-text:PokerHandConditionData:GetProgressText:0bede0e9",
@@ -3745,6 +4842,86 @@
       "ja": "カードをロックせずにランク{0}を出して勝つ"
     },
     {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:d4ffff17",
+      "source": "Get Straight",
+      "ja": "ストレートを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:a18f2094",
+      "source": "Get Straight and win",
+      "ja": "ストレートを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:fdf787ad",
+      "source": "Get Straight Flush",
+      "ja": "ストレートフラッシュを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:31ed928e",
+      "source": "Get Straight Flush and win",
+      "ja": "ストレートフラッシュを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:f40f6c4b",
+      "source": "Get Straight Flush without locking cards",
+      "ja": "カードをロックせずにストレートフラッシュを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:65396908",
+      "source": "Get Straight Flush without locking cards and win",
+      "ja": "カードをロックせずにストレートフラッシュを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:b549738d",
+      "source": "Get Straight without locking cards",
+      "ja": "カードをロックせずにストレートを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:961e8aee",
+      "source": "Get Straight without locking cards and win",
+      "ja": "カードをロックせずにストレートを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:1e2f38ab",
+      "source": "Get Three of a Kind",
+      "ja": "スリーカードを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:f2355ce8",
+      "source": "Get Three of a Kind and win",
+      "ja": "スリーカードを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:7a05c7c1",
+      "source": "Get Three of a Kind without locking cards",
+      "ja": "カードをロックせずにスリーカードを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:cd2df482",
+      "source": "Get Three of a Kind without locking cards and win",
+      "ja": "カードをロックせずにスリーカードを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:d19f994b",
+      "source": "Get Two Pair",
+      "ja": "ツーペアを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:82823608",
+      "source": "Get Two Pair and win",
+      "ja": "ツーペアを出して勝つ"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:500890e1",
+      "source": "Get Two Pair without locking cards",
+      "ja": "カードをロックせずにツーペアを出す"
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:4c598122",
+      "source": "Get Two Pair without locking cards and win",
+      "ja": "カードをロックせずにツーペアを出して勝つ"
+    },
+    {
       "id": "asset-text:resources.assets:58611:148:be02d259",
       "source": "GHI",
       "ja": "GHI"
@@ -3762,7 +4939,7 @@
       }
     },
     {
-      "id": "dll-promoted:UpgradeEntryUI:SetUpgradeEntry:844a8df0",
+      "id": "dll-text:UpgradeEntryUI:SetUpgradeEntry:844a8df0",
       "source": "Gives a chance to earn ticket on win",
       "ja": "勝つとチケット獲得",
       "context": {
@@ -3840,6 +5017,11 @@
       "ja": "ゴールデンチップ"
     },
     {
+      "id": "dll-text:Keypad:SetGoldenChip:7ed76505",
+      "source": "Golden Chip!",
+      "ja": "ゴールデンチップ！"
+    },
+    {
       "id": "asset-text:resources.assets:57631:28:d935167e",
       "source": "GoldenChip",
       "ja": "ゴールデンチップ"
@@ -3848,6 +5030,11 @@
       "id": "asset-text:resources.assets:57355:28:5f28ce59",
       "source": "Gorey",
       "ja": "ゴーリー"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:5f3377e7",
+      "source": "Graph",
+      "ja": "グラフ"
     },
     {
       "id": "asset-text:level3:8829:88:b62b9fa8",
@@ -4090,7 +5277,7 @@
       "ja": "ヘッドフォン2"
     },
     {
-      "id": "configured-source:c490a657",
+      "id": "asset-text:level3:8809:88:c490a657",
       "source": "heads or taıls?",
       "ja": "表か裏か？"
     },
@@ -4115,6 +5302,16 @@
       "ja": "隠れる"
     },
     {
+      "id": "dll-text:NewConsole:ShowCameramanMenu:24659564",
+      "source": "Hide Camera Canvas",
+      "ja": "カメラキャンバスを非表示"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCameramanMenu:b32b9cf6",
+      "source": "Hide Player",
+      "ja": "プレイヤーを非表示"
+    },
+    {
       "id": "asset-text:resources.assets:57597:72:be0a061d",
       "source": "High",
       "ja": "高"
@@ -4130,9 +5327,47 @@
       "ja": "ハイリスクウェッジ"
     },
     {
+      "id": "derived-template:ffb704cf:14632ba9:9c9a17dc",
+      "source": "High Risk Wedge (Challenge)",
+      "ja": "ハイリスクウェッジ（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57547,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57512:48:515b796f",
       "source": "High Roller",
       "ja": "ハイローラー"
+    },
+    {
+      "id": "derived-template:ffb704cf:802be376:f61f83ab",
+      "source": "High Roller (Challenge)",
+      "ja": "ハイローラー（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57512,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:57512:28:1141f411",
@@ -4188,6 +5423,11 @@
       "id": "asset-text:resources.assets:59861:72:27d13aa6",
       "source": "Hold [E] to Interact",
       "ja": "[E]長押しで操作"
+    },
+    {
+      "id": "dll-text:TooltipKeySetup:TestTooltipSystem:07d4024e",
+      "source": "hold [E] to pick up",
+      "ja": "[E]長押しで拾う"
     },
     {
       "id": "asset-text:level9:15678:72:8b368295",
@@ -4255,6 +5495,25 @@
       "ja": "ハウスブレーカー"
     },
     {
+      "id": "derived-template:ffb704cf:43d6348f:26badb8f",
+      "source": "House Breaker (Challenge)",
+      "ja": "ハウスブレーカー（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57538,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57682:1456:d302c0bc",
       "source": "Icon_Copy",
       "ja": "アイコン_コピー"
@@ -4278,6 +5537,21 @@
       "id": "asset-text:level3:9364:2848:590ca79a",
       "source": "Image",
       "ja": "画像"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:c749427a",
+      "source": "Immunity buff active (✓)",
+      "ja": "耐性バフ有効 (✓)"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:e1eda079",
+      "source": "Immunity buff not allowed",
+      "ja": "耐性バフ禁止"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:c4e8739d",
+      "source": "Immunity buff required",
+      "ja": "耐性バフ必須"
     },
     {
       "id": "asset-text:resources.assets:57669:832:5cf2bd9e",
@@ -4326,7 +5600,7 @@
       "ja": "地雷を増やす"
     },
     {
-      "id": "dll-promoted:UpgradeEntryUI:SetUpgradeEntry:915dda1c",
+      "id": "dll-text:UpgradeEntryUI:SetUpgradeEntry:915dda1c",
       "source": "Increases profit",
       "ja": "利益を増加",
       "context": {
@@ -4443,9 +5717,38 @@
       "ja": "ジャビンボタン"
     },
     {
+      "id": "dll-text:Baccarat:GetRankName:953363ba",
+      "source": "Jack",
+      "ja": "ジャック"
+    },
+    {
       "id": "asset-text:resources.assets:57515:44:8c18dcdd",
       "source": "Jackpot Hunter",
       "ja": "ジャックポットハンター"
+    },
+    {
+      "id": "derived-template:ffb704cf:9114a84f:9c8aec7d",
+      "source": "Jackpot Hunter (Challenge)",
+      "ja": "ジャックポットハンター（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57515,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
+      "id": "dll-text:Slots:UserCode_RpcMultiplierAnimation__Boolean__Single:c98e6d8a",
+      "source": "Jackpot! ${0}",
+      "ja": "ジャックポット！ ${0}"
     },
     {
       "id": "asset-text:resources.assets:57402:28:682c044a",
@@ -4533,6 +5836,25 @@
       "ja": "回し続けろ"
     },
     {
+      "id": "derived-template:ffb704cf:ccaff8fd:46189e01",
+      "source": "Keep It Spinning (Challenge)",
+      "ja": "回し続けろ（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57536,
+        "classId": 114,
+        "stringOffset": 52,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:level9:15319:88:444fd7b2",
       "source": "Keno",
       "ja": "キノ"
@@ -4553,14 +5875,14 @@
       "ja": "キーボード&マウス"
     },
     {
+      "id": "dll-text:Baccarat:GetRankName:40f50df6",
+      "source": "King",
+      "ja": "キング"
+    },
+    {
       "id": "asset-text:level10:2934:88:a7dba9f9",
       "source": "Kiwick Studios (Art Support)",
       "ja": "Kiwick Studios (アートサポート)"
-    },
-    {
-      "id": "asset-text:resources.assets:57717:1224:9eccf29d",
-      "source": "Label",
-      "ja": "ラベル"
     },
     {
       "id": "asset-text:resources.assets:57413:52:4b886e7e",
@@ -4625,9 +5947,24 @@
       "fontScale": 0.5
     },
     {
+      "id": "dll-text:PublicLobbyListUI:AddEntry:e21198df",
+      "source": "Lobby {0} ({1})",
+      "ja": "ロビー {0} ({1})"
+    },
+    {
+      "id": "dll-text:PublicLobbyListUI:AddEntry:0b31b60e",
+      "source": "Lobby {0} ({1}/{2})",
+      "ja": "ロビー {0} ({1}/{2})"
+    },
+    {
       "id": "asset-text:level5:37655:88:7899971d",
       "source": "Lobby Button",
       "ja": "ロビーボタン"
+    },
+    {
+      "id": "dll-text:GoOnlineClient:OnLobbyCreated:934209bb",
+      "source": "Lobby creation failed: {0}",
+      "ja": "ロビー作成に失敗: {0}"
     },
     {
       "id": "asset-text:resources.assets:57580:60:37677c26",
@@ -4665,6 +6002,11 @@
       "ja": "視点操作"
     },
     {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:53db0d98",
+      "source": "Lose",
+      "ja": "敗北"
+    },
+    {
       "id": "asset-text:resources.assets:57531:80:2af73231",
       "source": "Lose 4 times in a row with at least [minAmount] on dragon tower.",
       "ja": "ドラゴンタワーで[minAmount]以上ベットして4連敗する"
@@ -4700,9 +6042,47 @@
       "ja": "ラッキーロール"
     },
     {
+      "id": "derived-template:ffb704cf:695e6b0b:eaf2dfb6",
+      "source": "Lucky Roll (Challenge)",
+      "ja": "ラッキーロール（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57511,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57513:48:b627a76f",
       "source": "Lucky Streak",
       "ja": "ラッキーストリーク"
+    },
+    {
+      "id": "derived-template:ffb704cf:83182777:bd5451ab",
+      "source": "Lucky Streak (Challenge)",
+      "ja": "ラッキーストリーク（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57513,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:level1:248:188:86231aa8",
@@ -4745,6 +6125,25 @@
       "ja": "勝つ印つき"
     },
     {
+      "id": "derived-template:ffb704cf:c7fd79b9:a7f0b5a4",
+      "source": "Marked to Win (Challenge)",
+      "ja": "勝つ印つき（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57544,
+        "classId": 114,
+        "stringOffset": 40,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57656:176:a116b053",
       "source": "Master",
       "ja": "マスター"
@@ -4758,6 +6157,16 @@
       "id": "asset-text:resources.assets:57581:44:e35d330d",
       "source": "masterVolume",
       "ja": "マスターボリューム"
+    },
+    {
+      "id": "dll-text:Keypad:AppendDigit:707ddd8a",
+      "source": "Max Bet: {0}",
+      "ja": "最大ベット: {0}"
+    },
+    {
+      "id": "dll-text:Keypad:ApplyInput:b8952af7",
+      "source": "Max: {0}",
+      "ja": "最高: {0}"
     },
     {
       "id": "asset-text:resources.assets:57582:44:48288458",
@@ -4778,6 +6187,21 @@
       "id": "asset-text:resources.assets:57597:80:09be5f96",
       "source": "Medium",
       "ja": "中"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:b184e13c",
+      "source": "Melody buff active (✓)",
+      "ja": "メロディーバフ有効 (✓)"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:ac2bf69b",
+      "source": "Melody buff not allowed",
+      "ja": "メロディーバフ禁止"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:1554fdcb",
+      "source": "Melody buff required",
+      "ja": "メロディーバフ必須"
     },
     {
       "id": "asset-text:resources.assets:58172:148:c1b6a115",
@@ -4803,6 +6227,11 @@
       "id": "asset-text:resources.assets:57583:48:dc344807",
       "source": "microphoneDevice",
       "ja": "マイクデバイス"
+    },
+    {
+      "id": "asset-text:resources.assets:57751:88:d1436de4",
+      "source": "Microphonee",
+      "ja": "マイク"
     },
     {
       "id": "configured-source:5e166f9c",
@@ -4845,7 +6274,12 @@
       "fontWeight": "bold"
     },
     {
-      "id": "derived-variant:53284eb2:27504e70",
+      "id": "dll-text:Keypad:ApplyInput:d57f3909",
+      "source": "Min: {0}",
+      "ja": "最低: {0}"
+    },
+    {
+      "id": "configured-source:27504e70",
       "source": "Min: {0} Max: {1}",
       "ja": "最低 {0}\n最高 {1}",
       "context": {
@@ -5119,6 +6553,25 @@
       "ja": "ナチュラルローラー"
     },
     {
+      "id": "derived-template:ffb704cf:52a60f43:1a1459a2",
+      "source": "Natural Roller (Challenge)",
+      "ja": "ナチュラルローラー（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57528,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:61443:88:cc25a532",
       "source": "Neck",
       "ja": "ネック"
@@ -5164,6 +6617,25 @@
       "ja": "バストなしラン"
     },
     {
+      "id": "derived-template:ffb704cf:3e427687:c3b685c1",
+      "source": "No Bust Run (Challenge)",
+      "ja": "バストなしラン（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57509,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "dll-text:Challenge:GetProgressText:a1b03b78",
       "source": "No conditions",
       "ja": "条件なし"
@@ -5174,14 +6646,86 @@
       "ja": "爆発なし"
     },
     {
+      "id": "derived-template:ffb704cf:318689b4:622f6530",
+      "source": "No Detonations (Challenge)",
+      "ja": "爆発なし（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57546,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:57c980bd",
+      "source": "No Drink buff (✓)",
+      "ja": "ドリンクバフなし (✓)"
+    },
+    {
       "id": "asset-text:resources.assets:57540:48:395546f4",
       "source": "No Hesitation",
       "ja": "ためらいなし"
     },
     {
+      "id": "derived-template:ffb704cf:37ff2242:7b2dd15c",
+      "source": "No Hesitation (Challenge)",
+      "ja": "ためらいなし（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57540,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:2c266439",
+      "source": "No Immunity buff (✓)",
+      "ja": "耐性バフなし (✓)"
+    },
+    {
+      "id": "dll-text:StatusConditionData:GetProgressText:ea3a2b47",
+      "source": "No Melody buff (✓)",
+      "ja": "メロディーバフなし (✓)"
+    },
+    {
       "id": "asset-text:resources.assets:57530:40:7d0516a3",
       "source": "No Safe Rolls",
       "ja": "セーフロールなし"
+    },
+    {
+      "id": "derived-template:ffb704cf:ff924f64:6b74c81f",
+      "source": "No Safe Rolls (Challenge)",
+      "ja": "セーフロールなし（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57530,
+        "classId": 114,
+        "stringOffset": 40,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "derived-fragment:5f2ca1dc:6723026d",
@@ -5191,6 +6735,11 @@
         "method": "PopulateSlots",
         "type": "SaveSlotManager"
       }
+    },
+    {
+      "id": "dll-text:GameSettingsManager:UpdateSettingsList:cd06a769",
+      "source": "No settings assigned for this tab.",
+      "ja": "このタブには設定が割り当てられていません。"
     },
     {
       "id": "dll-text:SaveSlotManager:OpenSaveSelection:b5e59d3c",
@@ -5203,9 +6752,24 @@
       "ja": "いいえ、残る"
     },
     {
+      "id": "dll-text:NewConsole:ShowMainMenu:3aa1dba3",
+      "source": "Noclip: OFF",
+      "ja": "壁抜け: OFF"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMainMenu:0cab3b5f",
+      "source": "Noclip: ON",
+      "ja": "壁抜け: ON"
+    },
+    {
       "id": "dll-text:StatusConditionData:GetProgressText:bb4fe1c2",
       "source": "not allowed",
       "ja": "許可されていません"
+    },
+    {
+      "id": "dll-text:Keypad:ApplyInput:2b15d42a",
+      "source": "Not Enough Money",
+      "ja": "所持金が足りません"
     },
     {
       "id": "dll-text:GameTypeConditionData:GetProgressText:74ebc5b8",
@@ -5221,6 +6785,11 @@
       "id": "asset-text:resources.assets:57434:28:80fb93d3",
       "source": "Npc Floor3 Glasses",
       "ja": "3階NPCのメガネ"
+    },
+    {
+      "id": "dll-text:GameSettingsManager:CreateFieldForType:77074ba4",
+      "source": "null",
+      "ja": "なし"
     },
     {
       "id": "asset-text:resources.assets:57435:28:e17f4992",
@@ -5255,6 +6824,11 @@
         "method": "CreateRebindEntry",
         "type": "SettingsLayoutRuntimeUI"
       }
+    },
+    {
+      "id": "dll-text:Poker:GetHandDescription:e63d9739",
+      "source": "One Pair",
+      "ja": "ワンペア"
     },
     {
       "id": "asset-text:resources.assets:57910:336:538b10e9",
@@ -5339,6 +6913,11 @@
       "ja": "梱包箱"
     },
     {
+      "id": "dll-text:PokerHandConditionData:GetHandRankName:e323f1d1",
+      "source": "Pair",
+      "ja": "ペア"
+    },
+    {
       "id": "asset-text:level7:10951:88:c35b0729",
       "source": "Pay",
       "ja": "支払う"
@@ -5352,6 +6931,11 @@
       "id": "configured-source:ab4c3c19",
       "source": "Pay\n",
       "ja": "支払う\n"
+    },
+    {
+      "id": "mapping-variant:133238a0:4b17fa53:e202cdbb",
+      "source": "Pay\n ",
+      "ja": "支払う"
     },
     {
       "id": "configured-source:18c9b827",
@@ -5414,6 +6998,25 @@
       "id": "asset-text:resources.assets:57534:48:7f6c4f36",
       "source": "Perfect Sweep",
       "ja": "パーフェクトスイープ"
+    },
+    {
+      "id": "derived-template:ffb704cf:dff6eae6:0cd4deda",
+      "source": "Perfect Sweep (Challenge)",
+      "ja": "パーフェクトスイープ（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57534,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:level4:18880:88:79c28a3f",
@@ -5516,6 +7119,11 @@
       "ja": "プレイヤー"
     },
     {
+      "id": "dll-text:ProfitLineGraph3D:UpdatePlayerNameText:d535329a",
+      "source": "Player {0}",
+      "ja": "プレイヤー {0}"
+    },
+    {
       "id": "asset-text:level9:15725:88:ca10f5d4",
       "source": "Player Button",
       "ja": "プレイヤーにベット"
@@ -5561,6 +7169,11 @@
       "ja": "プレイテスター"
     },
     {
+      "id": "dll-text:BugReportFormUI:OnSubmit:199ffdd6",
+      "source": "Please enter a title.",
+      "ja": "件名を入力してください。"
+    },
+    {
       "id": "asset-text:level9:15417:88:a0e22b24",
       "source": "Plinko",
       "ja": "プリンコ"
@@ -5579,6 +7192,25 @@
       "id": "asset-text:resources.assets:57535:44:1f8cd107",
       "source": "Poker Face",
       "ja": "ポーカーフェイス"
+    },
+    {
+      "id": "derived-template:ffb704cf:3f2d5958:d87f47e3",
+      "source": "Poker Face (Challenge)",
+      "ja": "ポーカーフェイス（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57535,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:66322:100:3db32d07",
@@ -5600,7 +7232,7 @@
       }
     },
     {
-      "id": "derived-variant:633c068c:094c359c",
+      "id": "mapping-variant:133238a0:633c068c:094c359c",
       "source": "Press ",
       "ja": "押す",
       "context": {
@@ -5684,6 +7316,11 @@
       "ja": "ハイローで合計[minAmount]の利益を出す"
     },
     {
+      "id": "dll-text:NewConsole:ShowTeleportMenu:1a36a166",
+      "source": "Progress",
+      "ja": "進捗"
+    },
+    {
       "id": "asset-text:resources.assets:57436:48:8ca47901",
       "source": "Propeller Hat",
       "ja": "プロペラ帽"
@@ -5719,7 +7356,7 @@
       "ja": "公開ロビー"
     },
     {
-      "id": "configured-source:9acb9fb3",
+      "id": "asset-text:level10:2937:88:9acb9fb3",
       "source": "publıshed by tenstack",
       "ja": "TENSTACK 提供",
       "context": {
@@ -5751,6 +7388,11 @@
       "id": "asset-text:resources.assets:57597:56:cb7fbec6",
       "source": "Quality",
       "ja": "画質"
+    },
+    {
+      "id": "dll-text:Baccarat:GetRankName:b572b269",
+      "source": "Queen",
+      "ja": "クイーン"
     },
     {
       "id": "asset-text:level3:8869:88:84d9bc36",
@@ -5837,7 +7479,7 @@
       "ja": "レッドチーム"
     },
     {
-      "id": "dll-promoted:UpgradeEntryUI:SetUpgradeEntry:4c55d303",
+      "id": "dll-text:UpgradeEntryUI:SetUpgradeEntry:4c55d303",
       "source": "Reduces loss",
       "ja": "損失を軽減",
       "context": {
@@ -5866,6 +7508,16 @@
       "ja": "バグを報告する"
     },
     {
+      "id": "dll-text:BugReportFormUI:<OnSubmit>b__25_0:7c567658",
+      "source": "Report submitted.",
+      "ja": "報告を送信しました。"
+    },
+    {
+      "id": "dll-text:BugReportFormUI:<OnSubmit>b__25_0:a016bd76",
+      "source": "Report submitted. Card: {0}",
+      "ja": "報告を送信しました。カード: {0}"
+    },
+    {
       "id": "dll-text:StatusConditionData:GetProgressText:848c8620",
       "source": "required",
       "ja": "必須"
@@ -5873,6 +7525,11 @@
     {
       "id": "asset-text:level12:14932:88:4d39c0cb",
       "source": "Reroll",
+      "ja": "リロール"
+    },
+    {
+      "id": "mapping-variant:133238a0:3891f14b:7ceab1f1",
+      "source": "Reroll ",
       "ja": "リロール"
     },
     {
@@ -5917,6 +7574,11 @@
       "ja": "リセット"
     },
     {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:ab193c2e",
+      "source": "Reset All Unlocks",
+      "ja": "全アンロックをリセット"
+    },
+    {
       "id": "asset-text:level9:15464:88:62c94fcc",
       "source": "Reset Bets",
       "ja": "ベットをリセット"
@@ -5932,6 +7594,16 @@
       "ja": "リセットボタン"
     },
     {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:299aac91",
+      "source": "Reset Customization",
+      "ja": "カスタマイズをリセット"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:1c14b525",
+      "source": "Reset Player Appearance",
+      "ja": "外見をリセット"
+    },
+    {
       "id": "derived-fragment:26cb4872:6a35cbf2",
       "source": "Reset Score",
       "ja": "スコアをリセット",
@@ -5942,6 +7614,11 @@
         "stringOffset": 72,
         "type": "MonoBehaviour"
       }
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMoneyMenu:c78e825c",
+      "source": "Reset To Default",
+      "ja": "初期設定に戻す"
     },
     {
       "id": "asset-text:resources.assets:57598:56:7ec13a59",
@@ -6057,9 +7734,47 @@
       "ja": "危険な一手"
     },
     {
+      "id": "derived-template:ffb704cf:9100271f:8bfbac56",
+      "source": "Risky Move (Challenge)",
+      "ja": "危険な一手（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57510,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57521:40:a8a56f75",
       "source": "Roll the Odds",
       "ja": "オッズを転がせ"
+    },
+    {
+      "id": "derived-template:ffb704cf:ae996d66:39aa9275",
+      "source": "Roll the Odds (Challenge)",
+      "ja": "オッズを転がせ（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57521,
+        "classId": 114,
+        "stringOffset": 40,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "dll-promoted:GoOnlineClient:.ctor:c7f29e3a",
@@ -6095,6 +7810,25 @@
       "id": "asset-text:resources.assets:57539:44:39e6baf8",
       "source": "Safe Exit",
       "ja": "安全な出口"
+    },
+    {
+      "id": "derived-template:ffb704cf:a0278040:3f715a70",
+      "source": "Safe Exit (Challenge)",
+      "ja": "安全な出口（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57539,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:65923:68:a66fc571",
@@ -6166,7 +7900,7 @@
       }
     },
     {
-      "id": "dll-promoted:SaveSlotUI:PopulateSlot:b4293aad",
+      "id": "dll-text:SaveSlotUI:PopulateSlot:b4293aad",
       "source": "SELECT",
       "ja": "選択",
       "context": {
@@ -6188,6 +7922,11 @@
       "id": "asset-text:resources.assets:58562:148:e3012939",
       "source": "SEND BUG REPORT",
       "ja": "バグ報告を送信"
+    },
+    {
+      "id": "dll-text:BugReportFormUI:OnSubmit:967aa5dd",
+      "source": "Sending…",
+      "ja": "送信中…"
     },
     {
       "id": "asset-text:resources.assets:57441:28:be913aac",
@@ -6260,6 +7999,11 @@
       "id": "configured-source:f9bd04e7",
       "source": "Shift",
       "ja": "シフト"
+    },
+    {
+      "id": "mapping-variant:133238a0:f5acd47e:eb8e8545",
+      "source": "Shift ",
+      "ja": "Shift"
     },
     {
       "id": "asset-text:resources.assets:57443:28:72661c98",
@@ -6367,6 +8111,16 @@
       "ja": "ショップとアップグレード"
     },
     {
+      "id": "dll-text:NewConsole:ShowCameramanMenu:398898c5",
+      "source": "Show Camera Canvas",
+      "ja": "カメラキャンバスを表示"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCameramanMenu:4cdfba09",
+      "source": "Show Player",
+      "ja": "プレイヤーを表示"
+    },
+    {
       "id": "derived-fragment:35e2c5b3:4e93ed55",
       "source": "Shred",
       "ja": "粉砕",
@@ -6382,6 +8136,11 @@
       "id": "dll-promoted:GoOnlineClient:.ctor:cf73dd9f",
       "source": "Shuffling the deck...",
       "ja": "カードをシャッフルしています..."
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMainMenu:6f016c0f",
+      "source": "Simulate",
+      "ja": "シミュレーション"
     },
     {
       "id": "asset-text:level12:15117:36:605d4d70",
@@ -6511,6 +8270,16 @@
       "ja": "スペース"
     },
     {
+      "id": "mapping-variant:133238a0:22fb44ae:0cdabddf",
+      "source": "Space ",
+      "ja": "スペース"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowMainMenu:c6929d38",
+      "source": "Spawn",
+      "ja": "生成"
+    },
+    {
       "id": "asset-text:level10:2921:88:f8bd4e79",
       "source": "SPECIAL THANKS",
       "ja": "スペシャルサンクス"
@@ -6580,14 +8349,71 @@
       "ja": "スピンストリーク"
     },
     {
+      "id": "derived-template:ffb704cf:1b454896:7cf17b25",
+      "source": "Spin Streak (Challenge)",
+      "ja": "スピンストリーク（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57525,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57517:52:6c0368f1",
       "source": "Spin The Wheel",
       "ja": "ホイールを回せ"
     },
     {
+      "id": "derived-template:ffb704cf:adb4faf4:d3b51991",
+      "source": "Spin The Wheel (Challenge)",
+      "ja": "ホイールを回せ（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57517,
+        "classId": 114,
+        "stringOffset": 52,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57523:40:dc1a5682",
       "source": "Spot On",
       "ja": "スポットオン"
+    },
+    {
+      "id": "derived-template:ffb704cf:35a3cab5:7d1ee206",
+      "source": "Spot On (Challenge)",
+      "ja": "スポットオン（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57523,
+        "classId": 114,
+        "stringOffset": 40,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:57601:28:e943dc75",
@@ -6624,6 +8450,11 @@
       }
     },
     {
+      "id": "mapping-variant:133238a0:5a24be3e:c02f7929",
+      "source": "Stakeholder ",
+      "ja": "ステークホルダー"
+    },
+    {
       "id": "asset-text:level9:15289:88:ddb26fc3",
       "source": "STAND",
       "ja": "スタンド"
@@ -6632,6 +8463,11 @@
       "id": "asset-text:level9:16505:88:940b7aed",
       "source": "Stand Button",
       "ja": "スタンドボタン"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:0fec8e8c",
+      "source": "Stats",
+      "ja": "統計"
     },
     {
       "id": "configured-source:e69d8ab7",
@@ -6643,7 +8479,7 @@
       }
     },
     {
-      "id": "dll-promoted:GoOnlineClient:HandleSteamInitFailure:eeb0b70a",
+      "id": "dll-text:GoOnlineClient:HandleSteamInitFailure:eeb0b70a",
       "source": "Steam initialization failed! Please ensure Steam is running.",
       "ja": "Steamの初期化に失敗しました！Steamが起動していることを確認してください。",
       "context": {
@@ -6652,13 +8488,23 @@
       }
     },
     {
-      "id": "dll-promoted:GoOnlineClient:UpdateRetryUI:21b7dbc5",
+      "id": "dll-text:GoOnlineClient:UpdateRetryUI:21b7dbc5",
       "source": "Steam initialization failed. Retrying... ({0}/{1})",
       "ja": "Steamの初期化に失敗しました。再試行中... ({0}/{1})",
       "context": {
         "method": "UpdateRetryUI",
         "type": "GoOnlineClient"
       }
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:ccac500c",
+      "source": "Steam: Connected",
+      "ja": "Steam: 接続済み"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:e45d085c",
+      "source": "Steam: Offline",
+      "ja": "Steam: オフライン"
     },
     {
       "id": "asset-text:level9:15547:88:4771f92f",
@@ -6676,6 +8522,25 @@
       "ja": "ステップ・イン・ファイア"
     },
     {
+      "id": "derived-template:ffb704cf:9519482f:a6f17e35",
+      "source": "Step Into Fire (Challenge)",
+      "ja": "ステップ・イン・ファイア（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57531,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:65030:88:2e7e275a",
       "source": "Steps to reproduce",
       "ja": "再現手順"
@@ -6686,9 +8551,38 @@
       "ja": "停止"
     },
     {
+      "id": "dll-text:Poker:GetHandDescription:4f0ff167",
+      "source": "Straight",
+      "ja": "ストレート"
+    },
+    {
       "id": "asset-text:resources.assets:57548:44:cd63d535",
       "source": "Straight Down",
       "ja": "ストレートダウン"
+    },
+    {
+      "id": "derived-template:ffb704cf:02033263:a6abffb5",
+      "source": "Straight Down (Challenge)",
+      "ja": "ストレートダウン（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57548,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
+      "id": "dll-text:Poker:GetHandDescription:8f80623d",
+      "source": "Straight Flush",
+      "ja": "ストレートフラッシュ"
     },
     {
       "id": "asset-text:level9:15531:88:3d79215b",
@@ -6786,6 +8680,11 @@
       "ja": "スーツ9"
     },
     {
+      "id": "dll-text:NewConsole:ShowTeleportMenu:414eb5b3",
+      "source": "Summary",
+      "ja": "サマリー"
+    },
+    {
       "id": "asset-text:resources.assets:57482:28:b988a76a",
       "source": "Sweater Thick 1",
       "ja": "厚手セーター 1"
@@ -6878,6 +8777,16 @@
       "ja": "チームチャット"
     },
     {
+      "id": "dll-text:NewConsole:ShowMainMenu:652e66de",
+      "source": "Teleport",
+      "ja": "テレポート"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowTeleportMenu:870b5db1",
+      "source": "Teleport to {0}",
+      "ja": "{0}へテレポート"
+    },
+    {
       "id": "asset-text:level3:8867:88:0542a404",
       "source": "TENSTACK & KIWICK",
       "ja": "テンスタック＆キウィック"
@@ -6886,6 +8795,11 @@
       "id": "asset-text:level12:14909:88:1f5e4e1c",
       "source": "TenWick Plaza",
       "ja": "テンウィック プラザ"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowTeleportMenu:2ffcbe05",
+      "source": "Test",
+      "ja": "テスト"
     },
     {
       "id": "asset-text:level13:207:88:52012c26",
@@ -6910,6 +8824,11 @@
         "method": "CreateRebindEntry",
         "type": "SettingsLayoutRuntimeUI"
       }
+    },
+    {
+      "id": "dll-text:Poker:GetHandDescription:68e0231b",
+      "source": "Three of a Kind",
+      "ja": "スリーカード"
     },
     {
       "id": "asset-text:level10:2985:232:2033e7cf",
@@ -6960,11 +8879,6 @@
       "id": "asset-text:resources.assets:57486:28:ddfb4ea0",
       "source": "Timtallhatstoweringtophat 1",
       "ja": "ティム・タルハットのそびえ立つシルクハット 1"
-    },
-    {
-      "id": "asset-text:resources.assets:57695:1068:24d471a9",
-      "source": "Title",
-      "ja": "タイトル"
     },
     {
       "id": "derived-fragment:3b76be38:471fb515",
@@ -7111,6 +9025,25 @@
       "ja": "トラフィックモンスター"
     },
     {
+      "id": "derived-template:ffb704cf:ccf4920f:e3c9769c",
+      "source": "Traffic Monster (Challenge)",
+      "ja": "トラフィックモンスター（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57529,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "asset-text:resources.assets:57488:28:0c5a4332",
       "source": "Trafficcone 1",
       "ja": "トラフィックコーン 1"
@@ -7151,6 +9084,16 @@
       "ja": "TUV"
     },
     {
+      "id": "dll-text:Poker:GetHandDescription:11f3bcdb",
+      "source": "Two Pair",
+      "ja": "ツーペア"
+    },
+    {
+      "id": "dll-text:OfflineSplashCoinFlip:.ctor:a8449771",
+      "source": "Uh oh, you lost sucka.",
+      "ja": "あーあ、負けちゃったな。"
+    },
+    {
       "id": "asset-text:resources.assets:57720:1052:5c43327b",
       "source": "ui",
       "ja": "UI"
@@ -7161,7 +9104,7 @@
       "ja": "UI"
     },
     {
-      "id": "configured-source:baa97727",
+      "id": "asset-text:level3:8814:88:baa97727",
       "source": "ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence",
       "ja": "究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験"
     },
@@ -7191,6 +9134,11 @@
       "ja": "ユニコーンの角"
     },
     {
+      "id": "dll-text:LobbyMemberList:CheckAndUpdateVersionMismatch:9b759fb9",
+      "source": "unknown",
+      "ja": "不明"
+    },
+    {
       "id": "dll-text:SaveSlotUI:FormatSaveDate:e85afe0f",
       "source": "Unknown Date",
       "ja": "日付不明"
@@ -7206,6 +9154,21 @@
       "ja": "無制限"
     },
     {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:11b2b9c2",
+      "source": "Unlock All Cosmetics",
+      "ja": "すべてのコスメを解放"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:4619f65f",
+      "source": "Unlock Random Cosmetic",
+      "ja": "ランダムなコスメを解放"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCosmeticsMenu:c03aa984",
+      "source": "Unlocked: {0}/{1}",
+      "ja": "解放済み: {0}/{1}"
+    },
+    {
       "id": "asset-text:level1:213:88:d133eff1",
       "source": "Unlucky :( Closing the game now!",
       "ja": "不運… ゲームを終了します！"
@@ -7214,6 +9177,25 @@
       "id": "asset-text:resources.assets:57542:44:9b59b409",
       "source": "Unstoppable Quack",
       "ja": "止まらぬクワック"
+    },
+    {
+      "id": "derived-template:ffb704cf:69f19f4e:4db2ce29",
+      "source": "Unstoppable Quack (Challenge)",
+      "ja": "止まらぬクワック（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57542,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:66895:88:459d414e",
@@ -7261,6 +9243,11 @@
       "id": "asset-text:level3:8807:88:d3eb184c",
       "source": "VERSION NO.",
       "ja": "バージョン番号"
+    },
+    {
+      "id": "dll-text:VersionMismatchDisplay:ShowVersionMismatch:c477a7c9",
+      "source": "Version: {0}",
+      "ja": "バージョン: {0}"
     },
     {
       "id": "asset-text:level9:15578:52:80fb2d5b",
@@ -7335,6 +9322,11 @@
       "ja": "波"
     },
     {
+      "id": "dll-text:ReasonDemo:GenerateExampleOutput:3ae38823",
+      "source": "we messed up..",
+      "ja": "やらかしちゃった.."
+    },
+    {
       "id": "asset-text:level4:18587:100:f794e433",
       "source": "Wet Paint",
       "ja": "ウェットペイント"
@@ -7387,6 +9379,11 @@
         "stringOffset": 380,
         "type": "MonoBehaviour"
       }
+    },
+    {
+      "id": "dll-text:NewConsole:ShowSimulateMenu:6e8262f9",
+      "source": "Win",
+      "ja": "勝利"
     },
     {
       "id": "asset-text:resources.assets:57530:72:8d207cf7",
@@ -7544,6 +9541,25 @@
       "ja": "勝った勝った、ペンギン飯だ"
     },
     {
+      "id": "derived-template:ffb704cf:235a0fa9:1089f8a7",
+      "source": "Winner Winner Penguin Dinner (Challenge)",
+      "ja": "勝った勝った、ペンギン飯だ（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57520,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
+    },
+    {
       "id": "derived-fragment:2b0a0b1f:1dba6cb7",
       "source": "Withdraw",
       "ja": "引き出す",
@@ -7561,7 +9577,12 @@
       "ja": "カードをロックせずに"
     },
     {
-      "id": "configured-source:f19464a0",
+      "id": "asset-text:level3:8820:88:f19464a0",
+      "source": "wıth your",
+      "ja": "友達と"
+    },
+    {
+      "id": "configured-source:cc9a3580",
       "source": "wıth your ",
       "ja": "友達と "
     },
@@ -7569,6 +9590,11 @@
       "id": "asset-text:resources.assets:58650:148:c2985409",
       "source": "WXYZ",
       "ja": "WXYZ"
+    },
+    {
+      "id": "dll-text:NewConsole:ShowCountMenu:4e2ccfa3",
+      "source": "x{0}",
+      "ja": "x{0}"
     },
     {
       "id": "asset-text:sharedassets0.assets:64:1512:6f13f22f",
@@ -7589,6 +9615,25 @@
       "id": "asset-text:resources.assets:57516:48:c6df50f8",
       "source": "YARLL!!!",
       "ja": "ヤール！！！"
+    },
+    {
+      "id": "derived-template:ffb704cf:6e8f9c03:04a61070",
+      "source": "YARLL!!! (Challenge)",
+      "ja": "ヤール！！！（チャレンジ）",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 57516,
+        "classId": 114,
+        "stringOffset": 48,
+        "type": "Challenge",
+        "method": "MoveNext",
+        "field": "challengeName",
+        "serializedTypeId": 65,
+        "scriptTypeIndex": 15,
+        "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+        "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+        "rawStringIndex": 1
+      }
     },
     {
       "id": "asset-text:resources.assets:57634:64:fee528de",
@@ -7615,7 +9660,7 @@
       }
     },
     {
-      "id": "dll-promoted:SaveSlotManager:OpenSaveSelection:25c3c67b",
+      "id": "dll-text:SaveSlotManager:OpenSaveSelection:25c3c67b",
       "source": "Yes, I am",
       "ja": "はい、そうです",
       "context": {
@@ -7636,6 +9681,11 @@
       "id": "asset-text:level3:8817:88:7664011a",
       "source": "You can use DISCORD to Invite and Join Friends!",
       "ja": "DISCORDでフレンドを招待・参加できます！"
+    },
+    {
+      "id": "dll-text:OfflineSplashCoinFlip:.ctor:2ce5d7f7",
+      "source": "You win this time.",
+      "ja": "今回は君の勝ちだ。"
     },
     {
       "id": "asset-text:resources.assets:67620:1632:ea0b95ea",

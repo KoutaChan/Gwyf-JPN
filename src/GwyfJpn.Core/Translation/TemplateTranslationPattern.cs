@@ -32,6 +32,8 @@ internal sealed class TemplateTranslationPattern
         _sourceTokenKeys = sourceTokenKeys;
     }
 
+    public string Source => _entry.Source;
+
     /// <summary>
     /// Builds a matcher only for templates that contain both literal text and placeholders.
     /// Pure placeholder templates are intentionally ignored because they would match too broadly.

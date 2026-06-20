@@ -9,9 +9,6 @@ namespace GwyfJpn.Core;
 /// </summary>
 public sealed class TranslationStore
 {
-    private const string ChallengeTitleSuffix = " (Challenge)";
-    private const string ChallengeTitleSuffixJa = "（チャレンジ）";
-
     private readonly Dictionary<string, TranslationEntry> _byId = new(StringComparer.Ordinal);
     private readonly Dictionary<string, TranslationEntry> _bySource = new(StringComparer.Ordinal);
     private readonly Dictionary<string, TranslationEntry> _byNormalizedSource = new(StringComparer.Ordinal);
@@ -90,6 +87,8 @@ public sealed class TranslationStore
                 _templatePatterns.Add(templatePattern);
             }
         }
+
+        PrioritizeTemplatePatterns();
     }
 
     /// <summary>
@@ -132,11 +131,6 @@ public sealed class TranslationStore
             }
         }
 
-        if (TryReplaceChallengeTitle(source, out var challengeTitleResult))
-        {
-            return challengeTitleResult;
-        }
-
         return new ReplacementResult(source, source, false, null);
     }
 
@@ -168,11 +162,6 @@ public sealed class TranslationStore
             {
                 return true;
             }
-        }
-
-        if (IsKnownChallengeTitleOutput(value))
-        {
-            return true;
         }
 
         return false;
@@ -261,6 +250,47 @@ public sealed class TranslationStore
         return new TranslationTextStyle(entry.TextColor, entry.OutlineColor, entry.OutlineWidth, entry.FontWeight);
     }
 
+    private void PrioritizeTemplatePatterns()
+    {
+        if (_templatePatterns.Count < 2)
+        {
+            return;
+        }
+
+        var originalIndex = new Dictionary<TemplateTranslationPattern, int>();
+        for (var index = 0; index < _templatePatterns.Count; index++)
+        {
+            originalIndex[_templatePatterns[index]] = index;
+        }
+
+        _templatePatterns.Sort((left, right) =>
+        {
+            var leftNoParse = HasNoParsePrefix(left.Source);
+            var rightNoParse = HasNoParsePrefix(right.Source);
+            if (leftNoParse != rightNoParse)
+            {
+                return leftNoParse ? 1 : -1;
+            }
+
+            var leftLength = TextNormalizer.NormalizeSource(left.Source).Length;
+            var rightLength = TextNormalizer.NormalizeSource(right.Source).Length;
+            var lengthCompare = rightLength.CompareTo(leftLength);
+            if (lengthCompare != 0)
+            {
+                return lengthCompare;
+            }
+
+            return originalIndex[left].CompareTo(originalIndex[right]);
+        });
+    }
+
+    private static bool HasNoParsePrefix(string? source)
+    {
+        return (source ?? string.Empty)
+            .TrimStart()
+            .StartsWith("<noparse></noparse>", StringComparison.OrdinalIgnoreCase);
+    }
+
     private void AddKnownOutputTextStyle(string output, TranslationTextStyle textStyle)
     {
         if (string.IsNullOrEmpty(output))
@@ -272,98 +302,5 @@ public sealed class TranslationStore
         {
             _textStyleByKnownOutput.Add(output, textStyle);
         }
-    }
-
-    /// <summary>
-    /// Challenge rows show titles like "Big Spender (Challenge)". Translate the base title, then append チャレンジ.
-    /// </summary>
-    private bool TryReplaceChallengeTitle(string source, out ReplacementResult result)
-    {
-        result = new ReplacementResult(source, source, false, null);
-        var normalized = TextNormalizer.NormalizeSource(source);
-        if (string.IsNullOrEmpty(normalized) ||
-            normalized.Length <= ChallengeTitleSuffix.Length ||
-            !normalized.EndsWith("(Challenge)", StringComparison.OrdinalIgnoreCase))
-        {
-            return false;
-        }
-
-        var suffixIndex = normalized.LastIndexOf("(Challenge)", StringComparison.OrdinalIgnoreCase);
-        if (suffixIndex <= 0)
-        {
-            return false;
-        }
-
-        var baseName = normalized[..suffixIndex].TrimEnd();
-
-        if (string.IsNullOrWhiteSpace(baseName))
-        {
-            return false;
-        }
-
-        if (!TryLookupBaseTranslation(baseName, out var baseResult))
-        {
-            return false;
-        }
-
-        result = new ReplacementResult(
-            source,
-            baseResult.Output + ChallengeTitleSuffixJa,
-            true,
-            baseResult.MatchedId,
-            baseResult.FontScale,
-            baseResult.TextStyle);
-        return true;
-    }
-
-    private bool TryLookupBaseTranslation(string baseName, out ReplacementResult result)
-    {
-        result = new ReplacementResult(baseName, baseName, false, null);
-        if (_bySource.TryGetValue(baseName, out var exact))
-        {
-            result = new ReplacementResult(baseName, exact.Ja, true, exact.Id, exact.FontScale, CreateTextStyle(exact));
-            return true;
-        }
-
-        var normalized = TextNormalizer.NormalizeSource(baseName);
-        if (!string.IsNullOrEmpty(normalized) && _byNormalizedSource.TryGetValue(normalized, out var normalizedEntry))
-        {
-            result = new ReplacementResult(baseName, normalizedEntry.Ja, true, normalizedEntry.Id, normalizedEntry.FontScale, CreateTextStyle(normalizedEntry));
-            return true;
-        }
-
-        if (!string.IsNullOrEmpty(normalized) && _byNormalizedSourceIgnoreCase.TryGetValue(normalized, out var ignoreCaseEntry))
-        {
-            result = new ReplacementResult(baseName, ignoreCaseEntry.Ja, true, ignoreCaseEntry.Id, ignoreCaseEntry.FontScale, CreateTextStyle(ignoreCaseEntry));
-            return true;
-        }
-
-        foreach (var pattern in _templatePatterns)
-        {
-            if (pattern.TryReplace(baseName, out var templateResult) && templateResult.Replaced)
-            {
-                result = templateResult;
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    private bool IsKnownChallengeTitleOutput(string value)
-    {
-        if (!value.EndsWith(ChallengeTitleSuffixJa, StringComparison.Ordinal))
-        {
-            return false;
-        }
-
-        var baseOutput = value[..^ChallengeTitleSuffixJa.Length];
-        if (_knownOutputs.Contains(baseOutput))
-        {
-            return true;
-        }
-
-        var normalized = TextNormalizer.NormalizeSource(baseOutput);
-        return !string.IsNullOrEmpty(normalized) && _knownNormalizedOutputs.Contains(normalized);
     }
 }

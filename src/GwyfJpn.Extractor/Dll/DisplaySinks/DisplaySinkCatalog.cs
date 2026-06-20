@@ -37,14 +37,8 @@ internal sealed class DisplaySinkCatalog
             return indexes.Count > 0;
         }
 
-        if (IsBuiltinDisplaySink(method))
-        {
-            indexes = GetStringParameterIndexes(method);
-            return indexes.Count > 0;
-        }
-
-        indexes = Array.Empty<int>();
-        return false;
+        indexes = GetStringParameterIndexes(method);
+        return indexes.Count > 0;
     }
 
     public bool TryGetDisplayStringParameterIndexes(IMethod method, out IReadOnlyList<int> indexes)
@@ -55,8 +49,8 @@ internal sealed class DisplaySinkCatalog
             return TryGetDisplayStringParameterIndexes(resolved, out indexes);
         }
 
-        indexes = Array.Empty<int>();
-        return false;
+        indexes = GetStringParameterIndexes(method);
+        return indexes.Count > 0;
     }
 
     public bool AddWrapper(MethodDef method, IEnumerable<int> stringParameterIndexes)
@@ -101,6 +95,7 @@ internal sealed class DisplaySinkCatalog
         foreach (var sink in _mapping.Document.BuiltinSinks)
         {
             if (!_mapping.MatchesBuiltinSink(
+                    sink,
                     IlOpcodeHelpers.TypeFullName(method.DeclaringType),
                     IlOpcodeHelpers.MethodName(method),
                     method.IsConstructor))
@@ -111,21 +106,27 @@ internal sealed class DisplaySinkCatalog
             return SinkParamResolver.ResolveIndexes(parameters, sink.StringParams);
         }
 
-        return SinkParamResolver.ResolveIndexes(parameters, declaredParamNames: null);
+        return Array.Empty<int>();
     }
 
-    private bool IsBuiltinDisplaySink(MethodDef method)
+    private IReadOnlyList<int> GetStringParameterIndexes(IMethod method)
     {
-        if (_mapping.MatchesBuiltinSink(
-                IlOpcodeHelpers.TypeFullName(method.DeclaringType),
-                IlOpcodeHelpers.MethodName(method),
-                method.IsConstructor))
+        var parameters = IlOpcodeHelpers.GetParameterInfos(method);
+        foreach (var sink in _mapping.Document.BuiltinSinks)
         {
-            return true;
+            if (!_mapping.MatchesBuiltinSink(
+                    sink,
+                    IlOpcodeHelpers.TypeFullName(method.DeclaringType),
+                    IlOpcodeHelpers.MethodName(method),
+                    IlOpcodeHelpers.IsConstructor(method)))
+            {
+                continue;
+            }
+
+            return SinkParamResolver.ResolveIndexes(parameters, sink.StringParams);
         }
 
-        return _mapping.MatchesGameSink(
-            IlOpcodeHelpers.GetDeclaringTypeShortName(method),
-            IlOpcodeHelpers.MethodName(method));
+        return Array.Empty<int>();
     }
+
 }

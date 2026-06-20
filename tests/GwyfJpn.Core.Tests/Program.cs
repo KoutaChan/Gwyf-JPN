@@ -11,6 +11,24 @@ var path = args.Length > 0
 var doc = JsonConvert.DeserializeObject<TranslationDocument>(File.ReadAllText(path)) ?? new TranslationDocument();
 Console.WriteLine($"entries={doc.Entries.Count}");
 
+var placeholderGuard = new PlaceholderGuardMapping
+{
+    BracketTokens = new() { "Space", "Shift" },
+    BracketTokenPatterns = new() { "^[A-Z]$", "^[a-z][A-Za-z0-9_]*$" }
+};
+Require(
+    PlaceholderGuard.PreservesPlaceholders(
+        "- [Blackjack] Lose {0} times with [minAmount]",
+        "- ブラックジャックで{0}回負ける [minAmount]",
+        placeholderGuard),
+    "Configured placeholder guard should allow translating non-placeholder bracket labels.");
+Require(
+    !PlaceholderGuard.PreservesPlaceholders("[E] Bet {0}", "ベット {0}", placeholderGuard),
+    "Configured placeholder guard should still require input key hints.");
+Require(
+    PlaceholderGuard.PreservesPlaceholders("[Shift] Run [minAmount]", "[Shift] 走る [minAmount]", placeholderGuard),
+    "Configured placeholder guard should preserve configured key names and named placeholders.");
+
 var excludePath = Path.Combine(Path.GetTempPath(), $"gwyf-excludes-{Guid.NewGuid():N}.json");
 try
 {
@@ -85,8 +103,17 @@ var challengeTitle = store.Replace("Big Spender (Challenge)", null);
 Console.WriteLine($"challenge title replaced={challengeTitle.Replaced} out={challengeTitle.Output}");
 Require(
     challengeTitle.Replaced &&
-    challengeTitle.Output == "大金使い（チャレンジ）",
-    "Challenge title suffix was not translated from the base challenge name.");
+    challengeTitle.Output == "大金使い（チャレンジ）" &&
+    (challengeTitle.MatchedId?.StartsWith("derived-template:", StringComparison.Ordinal) ?? false),
+    "Challenge title was not translated from a statically derived exact row.");
+
+var yarlChallengeTitle = store.Replace("YARLL!!! (Challenge)", null);
+Console.WriteLine($"yarl challenge title replaced={yarlChallengeTitle.Replaced} out={yarlChallengeTitle.Output}");
+Require(
+    yarlChallengeTitle.Replaced &&
+    yarlChallengeTitle.Output == "ヤール！！！（チャレンジ）" &&
+    (yarlChallengeTitle.MatchedId?.StartsWith("derived-template:", StringComparison.Ordinal) ?? false),
+    "YARLL challenge title was not translated from a statically derived exact row.");
 
 var floorLabel = store.Replace("FLOOR 1", null);
 Console.WriteLine($"floor label replaced={floorLabel.Replaced} out={floorLabel.Output}");
@@ -108,6 +135,15 @@ Require(
     pingLabel.Replaced &&
     pingLabel.Output == "ピン",
     "Uppercase ping label was not translated.");
+
+var bodyShredderPrices = store.Replace(
+    "Eye\n<color=yellow>9 Ticket</color>\nMouth\n<color=yellow>4 Ticket</color>\nBody\n<color=yellow>12 Ticket</color>",
+    null);
+Console.WriteLine($"body shredder prices replaced={bodyShredderPrices.Replaced} out={bodyShredderPrices.Output}");
+Require(
+    bodyShredderPrices.Replaced &&
+    bodyShredderPrices.Output == "目\n<color=yellow>チケット9枚</color>\n口\n<color=yellow>チケット4枚</color>\n体\n<color=yellow>チケット12枚</color>",
+    "Variable body shredder ticket prices were not translated.");
 
 var minMax = store.Replace("Min: $18 \nMax: $180", null);
 var minMaxStyle = store.GetTextStyleForOutput(minMax.Output);

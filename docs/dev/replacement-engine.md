@@ -51,7 +51,7 @@ normalized sourceはまず大小文字を区別して検索し、見つからな
 
 `source` に `{0}`, `{1}` のようなプレースホルダがあり、かつ固定 literal 部分を持つ場合はテンプレートとしても登録する。純プレースホルダだけのテンプレート（`{0}{1}{2}` など）は広すぎるため登録しない。
 
-`〇〇 (Challenge)` 形式のチャレンジ行タイトルは、末尾の `(Challenge)` を除いた base 名で翻訳を探し、見つかれば訳文に `（チャレンジ）` を付けて返す。
+`〇〇 (Challenge)` 形式のチャレンジ行タイトルは、extractor が Challenge asset の `challengeName` と `DaySummaryUI` の `{0} (Challenge)` テンプレートから具体的な source 行を生成する。実行時は通常の exact / normalized / template lookup だけを使う。
 
 ### ReplacementEngine
 
@@ -82,9 +82,8 @@ TMP/UI表示sinkへ到達した英文を `display_seen.jsonl` に書く。これ
 3. 正規化source一致
 4. 大小文字無視の正規化source一致
 5. テンプレート一致
-6. チャレンジタイトル `base (Challenge)` の合成
-7. 置換なし
-8. 未知英文ならログ
+6. 置換なし
+7. 未知英文ならログ
 
 この処理とは別に、置換前の原文は `display_seen.jsonl` にも記録される。翻訳が既に存在する文字列も含め、表示sinkへ来た文字列を取得するためである。
 

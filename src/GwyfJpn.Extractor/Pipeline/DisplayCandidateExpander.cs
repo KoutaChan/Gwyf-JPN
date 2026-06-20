@@ -28,8 +28,12 @@ internal static class DisplayCandidateExpander
         var withEnrichment = baseCandidates.Concat(enrichment);
         var fragments = InteractionFragmentDeriver.Expand(withEnrichment);
         var withFragments = withEnrichment.Concat(fragments).ToList();
+        var templateInstantiations = TemplateInstantiationExpander.Expand(withFragments, mapping);
+        var withTemplateInstantiations = withFragments.Concat(templateInstantiations).ToList();
 
-        return withFragments.Concat(DisplayVariantExpander.Expand(withFragments, mapping)).ToList();
+        return withTemplateInstantiations
+            .Concat(DisplayVariantExpander.Expand(withTemplateInstantiations, mapping))
+            .ToList();
     }
 
     private static class CandidateFactories

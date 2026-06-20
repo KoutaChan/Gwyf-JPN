@@ -122,7 +122,7 @@ internal sealed class ReplacementEngine
         output = input;
         fontScale = null;
         textStyle = null;
-        if (tmp == null || ShouldSkipHotReplacement(input))
+        if (tmp == null || IsEmptyOrKnownOutput(input))
         {
             return false;
         }
@@ -179,11 +179,6 @@ internal sealed class ReplacementEngine
 
         GetFontSupportForOutput(source, out fontScale, out textStyle);
         TmpJapaneseFontSupport.EnsureReadable(tmp, source, fontScale, textStyle);
-    }
-
-    private bool ShouldSkipHotReplacement(string input)
-    {
-        return IsEmptyOrKnownOutput(input) || !TextNormalizer.LooksTranslatableEnglish(input);
     }
 
     private bool IsEmptyOrKnownOutput(string input)

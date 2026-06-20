@@ -59,7 +59,12 @@ internal static class TranslationFileFactory
             Type = context.Type,
             Method = context.Method,
             Field = context.Field,
-            FieldType = context.FieldType
+            FieldType = context.FieldType,
+            SerializedTypeId = context.SerializedTypeId,
+            ScriptTypeIndex = context.ScriptTypeIndex,
+            ScriptId = context.ScriptId,
+            OldTypeHash = context.OldTypeHash,
+            RawStringIndex = context.RawStringIndex
         };
     }
 }

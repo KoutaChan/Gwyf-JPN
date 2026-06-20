@@ -74,10 +74,11 @@ internal static class Program
         var fragmentCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DerivedDisplayFragment);
         var supplementalCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.ConfiguredDisplaySource);
         var templateCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DllDisplayFlowTemplate);
+        var instantiatedTemplateCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DerivedTemplateInstantiation);
         var mappingVariantCount = enriched.Count(e =>
             (e.Id ?? string.Empty).StartsWith("mapping-variant:", StringComparison.Ordinal));
         Console.WriteLine(
-            $"Enriched merge inputs: +{promotedCount} promoted ldstr, +{fragmentCount} derived fragments, +{supplementalCount} configured sources, +{templateCount} display templates, +{mappingVariantCount} mapping variants");
+            $"Enriched merge inputs: +{promotedCount} promoted ldstr, +{fragmentCount} derived fragments, +{instantiatedTemplateCount} template instantiations, +{supplementalCount} configured sources, +{templateCount} display templates, +{mappingVariantCount} mapping variants");
 
         var merged = CandidateMerger.MergeAll(enriched, mapping);
         JsonIO.WriteJson(paths.MergedOut, merged);
@@ -120,7 +121,8 @@ internal static class Program
 
         var translationsPath = options.Translations ?? throw new InvalidOperationException("Missing --translations.");
         var document = JsonIO.ReadJson<TranslationDocument>(translationsPath);
-        var failures = TranslationValidator.Validate(document);
+        var placeholderGuard = DisplaySinkMapping.LoadDefault().Document.PlaceholderGuard;
+        var failures = TranslationValidator.Validate(document, placeholderGuard);
         if (failures.Count == 0)
         {
             Console.WriteLine($"OK: {document.Entries.Count} translation entries validated.");

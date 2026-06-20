@@ -41,6 +41,8 @@
 | `supplementalDisplaySources` | ランタイム観測から手動追加する文字列 |
 | `displayVariantRules` | テンプレート・正規表現による派生候補 |
 | `displayLiteralVariants` | 既知 base からの表記ゆれ |
+| `displaySourceSets` | Unity serialized type と raw string index で選ぶ source 集合 |
+| `displayTemplateInstantiations` | source 集合と display template から具体的な runtime 文字列を生成 |
 
 ## ランタイムパッチの種類
 
@@ -76,6 +78,25 @@
 
 C# にハードコードせず、**JSON が唯一の正**です。
 
+## source set と template instantiation
+
+`displaySourceSets` は serialized asset の型情報で source を選ぶ。Challenge 名のように、object 内の field 位置が安定しているものは `classId`、`scriptId`、`oldTypeHash`、`rawStringIndex` を指定する。
+
+```json
+{
+  "id": "challengeTitles",
+  "file": "resources.assets",
+  "classId": 114,
+  "scriptId": "6ad3d5d4422235e2d006c003d55b3c98",
+  "oldTypeHash": "a9b83e98fc90c92ac51c7ecd70cc728d",
+  "rawStringIndex": 1,
+  "contextType": "Challenge",
+  "contextField": "challengeName"
+}
+```
+
+`displayTemplateInstantiations` は source set の各 source を DLL 由来の display template に流し込み、`Big Spender (Challenge)` のような実表示文字列を静的に生成する。
+
 ## ソース種別（trusted）
 
 `CandidateSourceKind` で trusted と review を分ける。
@@ -85,13 +106,14 @@ C# にハードコードせず、**JSON が唯一の正**です。
 - `dll_display_flow_template`
 - `configured_display_source`
 - `dll_promoted_ldstr`
+- `derived_display_fragment`
+- `derived_template_instantiation`
 - `runtime_display_sink`
 
 **review のみ**
 
 - `dll_review_ldstr`
 - `asset_review_string`
-- `derived_display_fragment`（マージには入るが要レビュー）
 
 ## 診断コマンド
 

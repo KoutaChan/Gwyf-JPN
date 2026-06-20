@@ -88,35 +88,35 @@ public sealed class DisplaySinkMapping
 
     public bool MatchesBuiltinSink(string? declaringTypeFullName, string methodName, bool isConstructor)
     {
-        foreach (var sink in Document.BuiltinSinks)
+        return Document.BuiltinSinks.Any(sink =>
+            MatchesBuiltinSink(sink, declaringTypeFullName, methodName, isConstructor));
+    }
+
+    public bool MatchesBuiltinSink(
+        BuiltinSinkMapping sink,
+        string? declaringTypeFullName,
+        string methodName,
+        bool isConstructor)
+    {
+        if (!MatchesType(declaringTypeFullName, sink.TypeFullName, sink.TypePattern))
         {
-            if (!MatchesType(declaringTypeFullName, sink.TypeFullName, sink.TypePattern))
-            {
-                continue;
-            }
-
-            var memberKind = string.IsNullOrWhiteSpace(sink.MemberKind) ? "method" : sink.MemberKind;
-            if (isConstructor)
-            {
-                if (!memberKind.Equals("constructor", StringComparison.OrdinalIgnoreCase))
-                {
-                    continue;
-                }
-            }
-            else if (memberKind.Equals("constructor", StringComparison.OrdinalIgnoreCase))
-            {
-                continue;
-            }
-
-            if (!MatchesMethodName(methodName, sink.MethodName, sink.MethodNames))
-            {
-                continue;
-            }
-
-            return true;
+            return false;
         }
 
-        return false;
+        var memberKind = string.IsNullOrWhiteSpace(sink.MemberKind) ? "method" : sink.MemberKind;
+        if (isConstructor)
+        {
+            if (!memberKind.Equals("constructor", StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+        }
+        else if (memberKind.Equals("constructor", StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
+        return MatchesMethodName(methodName, sink.MethodName, sink.MethodNames);
     }
 
     public bool MatchesGameSink(string? declaringTypeName, string methodName)
@@ -189,11 +189,20 @@ public sealed class DisplaySinkMappingDocument
     [DataMember(Name = "tmpMarkup", Order = 8, EmitDefaultValue = false)]
     public TmpMarkupMapping? TmpMarkup { get; set; }
 
-    [DataMember(Name = "displayVariantRules", Order = 9, EmitDefaultValue = false)]
+    [DataMember(Name = "placeholderGuard", Order = 9, EmitDefaultValue = false)]
+    public PlaceholderGuardMapping? PlaceholderGuard { get; set; }
+
+    [DataMember(Name = "displayVariantRules", Order = 10, EmitDefaultValue = false)]
     public List<DisplayVariantRuleMapping> DisplayVariantRules { get; set; } = new();
 
-    [DataMember(Name = "displayLiteralVariants", Order = 10, EmitDefaultValue = false)]
+    [DataMember(Name = "displayLiteralVariants", Order = 11, EmitDefaultValue = false)]
     public List<DisplayLiteralVariantMapping> DisplayLiteralVariants { get; set; } = new();
+
+    [DataMember(Name = "displaySourceSets", Order = 12, EmitDefaultValue = false)]
+    public List<DisplaySourceSetMapping> DisplaySourceSets { get; set; } = new();
+
+    [DataMember(Name = "displayTemplateInstantiations", Order = 13, EmitDefaultValue = false)]
+    public List<DisplayTemplateInstantiationMapping> DisplayTemplateInstantiations { get; set; } = new();
 }
 
 [DataContract]
@@ -287,6 +296,29 @@ public sealed class TmpMarkupMapping
 }
 
 /// <summary>
+/// Rules for bracketed tokens that must survive translation validation.
+/// Numbered braces, printf placeholders, and variable names are always guarded;
+/// bracket tokens are game-specific and live in display_sinks.json.
+/// </summary>
+[DataContract]
+public sealed class PlaceholderGuardMapping
+{
+    [DataMember(Name = "preserveAllBracketTokens", Order = 0, EmitDefaultValue = false)]
+    public bool PreserveAllBracketTokens { get; set; }
+
+    [DataMember(Name = "bracketTokens", Order = 1, EmitDefaultValue = false)]
+    public List<string> BracketTokens { get; set; } = new();
+
+    [DataMember(Name = "bracketTokenPatterns", Order = 2, EmitDefaultValue = false)]
+    public List<string> BracketTokenPatterns { get; set; } = new();
+
+    public static PlaceholderGuardMapping PreserveAllBrackets()
+    {
+        return new PlaceholderGuardMapping { PreserveAllBracketTokens = true };
+    }
+}
+
+/// <summary>
 /// Declarative rule for deriving extra display candidates from extracted sources.
 /// The extractor engine stays generic; game-specific knowledge lives in display_sinks.json.
 /// </summary>
@@ -352,6 +384,68 @@ public sealed class DisplayLiteralVariantMapping
 
     [DataMember(Name = "variants", Order = 1)]
     public List<string> Variants { get; set; } = new();
+}
+
+/// <summary>
+/// A declarative set of extracted asset sources selected by Unity serialized type metadata
+/// and raw string position. This lets the extractor derive runtime strings from serialized
+/// data without putting game-specific titles in C#.
+/// </summary>
+[DataContract]
+public sealed class DisplaySourceSetMapping
+{
+    [DataMember(Name = "id", Order = 0)]
+    public string Id { get; set; } = string.Empty;
+
+    [DataMember(Name = "file", Order = 1, EmitDefaultValue = false)]
+    public string? File { get; set; }
+
+    [DataMember(Name = "classId", Order = 2, EmitDefaultValue = false)]
+    public int? ClassId { get; set; }
+
+    [DataMember(Name = "scriptId", Order = 3, EmitDefaultValue = false)]
+    public string? ScriptId { get; set; }
+
+    [DataMember(Name = "oldTypeHash", Order = 4, EmitDefaultValue = false)]
+    public string? OldTypeHash { get; set; }
+
+    [DataMember(Name = "rawStringIndex", Order = 5, EmitDefaultValue = false)]
+    public int? RawStringIndex { get; set; }
+
+    [DataMember(Name = "contextType", Order = 6, EmitDefaultValue = false)]
+    public string? ContextType { get; set; }
+
+    [DataMember(Name = "contextField", Order = 7, EmitDefaultValue = false)]
+    public string? ContextField { get; set; }
+}
+
+/// <summary>
+/// Instantiates a display template using every source in a named source set.
+/// Example: Challenge titles from assets + "{0} (Challenge)" from DaySummaryUI.
+/// </summary>
+[DataContract]
+public sealed class DisplayTemplateInstantiationMapping
+{
+    [DataMember(Name = "id", Order = 0)]
+    public string Id { get; set; } = string.Empty;
+
+    [DataMember(Name = "templateSource", Order = 1)]
+    public string TemplateSource { get; set; } = string.Empty;
+
+    [DataMember(Name = "argumentSourceSet", Order = 2)]
+    public string ArgumentSourceSet { get; set; } = string.Empty;
+
+    [DataMember(Name = "resultKind", Order = 3, EmitDefaultValue = false)]
+    public string? ResultKind { get; set; }
+
+    [DataMember(Name = "contextType", Order = 4, EmitDefaultValue = false)]
+    public string? ContextType { get; set; }
+
+    [DataMember(Name = "contextMethod", Order = 5, EmitDefaultValue = false)]
+    public string? ContextMethod { get; set; }
+
+    [DataMember(Name = "contextField", Order = 6, EmitDefaultValue = false)]
+    public string? ContextField { get; set; }
 }
 
 public static class GameInstallPaths

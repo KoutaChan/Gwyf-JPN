@@ -18,7 +18,7 @@ internal sealed class DisplayTextValue
     public static readonly DisplayTextValue Unknown = new(new[] { DisplayTextSequence.Placeholder() }, Enumerable.Empty<FieldDef>(), null);
     public static readonly DisplayTextValue Empty = new(new[] { DisplayTextSequence.Empty }, Enumerable.Empty<FieldDef>(), null);
 
-    private DisplayTextValue(IEnumerable<DisplayTextSequence> alternatives, IEnumerable<FieldDef> fields, int? containerId)
+    private DisplayTextValue(IEnumerable<DisplayTextSequence> alternatives, IEnumerable<FieldDef> fields, int? containerId, int? integerValue = null)
     {
         Alternatives = alternatives
             .Distinct()
@@ -26,11 +26,13 @@ internal sealed class DisplayTextValue
             .ToList();
         Fields = fields.Distinct().ToList();
         ContainerId = containerId;
+        IntegerValue = integerValue;
     }
 
     public IReadOnlyList<DisplayTextSequence> Alternatives { get; }
     public IReadOnlyList<FieldDef> Fields { get; }
     public int? ContainerId { get; }
+    public int? IntegerValue { get; }
     public bool HasDisplayEvidence => Alternatives.Any(a => a.HasLiteralText) || Fields.Count > 0;
     public bool IsContainerReference => ContainerId.HasValue;
 
@@ -48,7 +50,12 @@ internal sealed class DisplayTextValue
 
     public static DisplayTextValue FromContainer(int containerId)
     {
-        return new DisplayTextValue(new[] { DisplayTextSequence.Placeholder() }, Enumerable.Empty<FieldDef>(), null);
+        return new DisplayTextValue(new[] { DisplayTextSequence.Placeholder() }, Enumerable.Empty<FieldDef>(), containerId);
+    }
+
+    public static DisplayTextValue FromInteger(int value)
+    {
+        return new DisplayTextValue(Enumerable.Empty<DisplayTextSequence>(), Enumerable.Empty<FieldDef>(), null, value);
     }
 
     public static DisplayTextValue FromEnumType(TypeDef enumType)
@@ -70,7 +77,8 @@ internal sealed class DisplayTextValue
         return new DisplayTextValue(
             list.SelectMany(v => v.Alternatives),
             list.SelectMany(v => v.Fields),
-            SharedContainerId(list));
+            SharedContainerId(list),
+            SharedIntegerValue(list));
     }
 
     public static DisplayTextValue Concat(IEnumerable<DisplayTextValue> values)
@@ -217,7 +225,7 @@ internal sealed class DisplayTextValue
 
     public DisplayTextValue WithFields(IEnumerable<FieldDef> fields)
     {
-        return new DisplayTextValue(Alternatives, Fields.Concat(fields), ContainerId);
+        return new DisplayTextValue(Alternatives, Fields.Concat(fields), ContainerId, IntegerValue);
     }
 
     public IReadOnlyList<string> RenderTemplates()
@@ -258,6 +266,33 @@ internal sealed class DisplayTextValue
             }
 
             if (shared != value.ContainerId.Value)
+            {
+                return null;
+            }
+        }
+
+        return shared;
+    }
+
+    private static int? SharedIntegerValue(IReadOnlyList<DisplayTextValue> values)
+    {
+        int? shared = null;
+        var sawInteger = false;
+        foreach (var value in values)
+        {
+            if (!value.IntegerValue.HasValue)
+            {
+                continue;
+            }
+
+            if (!sawInteger)
+            {
+                shared = value.IntegerValue.Value;
+                sawInteger = true;
+                continue;
+            }
+
+            if (shared != value.IntegerValue.Value)
             {
                 return null;
             }

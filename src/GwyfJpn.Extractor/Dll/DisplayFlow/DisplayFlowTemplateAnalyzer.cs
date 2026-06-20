@@ -487,6 +487,12 @@ internal static class DisplayFlowTemplateAnalyzer
             return;
         }
 
+        if (TryGetInt32Constant(instruction, out var intValue))
+        {
+            state.Push(DisplayTextValue.FromInteger(intValue));
+            return;
+        }
+
         if (IlOpcodeHelpers.TryGetLdlocIndex(instruction, out var ldlocIndex))
         {
             state.Push(state.Locals.TryGetValue(ldlocIndex, out var value) ? value : DisplayTextValue.Unknown);
@@ -538,10 +544,10 @@ internal static class DisplayFlowTemplateAnalyzer
             return;
         }
 
-        if (op == OpCodes.Newarr && instruction.Operand is ITypeDefOrRef elementTypeRef)
+        if (op == OpCodes.Newarr)
         {
             state.Pop();
-            if (elementTypeRef.FullName == "System.String")
+            if (GetOperandFullName(instruction.Operand) == "System.String")
             {
                 state.Push(state.CreateContainer((int)instruction.Offset));
             }
@@ -556,9 +562,9 @@ internal static class DisplayFlowTemplateAnalyzer
         if (op == OpCodes.Stelem_Ref || op == OpCodes.Stelem)
         {
             var value = state.Pop();
-            state.Pop();
+            var elementIndex = state.Pop();
             var container = state.Pop();
-            state.AddToContainer(container, value);
+            state.AddToContainer(container, elementIndex, value);
             return;
         }
 
@@ -666,12 +672,13 @@ internal static class DisplayFlowTemplateAnalyzer
             {
                 if (displayIndex >= 0 && displayIndex < args.Length)
                 {
-                    if (!args[displayIndex].HasDisplayEvidence)
+                    var displayValue = ResolveContainerValue(args[displayIndex], state);
+                    if (!displayValue.HasDisplayEvidence)
                     {
                         unknownDisplayArgs++;
                     }
 
-                    AddDisplayValue(result, args[displayIndex]);
+                    AddDisplayValue(result, displayValue);
                 }
             }
 
@@ -697,13 +704,13 @@ internal static class DisplayFlowTemplateAnalyzer
 
         if (IlOpcodeHelpers.IsStringConcat(method))
         {
-            state.Push(DisplayTextValue.Concat(args));
+            state.Push(DisplayTextValue.Concat(args.Select(arg => ResolveContainerValue(arg, state))));
             return;
         }
 
         if (IlOpcodeHelpers.IsStringFormat(method))
         {
-            state.Push(DisplayTextValue.Format(method, args));
+            state.Push(DisplayTextValue.Format(method, args.Select(arg => ResolveContainerValue(arg, state)).ToList()));
             return;
         }
 
@@ -746,6 +753,65 @@ internal static class DisplayFlowTemplateAnalyzer
         }
 
         return method.MethodSig?.RetType.FullName != "System.Void";
+    }
+
+    private static DisplayTextValue ResolveContainerValue(DisplayTextValue value, DisplayFlowState state)
+    {
+        return value.IsContainerReference ? state.GetContainerValue(value) : value;
+    }
+
+    private static string GetOperandFullName(object? operand)
+    {
+        return operand switch
+        {
+            ITypeDefOrRef type => type.FullName,
+            TypeSig typeSig => typeSig.FullName,
+            _ => string.Empty
+        };
+    }
+
+    private static bool TryGetInt32Constant(Instruction instruction, out int value)
+    {
+        switch (instruction.OpCode.Code)
+        {
+            case Code.Ldc_I4_M1:
+                value = -1;
+                return true;
+            case Code.Ldc_I4_0:
+                value = 0;
+                return true;
+            case Code.Ldc_I4_1:
+                value = 1;
+                return true;
+            case Code.Ldc_I4_2:
+                value = 2;
+                return true;
+            case Code.Ldc_I4_3:
+                value = 3;
+                return true;
+            case Code.Ldc_I4_4:
+                value = 4;
+                return true;
+            case Code.Ldc_I4_5:
+                value = 5;
+                return true;
+            case Code.Ldc_I4_6:
+                value = 6;
+                return true;
+            case Code.Ldc_I4_7:
+                value = 7;
+                return true;
+            case Code.Ldc_I4_8:
+                value = 8;
+                return true;
+            case Code.Ldc_I4:
+            case Code.Ldc_I4_S:
+                value = Convert.ToInt32(instruction.Operand);
+                return true;
+            default:
+                value = 0;
+                return false;
+        }
     }
 
     private static void AddDisplayValue(DisplayFlowTemplateResult result, DisplayTextValue value)
@@ -1697,6 +1763,7 @@ internal sealed class DisplayFlowState
 
     public Dictionary<int, DisplayTextValue> Locals { get; } = new();
     public Dictionary<int, DisplayTextValue> Containers { get; } = new();
+    public Dictionary<int, SortedDictionary<int, DisplayTextValue>> OrderedContainerElements { get; } = new();
     public HashSet<int> DisplayBoundContainers { get; } = new();
     public int StackDepth => _stack.Count;
 
@@ -1741,16 +1808,50 @@ internal sealed class DisplayFlowState
 
     public bool AddToContainer(DisplayTextValue container, DisplayTextValue value)
     {
+        return AddToContainer(container, null, value);
+    }
+
+    public bool AddToContainer(DisplayTextValue container, DisplayTextValue? elementIndex, DisplayTextValue value)
+    {
         if (!container.ContainerId.HasValue)
         {
             return false;
         }
 
         var containerId = container.ContainerId.Value;
-        Containers[containerId] = Containers.TryGetValue(containerId, out var existing)
-            ? DisplayTextValue.Choice(new[] { existing, value })
-            : value;
+        if (elementIndex?.IntegerValue.HasValue == true)
+        {
+            if (!OrderedContainerElements.TryGetValue(containerId, out var elements))
+            {
+                elements = new SortedDictionary<int, DisplayTextValue>();
+                OrderedContainerElements[containerId] = elements;
+            }
+
+            var index = elementIndex.IntegerValue.Value;
+            elements[index] = elements.TryGetValue(index, out var existing)
+                ? DisplayTextValue.Choice(new[] { existing, value })
+                : value;
+            RebuildOrderedContainer(containerId);
+        }
+        else
+        {
+            Containers[containerId] = Containers.TryGetValue(containerId, out var existing)
+                ? DisplayTextValue.Choice(new[] { existing, value })
+                : value;
+        }
+
         return DisplayBoundContainers.Contains(containerId);
+    }
+
+    private void RebuildOrderedContainer(int containerId)
+    {
+        if (!OrderedContainerElements.TryGetValue(containerId, out var elements) ||
+            elements.Count == 0)
+        {
+            return;
+        }
+
+        Containers[containerId] = DisplayTextValue.Concat(elements.OrderBy(item => item.Key).Select(item => item.Value));
     }
 
     public DisplayTextValue GetContainerValue(DisplayTextValue container)
@@ -1772,6 +1873,11 @@ internal sealed class DisplayFlowState
         foreach (var item in Containers)
         {
             clone.Containers[item.Key] = item.Value;
+        }
+
+        foreach (var item in OrderedContainerElements)
+        {
+            clone.OrderedContainerElements[item.Key] = new SortedDictionary<int, DisplayTextValue>(item.Value);
         }
 
         foreach (var item in DisplayBoundContainers)
@@ -1839,6 +1945,42 @@ internal sealed class DisplayFlowState
             }
         }
 
+        foreach (var item in other.OrderedContainerElements)
+        {
+            var containerChanged = false;
+            if (!OrderedContainerElements.TryGetValue(item.Key, out var elements))
+            {
+                OrderedContainerElements[item.Key] = new SortedDictionary<int, DisplayTextValue>(item.Value);
+                RebuildOrderedContainer(item.Key);
+                changed = true;
+                continue;
+            }
+
+            foreach (var element in item.Value)
+            {
+                if (!elements.TryGetValue(element.Key, out var existing))
+                {
+                    elements[element.Key] = element.Value;
+                    containerChanged = true;
+                    changed = true;
+                    continue;
+                }
+
+                var merged = DisplayTextValue.Choice(new[] { existing, element.Value });
+                if (!SameValue(existing, merged))
+                {
+                    elements[element.Key] = merged;
+                    containerChanged = true;
+                    changed = true;
+                }
+            }
+
+            if (containerChanged)
+            {
+                RebuildOrderedContainer(item.Key);
+            }
+        }
+
         foreach (var item in other.DisplayBoundContainers)
         {
             if (DisplayBoundContainers.Add(item))
@@ -1854,6 +1996,7 @@ internal sealed class DisplayFlowState
     {
         return left.RenderTemplates().SequenceEqual(right.RenderTemplates()) &&
                left.Fields.SequenceEqual(right.Fields) &&
-               left.ContainerId == right.ContainerId;
+               left.ContainerId == right.ContainerId &&
+               left.IntegerValue == right.IntegerValue;
     }
 }

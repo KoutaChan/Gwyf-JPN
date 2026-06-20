@@ -10,7 +10,7 @@ namespace GwyfJpn.Extractor;
 /// </summary>
 internal static class TranslationValidator
 {
-    public static List<string> Validate(TranslationDocument document)
+    public static List<string> Validate(TranslationDocument document, PlaceholderGuardMapping? placeholderGuard = null)
     {
         var failures = new List<string>();
         failures.AddRange(document.Entries
@@ -48,7 +48,7 @@ internal static class TranslationValidator
 
             if (!string.IsNullOrWhiteSpace(entry.Source) && !string.IsNullOrWhiteSpace(entry.Ja))
             {
-                if (!PlaceholderGuard.PreservesPlaceholders(entry.Source, entry.Ja))
+                if (!PlaceholderGuard.PreservesPlaceholders(entry.Source, entry.Ja, placeholderGuard))
                 {
                     failures.Add($"placeholder mismatch: {entry.Id}");
                 }

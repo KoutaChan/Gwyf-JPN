@@ -245,20 +245,36 @@ internal static class IlOpcodeHelpers
 
     public static bool IsStringParameter(MethodDef method, int parameterIndex)
     {
-        if (parameterIndex < 0 || parameterIndex >= method.Parameters.Count)
+        var parameters = GetParameterInfos(method);
+        if (parameterIndex < 0 || parameterIndex >= parameters.Count)
         {
             return false;
         }
 
-        return method.Parameters[parameterIndex].Type.FullName == "System.String";
+        return parameters[parameterIndex].IsString;
     }
 
     public static IReadOnlyList<MethodParameterInfo> GetParameterInfos(MethodDef method) =>
         method.Parameters
+            .Skip(method.IsStatic ? 0 : 1)
             .Select(parameter => new MethodParameterInfo(
                 parameter.Name ?? string.Empty,
                 parameter.Type.FullName == "System.String"))
             .ToList();
+
+    public static IReadOnlyList<MethodParameterInfo> GetParameterInfos(IMethod method)
+    {
+        if (method.MethodSig?.Params == null)
+        {
+            return Array.Empty<MethodParameterInfo>();
+        }
+
+        return method.MethodSig.Params
+            .Select(parameter => new MethodParameterInfo(
+                string.Empty,
+                parameter.FullName == "System.String"))
+            .ToList();
+    }
 
     public static IReadOnlyList<int> ResolveStringParamIndexes(MethodDef method, IList<string>? stringParams) =>
         SinkParamResolver.ResolveIndexes(GetParameterInfos(method), stringParams);

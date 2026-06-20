@@ -13,6 +13,7 @@ public static class CandidateSourceKind
     public const string DllReviewLdstr = "dll_review_ldstr";
     public const string DllPromotedLdstr = "dll_promoted_ldstr";
     public const string DerivedDisplayFragment = "derived_display_fragment";
+    public const string DerivedTemplateInstantiation = "derived_template_instantiation";
     public const string ConfiguredDisplaySource = "configured_display_source";
     public const string RuntimeDisplaySink = "runtime_display_sink";
 
@@ -22,6 +23,7 @@ public static class CandidateSourceKind
                sourceKind == DllDisplayFlowTemplate ||
                sourceKind == DllPromotedLdstr ||
                sourceKind == DerivedDisplayFragment ||
+               sourceKind == DerivedTemplateInstantiation ||
                sourceKind == ConfiguredDisplaySource ||
                sourceKind == RuntimeDisplaySink;
     }

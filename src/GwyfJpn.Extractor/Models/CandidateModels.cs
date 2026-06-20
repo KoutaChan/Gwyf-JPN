@@ -77,6 +77,21 @@ internal sealed class CandidateContext
 
     [DataMember(Name = "fieldType", Order = 8, EmitDefaultValue = false)]
     public string? FieldType { get; set; }
+
+    [DataMember(Name = "serializedTypeId", Order = 9, EmitDefaultValue = false)]
+    public int? SerializedTypeId { get; set; }
+
+    [DataMember(Name = "scriptTypeIndex", Order = 10, EmitDefaultValue = false)]
+    public int? ScriptTypeIndex { get; set; }
+
+    [DataMember(Name = "scriptId", Order = 11, EmitDefaultValue = false)]
+    public string? ScriptId { get; set; }
+
+    [DataMember(Name = "oldTypeHash", Order = 12, EmitDefaultValue = false)]
+    public string? OldTypeHash { get; set; }
+
+    [DataMember(Name = "rawStringIndex", Order = 13, EmitDefaultValue = false)]
+    public int? RawStringIndex { get; set; }
 }
 
 [DataContract]

@@ -36,13 +36,14 @@ internal sealed class UnitySerializedFile
         {
             var classId = Endian.ReadInt32Little(bytes, ref offset);
             Endian.ReadBoolean(bytes, ref offset); // stripped type flag
-            Endian.ReadInt16Little(bytes, ref offset);
+            var scriptTypeIndex = Endian.ReadInt16Little(bytes, ref offset);
+            string? scriptId = null;
             if (classId == 114)
             {
-                Endian.ReadBytes(bytes, ref offset, 16);
+                scriptId = ToLowerHex(Endian.ReadBytes(bytes, ref offset, 16));
             }
 
-            Endian.ReadBytes(bytes, ref offset, 16);
+            var oldTypeHash = ToLowerHex(Endian.ReadBytes(bytes, ref offset, 16));
             if (hasTypeTree)
             {
                 SkipTypeTree(bytes, ref offset, version);
@@ -53,7 +54,7 @@ internal sealed class UnitySerializedFile
                 SkipTypeTree(bytes, ref offset, version);
             }
 
-            types.Add(new UnitySerializedType(classId));
+            types.Add(new UnitySerializedType(classId, scriptTypeIndex, scriptId, oldTypeHash));
         }
 
         var objectCount = Endian.ReadInt32Little(bytes, ref offset);
@@ -65,11 +66,22 @@ internal sealed class UnitySerializedFile
             var byteStart = version >= 22 ? checked((long)Endian.ReadUInt64Little(bytes, ref offset)) : Endian.ReadUInt32Little(bytes, ref offset);
             var byteSize = checked((int)Endian.ReadUInt32Little(bytes, ref offset));
             var typeId = Endian.ReadInt32Little(bytes, ref offset);
-            var classId = typeId >= 0 && typeId < types.Count ? types[typeId].ClassId : 0;
-            objects.Add(new UnitySerializedObject(pathId, byteStart, byteSize, typeId, classId));
+            var type = typeId >= 0 && typeId < types.Count ? types[typeId] : UnitySerializedType.Unknown;
+            objects.Add(new UnitySerializedObject(pathId, byteStart, byteSize, typeId, type));
         }
 
         return new UnitySerializedFile(dataOffset, types, objects);
+    }
+
+    private static string ToLowerHex(byte[] bytes)
+    {
+        var builder = new StringBuilder(bytes.Length * 2);
+        foreach (var value in bytes)
+        {
+            builder.Append(value.ToString("x2"));
+        }
+
+        return builder.ToString();
     }
 
     private static void SkipTypeTree(byte[] bytes, ref int offset, int version)
@@ -89,29 +101,41 @@ internal sealed class UnitySerializedFile
 /// <summary>Serialized type metadata entry from the Unity file type table.</summary>
 internal sealed class UnitySerializedType
 {
-    public UnitySerializedType(int classId)
+    public static UnitySerializedType Unknown { get; } = new(0, 0, null, null);
+
+    public UnitySerializedType(int classId, short scriptTypeIndex, string? scriptId, string? oldTypeHash)
     {
         ClassId = classId;
+        ScriptTypeIndex = scriptTypeIndex;
+        ScriptId = scriptId;
+        OldTypeHash = oldTypeHash;
     }
 
     public int ClassId { get; }
+    public short ScriptTypeIndex { get; }
+    public string? ScriptId { get; }
+    public string? OldTypeHash { get; }
 }
 
 /// <summary>Object table entry with the exact byte range of one serialized Unity object.</summary>
 internal sealed class UnitySerializedObject
 {
-    public UnitySerializedObject(long pathId, long byteStart, int byteSize, int typeId, int classId)
+    public UnitySerializedObject(long pathId, long byteStart, int byteSize, int typeId, UnitySerializedType type)
     {
         PathId = pathId;
         ByteStart = byteStart;
         ByteSize = byteSize;
         TypeId = typeId;
-        ClassId = classId;
+        Type = type;
     }
 
     public long PathId { get; }
     public long ByteStart { get; }
     public int ByteSize { get; }
     public int TypeId { get; }
-    public int ClassId { get; }
+    public UnitySerializedType Type { get; }
+    public int ClassId => Type.ClassId;
+    public short ScriptTypeIndex => Type.ScriptTypeIndex;
+    public string? ScriptId => Type.ScriptId;
+    public string? OldTypeHash => Type.OldTypeHash;
 }
