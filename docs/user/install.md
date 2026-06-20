@@ -23,7 +23,7 @@ GwyfJpn を Steam 版 Gamble With Your Friends に入れて、プラグインが
 
 1. [Releases](https://github.com/KoutaChan/Gwyf-JPN/releases/latest) から最新 zip をダウンロード
 2. 未導入なら [BepInEx 5](https://github.com/bepinex/bepinex/releases) をゲームフォルダに展開
-3. Steam から一度起動し、`BepInEx/` ができることを確認
+3. Steam から一度起動し、`BepInEx/plugins/` ができることを確認
 4. zip の中身を **`BepInEx/plugins/GwyfJpn/`** に配置
 5. 再度 Steam から起動して動作確認
 
