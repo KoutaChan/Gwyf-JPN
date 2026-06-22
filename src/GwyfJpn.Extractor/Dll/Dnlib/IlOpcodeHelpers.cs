@@ -75,7 +75,9 @@ internal static class IlOpcodeHelpers
     public static bool TryGetField(Instruction instruction, out IField field)
     {
         if ((instruction.OpCode == OpCodes.Ldfld ||
+             instruction.OpCode == OpCodes.Ldflda ||
              instruction.OpCode == OpCodes.Ldsfld ||
+             instruction.OpCode == OpCodes.Ldsflda ||
              instruction.OpCode == OpCodes.Stfld ||
              instruction.OpCode == OpCodes.Stsfld) &&
             instruction.Operand is IField resolved)

@@ -20,6 +20,9 @@ internal static class SourceTextClassifier
     private static readonly Regex UriLike = new(@"^[a-z][a-z0-9+.-]*://|^www\.", RegexOptions.Compiled | RegexOptions.IgnoreCase);
     private static readonly Regex LongIdentifier = new(@"^[A-Za-z_][A-Za-z0-9_]{18,}$", RegexOptions.Compiled);
     private static readonly Regex HexOrSerializedNoise = new(@"(?:^|[(:;\/])(?:[A-F0-9]{10,})(?:[):;\/]|$)", RegexOptions.Compiled);
+    private static readonly Regex RichTextTagWithText = new(
+        @"<(?<tag>[A-Za-z][A-Za-z0-9_-]*)\b[^>]*>[^<>]*[A-Za-z][^<>]*</\k<tag>>",
+        RegexOptions.Compiled);
 
     public static string NormalizeCandidate(string? value)
     {
@@ -96,7 +99,10 @@ internal static class SourceTextClassifier
             return true;
         }
 
-        if (!value.Any(char.IsWhiteSpace) && value.Length >= 10 && value.Any(ch => ch == '_' || ch == '/' || ch == '\\'))
+        if (!value.Any(char.IsWhiteSpace) &&
+            value.Length >= 10 &&
+            value.Any(ch => ch == '_' || ch == '/' || ch == '\\') &&
+            !RichTextTagWithText.IsMatch(value))
         {
             return true;
         }

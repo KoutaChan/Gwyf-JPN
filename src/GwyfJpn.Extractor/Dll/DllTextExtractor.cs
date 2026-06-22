@@ -36,6 +36,11 @@ internal static class DllTextExtractor
         if (DisplayFieldStorageWrapperDetector.AddFieldStorageWrappers(methodInstructions, displayBoundFieldKeys, displaySinks))
         {
             displaySinks = DisplaySinkWrapperDetector.Build(methodInstructions, displaySinks);
+            if (DisplayMirrorWrapperDetector.AddRpcWrappers(methodInstructions, displaySinks))
+            {
+                displaySinks = DisplaySinkWrapperDetector.Build(methodInstructions, displaySinks);
+            }
+
             returnSummaries = DisplayReturnSummaryBuilder.Build(methodInstructions, displaySinks);
             displayBoundFieldKeys = CollectDisplayBoundFieldKeys(types, methodInstructions, displaySinks, returnSummaries);
         }
@@ -136,6 +141,11 @@ internal static class DllTextExtractor
     {
         foreach (var known in mapping.Document.KnownDisplayFields)
         {
+            foreach (var fieldName in known.FieldNames)
+            {
+                displayBoundFields.Add(known.TypeName + "::" + fieldName);
+            }
+
             foreach (var type in types.Where(t => IlOpcodeHelpers.TypeNameEquals(t, known.TypeName)))
             {
                 foreach (var fieldName in known.FieldNames)

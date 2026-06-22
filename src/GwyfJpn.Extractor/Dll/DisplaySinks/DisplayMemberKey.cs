@@ -20,6 +20,11 @@ internal static class DisplayMemberKey
 
     public static string ForField(FieldDef field)
     {
+        return ForField((IField)field);
+    }
+
+    public static string ForField(IField field)
+    {
         var declaringType = IlOpcodeHelpers.TypeFullName(field.DeclaringType);
         if (string.IsNullOrEmpty(declaringType))
         {
@@ -27,5 +32,10 @@ internal static class DisplayMemberKey
         }
 
         return declaringType + "::" + IlOpcodeHelpers.FieldName(field);
+    }
+
+    public static string ForFieldShort(IField field)
+    {
+        return IlOpcodeHelpers.TypeName(field.DeclaringType) + "::" + IlOpcodeHelpers.FieldName(field);
     }
 }

@@ -511,15 +511,18 @@ internal static class DisplayFlowTemplateAnalyzer
             return;
         }
 
-        if ((op == OpCodes.Ldfld || op == OpCodes.Ldsfld) && IlOpcodeHelpers.TryGetField(instruction, out var fieldRef))
+        if ((op == OpCodes.Ldfld || op == OpCodes.Ldsfld || op == OpCodes.Ldflda || op == OpCodes.Ldsflda) &&
+            IlOpcodeHelpers.TryGetField(instruction, out var fieldRef))
         {
             var field = IlOpcodeHelpers.ResolveFieldDef(fieldRef);
-            if (op == OpCodes.Ldfld)
+            var isInstanceField = op == OpCodes.Ldfld || op == OpCodes.Ldflda;
+            var isAddressLoad = op == OpCodes.Ldflda || op == OpCodes.Ldsflda;
+            if (isInstanceField)
             {
                 state.Pop();
             }
 
-            state.Push(field == null ? DisplayTextValue.Unknown : DisplayTextValue.FromField(field));
+            state.Push(CreateFieldValue(field, isAddressLoad));
             return;
         }
 
@@ -889,8 +892,7 @@ internal static class DisplayFlowTemplateAnalyzer
         DisplayFlowTemplateResult result,
         DisplayTextValue value)
     {
-        var field = IlOpcodeHelpers.ResolveFieldDef(fieldRef);
-        if (field != null && context.IsDisplayBoundField(field))
+        if (context.IsDisplayBoundField(fieldRef))
         {
             AddDisplayValue(result, value);
         }
@@ -1477,6 +1479,22 @@ internal static class DisplayFlowTemplateAnalyzer
         return type != null && InheritsFrom(type, "System.MulticastDelegate");
     }
 
+    private static DisplayTextValue CreateFieldValue(FieldDef? field, bool isAddressLoad)
+    {
+        if (field == null)
+        {
+            return DisplayTextValue.Unknown;
+        }
+
+        var enumType = field.FieldType.ScopeType?.ResolveTypeDef();
+        if (enumType?.IsEnum == true)
+        {
+            return DisplayTextValue.FromEnumType(enumType);
+        }
+
+        return isAddressLoad ? DisplayTextValue.Unknown : DisplayTextValue.FromField(field);
+    }
+
     private static bool IsGenericListMethod(IMethod method, string name)
     {
         return IlOpcodeHelpers.MethodNameEquals(method, name) &&
@@ -1753,7 +1771,13 @@ internal sealed class DisplayFlowAnalysisContext
 
     public bool IsDisplayBoundField(FieldDef field)
     {
-        return DisplayBoundFieldKeys.Contains(DisplayMemberKey.ForField(field));
+        return IsDisplayBoundField((IField)field);
+    }
+
+    public bool IsDisplayBoundField(IField field)
+    {
+        return DisplayBoundFieldKeys.Contains(DisplayMemberKey.ForField(field)) ||
+               DisplayBoundFieldKeys.Contains(DisplayMemberKey.ForFieldShort(field));
     }
 }
 

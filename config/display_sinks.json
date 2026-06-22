@@ -160,6 +160,10 @@
     {
       "typeName": "InteractableBase",
       "fieldNames": ["tooltipMessage", "interactableName"]
+    },
+    {
+      "typeName": "MMF_FloatingText",
+      "fieldNames": ["Value"]
     }
   ],
   "promotedDisplayTypes": [

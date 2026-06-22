@@ -9725,6 +9725,445 @@
       "id": "asset-text:resources.assets:57612:36:df92e232",
       "source": "zoom",
       "ja": "ズーム"
+    },
+    {
+      "id": "mapping-variant:3597fbc5:c39a695e:de15ef8b",
+      "source": " Buy {0} Item(s) ({1} tickets)",
+      "ja": "アイテム{0}個を購入（チケット{1}枚）",
+      "context": {
+        "method": "ServerOnHover",
+        "type": "MerchantBuyButton"
+      }
+    },
+    {
+      "id": "mapping-variant:3597fbc5:0667190f:ddb98738",
+      "source": " Unselect",
+      "ja": "選択解除",
+      "context": {
+        "method": "UserCode_RpcChangeMaterial__Boolean",
+        "type": "KenoButton"
+      }
+    },
+    {
+      "id": "dll-text:MerchantBuyButton:ServerOnHover:92156d92",
+      "source": "[E] Buy {0} Item(s) ({1} tickets)",
+      "ja": "[E] アイテム{0}個を購入（チケット{1}枚）",
+      "context": {
+        "method": "ServerOnHover",
+        "type": "MerchantBuyButton"
+      }
+    },
+    {
+      "id": "dll-text:MerchantBuyButton:ServerOnHover:bf3473f4",
+      "source": "[E] Buy Items",
+      "ja": "[E] アイテムを購入",
+      "context": {
+        "method": "ServerOnHover",
+        "type": "MerchantBuyButton"
+      }
+    },
+    {
+      "id": "dll-text:KenoButton:UserCode_RpcChangeMaterial__Boolean:af091e93",
+      "source": "[E] Unselect",
+      "ja": "[E] 選択解除",
+      "context": {
+        "method": "UserCode_RpcChangeMaterial__Boolean",
+        "type": "KenoButton"
+      }
+    },
+    {
+      "id": "mapping-variant:bda789e7:9be60b53:1705597a",
+      "source": "<noparse></noparse><shake>DEBT</shake>",
+      "ja": "<noparse></noparse><shake>借金</shake>",
+      "context": {
+        "method": "CreateRebindEntry",
+        "type": "SettingsLayoutRuntimeUI"
+      }
+    },
+    {
+      "id": "asset-text:resources.assets:67620:2456:51943bfb",
+      "source": "<shake>DEBT</shake>",
+      "ja": "<shake>借金</shake>",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 67620,
+        "classId": 114,
+        "stringOffset": 2456,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 233,
+        "scriptTypeIndex": 216,
+        "scriptId": "aa579358e5a634129b42fe7e566ced86",
+        "oldTypeHash": "0fbee20a473357f8192db241370ccfbf",
+        "rawStringIndex": 22
+      }
+    },
+    {
+      "id": "asset-text:resources.assets:67392:2460:e825cd26",
+      "source": "<shake>FLESH</shake>",
+      "ja": "<shake>肉体</shake>",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 67392,
+        "classId": 114,
+        "stringOffset": 2460,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 233,
+        "scriptTypeIndex": 216,
+        "scriptId": "aa579358e5a634129b42fe7e566ced86",
+        "oldTypeHash": "0fbee20a473357f8192db241370ccfbf",
+        "rawStringIndex": 22
+      }
+    },
+    {
+      "id": "dll-text:Upgrade:Start:7168f846",
+      "source": "BonusDraw",
+      "ja": "ボーナス抽選",
+      "context": {
+        "method": "Start",
+        "type": "Upgrade"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:892b4f71",
+      "source": "Not playing Baccarat",
+      "ja": "バカラ未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:a3369d4c",
+      "source": "Not playing Blackjack",
+      "ja": "ブラックジャック未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:0ec5b726",
+      "source": "Not playing CoinFlip",
+      "ja": "コインフリップ未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:9c779de1",
+      "source": "Not playing Craps",
+      "ja": "クラップス未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:837fc54b",
+      "source": "Not playing Crash",
+      "ja": "クラッシュ未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:e3d6eef9",
+      "source": "Not playing CrossyRoad",
+      "ja": "クロッシーロード未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:f3d11ee8",
+      "source": "Not playing DragonTower",
+      "ja": "ドラゴンタワー未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:b15ca67c",
+      "source": "Not playing DuckRace",
+      "ja": "ダックレース未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:761292de",
+      "source": "Not playing HiLo",
+      "ja": "ハイロー未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:dde978f3",
+      "source": "Not playing Keno",
+      "ja": "キノ未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:e2cd78be",
+      "source": "Not playing Minesweeper",
+      "ja": "マインスイーパー未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:17657393",
+      "source": "Not playing MoneyWheel",
+      "ja": "マネーホイール未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:70576ed5",
+      "source": "Not playing Plinko",
+      "ja": "プリンコ未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:8bf2bc5d",
+      "source": "Not playing Poker",
+      "ja": "ポーカー未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:78250b88",
+      "source": "Not playing Roulette",
+      "ja": "ルーレット未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:6b755fd9",
+      "source": "Not playing SlotMachine",
+      "ja": "スロットマシン未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:7980a637",
+      "source": "Not playing WheelOfFortune",
+      "ja": "ホイール・オブ・フォーチュン未プレイ",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:b20b0916",
+      "source": "Playing Baccarat",
+      "ja": "バカラをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:b2d499dd",
+      "source": "Playing Blackjack",
+      "ja": "ブラックジャックをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:0575abf1",
+      "source": "Playing CoinFlip",
+      "ja": "コインフリップをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:5079a728",
+      "source": "Playing Craps",
+      "ja": "クラップスをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:617c0082",
+      "source": "Playing Crash",
+      "ja": "クラッシュをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:1fa5e53a",
+      "source": "Playing CrossyRoad",
+      "ja": "クロッシーロードをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:ce138ab5",
+      "source": "Playing DragonTower",
+      "ja": "ドラゴンタワーをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:faeb193f",
+      "source": "Playing DuckRace",
+      "ja": "ダックレースをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:b1f01c75",
+      "source": "Playing HiLo",
+      "ja": "ハイローをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:cea6f250",
+      "source": "Playing Keno",
+      "ja": "キノをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:119f19db",
+      "source": "Playing Minesweeper",
+      "ja": "マインスイーパーをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:be236b4c",
+      "source": "Playing MoneyWheel",
+      "ja": "マネーホイールをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:63640ada",
+      "source": "Playing Plinko",
+      "ja": "プリンコをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:0e43d06c",
+      "source": "Playing Poker",
+      "ja": "ポーカーをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:d43ca743",
+      "source": "Playing Roulette",
+      "ja": "ルーレットをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:88b29c80",
+      "source": "Playing SlotMachine",
+      "ja": "スロットマシンをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:GameTypeConditionData:GetProgressText:109a978c",
+      "source": "Playing WheelOfFortune",
+      "ja": "ホイール・オブ・フォーチュンをプレイ中",
+      "context": {
+        "method": "GetProgressText",
+        "type": "GameTypeConditionData"
+      }
+    },
+    {
+      "id": "dll-text:VoiceManipulatorItem:OnStartClient:5675f954",
+      "source": "Radio",
+      "ja": "ラジオ",
+      "context": {
+        "method": "OnStartClient",
+        "type": "VoiceManipulatorItem"
+      }
+    },
+    {
+      "id": "dll-text:Craps:HandleDiceRolled:d096701f",
+      "source": "REFUND",
+      "ja": "返金",
+      "context": {
+        "method": "HandleDiceRolled",
+        "type": "Craps"
+      }
+    },
+    {
+      "id": "derived-fragment:a13b127d:675e5702",
+      "source": "Unselect",
+      "ja": "選択解除",
+      "context": {
+        "method": "UserCode_RpcChangeMaterial__Boolean",
+        "type": "KenoButton"
+      }
+    },
+    {
+      "id": "dll-text:VoiceManipulatorItem:OnStartClient:f95192f0",
+      "source": "Wobble",
+      "ja": "ぐらぐら",
+      "context": {
+        "method": "OnStartClient",
+        "type": "VoiceManipulatorItem"
+      }
     }
   ]
 }

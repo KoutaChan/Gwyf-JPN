@@ -49,6 +49,11 @@ internal static class DisplayFlowDiagnostics
         if (DisplayFieldStorageWrapperDetector.AddFieldStorageWrappers(methodInstructions, displayBoundFieldKeys, displaySinks))
         {
             displaySinks = DisplaySinkWrapperDetector.Build(methodInstructions, displaySinks);
+            if (DisplayMirrorWrapperDetector.AddRpcWrappers(methodInstructions, displaySinks))
+            {
+                displaySinks = DisplaySinkWrapperDetector.Build(methodInstructions, displaySinks);
+            }
+
             returnSummaries = DisplayReturnSummaryBuilder.Build(methodInstructions, displaySinks);
             displayBoundFieldKeys = CollectDisplayBoundFieldKeys(types, methodsByType, methodInstructions, displaySinks, returnSummaries);
         }
@@ -145,6 +150,7 @@ internal static class DisplayFlowDiagnostics
         IReadOnlyDictionary<string, DisplayTextValue> returnSummaries)
     {
         var displayBoundFields = new HashSet<string>(StringComparer.Ordinal);
+        AddKnownDisplayFieldKeys(types, displaySinks.Mapping, displayBoundFields);
         var context = new DisplayFlowAnalysisContext(displaySinks, returnSummaries);
         foreach (var type in types)
         {
@@ -164,5 +170,31 @@ internal static class DisplayFlowDiagnostics
         }
 
         return displayBoundFields;
+    }
+
+    private static void AddKnownDisplayFieldKeys(
+        IEnumerable<TypeDef> types,
+        GwyfJpn.Core.DisplaySinkMapping mapping,
+        HashSet<string> displayBoundFields)
+    {
+        foreach (var known in mapping.Document.KnownDisplayFields)
+        {
+            foreach (var fieldName in known.FieldNames)
+            {
+                displayBoundFields.Add(known.TypeName + "::" + fieldName);
+            }
+
+            foreach (var type in types.Where(t => IlOpcodeHelpers.TypeNameEquals(t, known.TypeName)))
+            {
+                foreach (var fieldName in known.FieldNames)
+                {
+                    var field = type.Fields.FirstOrDefault(f => IlOpcodeHelpers.FieldNameEquals(f, fieldName));
+                    if (field != null)
+                    {
+                        displayBoundFields.Add(DisplayMemberKey.ForField(field));
+                    }
+                }
+            }
+        }
     }
 }
