@@ -65,9 +65,10 @@ internal static class Program
         Console.WriteLine($"Wrote {dllDocument.Strings.Count} dll text entries: {paths.DllOut}");
         Console.WriteLine($"Wrote {dllDocument.Fields.Count} dll field entries: {paths.FieldsOut}");
 
+        var runtimeSeen = LoadRuntimeSeenCandidates(paths, options);
         var mapping = DisplaySinkMapping.LoadDefault();
         var enriched = DisplayCandidateExpander.EnrichForMerge(
-            assetDocument.Records,
+            assetDocument.Records.Concat(runtimeSeen),
             dllDocument.Strings,
             mapping);
         var promotedCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DllPromotedLdstr);
@@ -75,10 +76,11 @@ internal static class Program
         var supplementalCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.ConfiguredDisplaySource);
         var templateCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DllDisplayFlowTemplate);
         var instantiatedTemplateCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DerivedTemplateInstantiation);
+        var runtimeSeenCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.RuntimeDisplaySink);
         var mappingVariantCount = enriched.Count(e =>
             (e.Id ?? string.Empty).StartsWith("mapping-variant:", StringComparison.Ordinal));
         Console.WriteLine(
-            $"Enriched merge inputs: +{promotedCount} promoted ldstr, +{fragmentCount} derived fragments, +{instantiatedTemplateCount} template instantiations, +{supplementalCount} configured sources, +{templateCount} display templates, +{mappingVariantCount} mapping variants");
+            $"Enriched merge inputs: +{promotedCount} promoted ldstr, +{fragmentCount} derived fragments, +{instantiatedTemplateCount} template instantiations, +{supplementalCount} inferred/configured sources, +{runtimeSeenCount} runtime seen sources, +{templateCount} display templates, +{mappingVariantCount} mapping variants");
 
         var merged = CandidateMerger.MergeAll(enriched, mapping);
         JsonIO.WriteJson(paths.MergedOut, merged);
@@ -95,6 +97,41 @@ internal static class Program
         TranslationExportWriter.WriteJsonl(merged, paths.ExportOut);
         Console.WriteLine($"Wrote translation export: {paths.ExportOut}");
         return 0;
+    }
+
+    private static List<CandidateEntry> LoadRuntimeSeenCandidates(ExtractionPaths paths, CliOptions options)
+    {
+        var seenPath = ResolveSeenPath(paths, options);
+        if (string.IsNullOrWhiteSpace(seenPath))
+        {
+            return new List<CandidateEntry>();
+        }
+
+        if (!File.Exists(seenPath))
+        {
+            throw new FileNotFoundException("display_seen.jsonl was not found.", seenPath);
+        }
+
+        var seen = RuntimeSeenImporter.Import(seenPath);
+        JsonIO.WriteJson(paths.RuntimeSeenOut, seen);
+        Console.WriteLine($"Wrote {seen.Entries.Count} runtime display-sink candidates: {paths.RuntimeSeenOut}");
+        return seen.Entries;
+    }
+
+    private static string? ResolveSeenPath(ExtractionPaths paths, CliOptions options)
+    {
+        if (!string.IsNullOrWhiteSpace(options.Seen))
+        {
+            return options.Seen;
+        }
+
+        var defaultSeenPath = Path.Combine(
+            paths.GameDir,
+            "BepInEx",
+            "config",
+            "GwyfJpn",
+            "display_seen.jsonl");
+        return File.Exists(defaultSeenPath) ? defaultSeenPath : null;
     }
 
     private static int ImportSeen(CliOptions options)
@@ -192,7 +229,7 @@ internal static class Program
         }
 
         Console.Error.WriteLine("Usage:");
-        Console.Error.WriteLine("  GwyfJpn.Extractor extract --game-dir <game dir> --out-dir <out dir> --pseudo-out <pseudo.ja.json> --export-out <translation.export.jsonl>");
+        Console.Error.WriteLine("  GwyfJpn.Extractor extract --game-dir <game dir> [--seen <display_seen.jsonl>] --out-dir <out dir> --pseudo-out <pseudo.ja.json> --export-out <translation.export.jsonl>");
         Console.Error.WriteLine("  GwyfJpn.Extractor import-seen --seen <display_seen.jsonl> --out <seen.candidates.json>");
         Console.Error.WriteLine("  GwyfJpn.Extractor validate --translations <translations.ja.json>");
         Console.Error.WriteLine("  GwyfJpn.Extractor prune-translations --translations <translations.ja.json> [--out <translations.pruned.ja.json>]");

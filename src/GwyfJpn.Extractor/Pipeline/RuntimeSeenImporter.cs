@@ -37,7 +37,7 @@ internal static class RuntimeSeenImporter
                 continue;
             }
 
-            var source = SourceTextClassifier.NormalizeCandidate(record.Source);
+            var source = SourceTextClassifier.NormalizeConfiguredDisplay(record.Source);
             if (string.IsNullOrWhiteSpace(source))
             {
                 continue;

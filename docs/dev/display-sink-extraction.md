@@ -58,7 +58,7 @@ Steam から一度起動する。BepInEx ログに `Display extraction mode fini
 sh ./scripts/disable-scene-extraction.sh
 ```
 
-## インポート（レビュー用）
+## インポート
 
 ```sh
 sh ./scripts/import-seen.sh
@@ -66,7 +66,8 @@ sh ./scripts/import-seen.sh
 
 出力: `translations/pipeline/runtime.seen.candidates.json`
 
-**自動で `translations.ja.json` や `display_sinks.json` にマージはしません。** ログを見て `supplementalDisplaySources` に手動追加し、再 extract してください。
+通常の `extract` は、`--seen` が指定された場合、またはゲームフォルダ配下にこのログが存在する場合、自動で `merged.candidates.json` にマージします。
+`import-seen.sh` はログだけを確認したいときのレビュー用です。
 
 ## 役割分担
 

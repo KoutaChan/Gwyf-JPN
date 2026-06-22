@@ -8,7 +8,7 @@ namespace GwyfJpn.Extractor;
 
 /// <summary>
 /// Enriches static extraction before merge:
-/// promotes display-bound DLL ldstr, adds configured runtime labels, and derives interaction UI fragments.
+/// promotes display-bound DLL ldstr, infers runtime labels, and derives interaction UI fragments.
 /// </summary>
 internal static class DisplayCandidateExpander
 {
@@ -25,11 +25,13 @@ internal static class DisplayCandidateExpander
             .Expand(dllList, mapping)
             .Concat(SupplementalSources.Expand(mapping));
 
-        var withEnrichment = baseCandidates.Concat(enrichment);
+        var withEnrichment = baseCandidates.Concat(enrichment).ToList();
         var fragments = InteractionFragmentDeriver.Expand(withEnrichment);
         var withFragments = withEnrichment.Concat(fragments).ToList();
-        var templateInstantiations = TemplateInstantiationExpander.Expand(withFragments, mapping);
-        var withTemplateInstantiations = withFragments.Concat(templateInstantiations).ToList();
+        var inferredSupplementalSources = InferredSupplementalSources.Expand(withFragments, mapping);
+        var withInferredSupplementalSources = withFragments.Concat(inferredSupplementalSources).ToList();
+        var templateInstantiations = TemplateInstantiationExpander.Expand(withInferredSupplementalSources, mapping);
+        var withTemplateInstantiations = withInferredSupplementalSources.Concat(templateInstantiations).ToList();
 
         return withTemplateInstantiations
             .Concat(DisplayVariantExpander.Expand(withTemplateInstantiations, mapping))
@@ -173,6 +175,138 @@ internal static class DisplayCandidateExpander
                 }
 
                 yield return CandidateFactories.ConfiguredSource(normalized);
+            }
+        }
+    }
+
+    private static class InferredSupplementalSources
+    {
+        private static readonly Regex BracketToken = new(
+            @"\[([^\]]+)\]",
+            RegexOptions.Compiled | RegexOptions.CultureInvariant);
+
+        public static IEnumerable<CandidateEntry> Expand(
+            IReadOnlyList<CandidateEntry> entries,
+            DisplaySinkMapping mapping)
+        {
+            var mergeableSources = entries
+                .Where(entry =>
+                    CandidateSourceKind.IsAssetSource(entry.SourceKind) ||
+                    CandidateSourceKind.IsTrusted(entry.SourceKind))
+                .Select(entry => entry.Source ?? string.Empty)
+                .Where(source => !string.IsNullOrWhiteSpace(source))
+                .ToHashSet(StringComparer.Ordinal);
+            var inferredSources = new HashSet<string>(StringComparer.Ordinal);
+
+            foreach (var source in InferInputBindingLabels(entries, mapping))
+            {
+                var normalized = SourceTextClassifier.NormalizeConfiguredDisplay(source);
+                if (string.IsNullOrWhiteSpace(normalized) ||
+                    !inferredSources.Add(normalized))
+                {
+                    continue;
+                }
+
+                yield return CandidateFactories.ConfiguredSource(normalized);
+            }
+
+            foreach (var source in InferCompatibilityFragments(entries))
+            {
+                var normalized = SourceTextClassifier.NormalizeConfiguredDisplay(source);
+                if (string.IsNullOrWhiteSpace(normalized) ||
+                    mergeableSources.Contains(normalized) ||
+                    !inferredSources.Add(normalized))
+                {
+                    continue;
+                }
+
+                yield return CandidateFactories.ConfiguredSource(normalized);
+            }
+        }
+
+        private static IEnumerable<string> InferInputBindingLabels(
+            IReadOnlyList<CandidateEntry> entries,
+            DisplaySinkMapping mapping)
+        {
+            var observedBracketTokens = entries
+                .SelectMany(entry => ExtractBracketTokens(entry.Source))
+                .ToHashSet(StringComparer.Ordinal);
+            var configuredBracketTokens = (mapping.Document.PlaceholderGuard?.BracketTokens ?? new List<string>())
+                .Where(token => !string.IsNullOrWhiteSpace(token));
+
+            foreach (var token in observedBracketTokens.Concat(configuredBracketTokens).Distinct(StringComparer.Ordinal))
+            {
+                foreach (var label in ToInputDisplayLabels(token))
+                {
+                    yield return label;
+                }
+            }
+
+            if (entries.Any(entry => (entry.Source ?? string.Empty)
+                    .IndexOf("Press [", StringComparison.OrdinalIgnoreCase) >= 0))
+            {
+                yield return "Press";
+                yield return "<noparse></noparse>Press ";
+            }
+        }
+
+        private static IEnumerable<string> InferCompatibilityFragments(IReadOnlyList<CandidateEntry> entries)
+        {
+            var sources = entries
+                .Select(entry => entry.Source ?? string.Empty)
+                .Where(source => !string.IsNullOrWhiteSpace(source))
+                .ToList();
+
+            if (sources.Any(source => string.Equals(source, "'s Lobby", StringComparison.Ordinal)))
+            {
+                yield return "'s Lobby";
+            }
+
+            if (sources.Any(source =>
+                    string.Equals(source, "{0} | {1}'s Lobby", StringComparison.Ordinal) ||
+                    source.EndsWith("'s Lobby", StringComparison.Ordinal)))
+            {
+                yield return " | {0}'s Lobby";
+            }
+        }
+
+        private static IEnumerable<string> ExtractBracketTokens(string? source)
+        {
+            if (string.IsNullOrWhiteSpace(source))
+            {
+                yield break;
+            }
+
+            foreach (Match match in BracketToken.Matches(source))
+            {
+                var token = match.Groups[1].Value.Trim();
+                if (!string.IsNullOrWhiteSpace(token))
+                {
+                    yield return token;
+                }
+            }
+        }
+
+        private static IEnumerable<string> ToInputDisplayLabels(string token)
+        {
+            switch (token)
+            {
+                case "LMB":
+                    yield return "Left Button";
+                    break;
+                case "RMB":
+                    yield return "Right Button";
+                    break;
+                case "MMB":
+                    yield return "Middle Button";
+                    break;
+                case "Ctrl":
+                    yield return "Control";
+                    break;
+                case "Space":
+                case "Shift":
+                    yield return token;
+                    break;
             }
         }
     }

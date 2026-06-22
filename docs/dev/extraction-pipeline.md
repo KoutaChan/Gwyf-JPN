@@ -103,7 +103,8 @@ Python / UnityPy は不要です。
 | 種別 | 内容 |
 |------|------|
 | `dll_promoted_ldstr` | `gameSinks` / `promotedDisplayTypes` に一致する `ldstr` の昇格 |
-| `configured_display_source` | `supplementalDisplaySources` の手動追加候補 |
+| `configured_display_source` | 入力キー名など、抽出済み候補から推定した補助候補。`supplementalDisplaySources` は最後の逃げ道 |
+| `runtime_display_sink` | `display_seen.jsonl` から取り込んだ実表示文字列 |
 | `derived_display_fragment` | `[E] Pick Up` → `Pick Up` などの断片 |
 | `derived_template_instantiation` | asset 由来の source set と display template の組み合わせ。例: `Big Spender` + `{0} (Challenge)` → `Big Spender (Challenge)` |
 | `mapping-variant` | `displayVariantRules` による派生 |
@@ -123,7 +124,8 @@ sh ./scripts/import-seen.sh
 sh ./scripts/disable-scene-extraction.sh
 ```
 
-`import-seen.sh` はレビュー用です。**ログの自動マージは行いません。** 必要な文字列は `config/display_sinks.json` に手動追加してから再 extract します。
+`extract` は `--seen` が指定された場合、または `BepInEx/config/GwyfJpn/display_seen.jsonl` が存在する場合、そのログを `runtime_display_sink` として自動マージします。
+ログだけを候補 JSON に変換して確認したい場合は `import-seen.sh` を使います。
 
 詳細: [表示シンクログの収集](display-sink-extraction.md)
 

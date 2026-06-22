@@ -8,6 +8,7 @@ namespace GwyfJpn.Extractor;
 
 internal sealed class DisplayTemplateCoverageRule
 {
+    private static readonly Regex Placeholder = new(@"\{\d+(?::[^}]*)?\}", RegexOptions.Compiled);
     private readonly Regex _match;
 
     private DisplayTemplateCoverageRule(string template, Regex match)
@@ -34,6 +35,11 @@ internal sealed class DisplayTemplateCoverageRule
 
     public bool Covers(string source)
     {
+        if (Placeholder.IsMatch(source))
+        {
+            return false;
+        }
+
         return !string.Equals(source, Template, StringComparison.Ordinal) && _match.IsMatch(source);
     }
 

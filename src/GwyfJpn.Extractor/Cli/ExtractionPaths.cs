@@ -15,6 +15,7 @@ internal sealed class ExtractionPaths
         AssetOut = Path.Combine(outDir, "assets.raw.json");
         DllOut = Path.Combine(outDir, "dll.ldstr.json");
         FieldsOut = Path.Combine(outDir, "dll.fields.json");
+        RuntimeSeenOut = Path.Combine(outDir, "runtime.seen.candidates.json");
         MergedOut = Path.Combine(outDir, "merged.candidates.json");
         ReviewOut = Path.Combine(outDir, "review.candidates.json");
         PseudoOut = pseudoOut;
@@ -26,6 +27,7 @@ internal sealed class ExtractionPaths
     public string AssetOut { get; }
     public string DllOut { get; }
     public string FieldsOut { get; }
+    public string RuntimeSeenOut { get; }
     public string MergedOut { get; }
     public string ReviewOut { get; }
     public string PseudoOut { get; }
