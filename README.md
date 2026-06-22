@@ -4,7 +4,7 @@
 
 ![メインメニュー（日本語化の例）](docs/screenshots/main-menu.png)
 
-## 対応バージョン（MOD バージョン v0.2.0 現在）
+## 対応バージョン（MOD バージョン v0.2.1 現在）
 
 - ゲームバージョン **1.0.11** で動作確認
 - BepInEx 5
@@ -14,6 +14,13 @@
 - メインメニュー、設定、ロビー、ゲーム内 UI の日本語表示
 - TextMeshPro（`TMP_Text`）の表示文字列を Harmony でフックして置換
 - 未翻訳文字列を `runtime_unknown.jsonl` に記録
+
+## v0.2.1 の主な更新
+
+- `DAY X ENDED` 系の派生訳を `X日目終了` に統一
+- `Left Button` / `Middle Button` / `Right Button` の派生訳をクリック表記に統一
+- `ON` / `OFF`、`1st 12` / `2nd 12` / `3rd 12` など、英語が残っていた短い UI 表示を見やすい表記に調整
+- `<noparse></noparse>` 付き variant と通常 source の訳ズレを修正
 
 ## v0.2.0 の主な更新
 

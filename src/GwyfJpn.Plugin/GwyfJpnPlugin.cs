@@ -21,7 +21,7 @@ public sealed class GwyfJpnPlugin : BaseUnityPlugin
 {
     public const string PluginGuid = "local.gwyf.jpn";
     public const string PluginName = "Gamble With Your Friends Japanese";
-    public const string PluginVersion = "0.2.0";
+    public const string PluginVersion = "0.2.1";
     private const int StartupSweepIterations = 3;
     private const int StartupSweepMaxPerFrame = 48;
     private const int SceneSweepMaxPerFrame = 48;
