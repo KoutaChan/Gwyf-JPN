@@ -427,7 +427,7 @@
     },
     {
       "reason": "dev-comment-or-typo",
-      "pattern": "^(?i)(Action Test|Toggle Test|Greed Test|Teleport to skybravessssss|YEE-git|New (Drinking|Slots|Smoking) Socket Action)$"
+      "pattern": "^(?i)(Action Test|Toggle Test|Teleport to skybravessssss|YEE-git|New (Drinking|Slots|Smoking) Socket Action)$"
     },
     {
       "reason": "config-file-name",
