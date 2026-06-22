@@ -9,7 +9,10 @@ public static class CandidateSourceKind
     public const string StreamingJsonString = "streaming_json_string";
     public const string AssetTextAssetString = "asset_textasset_string";
     public const string AssetReviewString = "asset_review_string";
+    public const string StaticSceneTmpText = "static_scene_tmp_text";
     public const string DllDisplayFlowTemplate = "dll_display_flow_template";
+    public const string DllDisplayFlowLiteral = "dll_display_flow_literal";
+    public const string InputBindingDisplayLabel = "input_binding_display_label";
     public const string DllReviewLdstr = "dll_review_ldstr";
     public const string DllPromotedLdstr = "dll_promoted_ldstr";
     public const string DerivedDisplayFragment = "derived_display_fragment";
@@ -20,7 +23,10 @@ public static class CandidateSourceKind
     public static bool IsTrusted(string? sourceKind)
     {
         return sourceKind == StreamingJsonString ||
+               sourceKind == StaticSceneTmpText ||
                sourceKind == DllDisplayFlowTemplate ||
+               sourceKind == DllDisplayFlowLiteral ||
+               sourceKind == InputBindingDisplayLabel ||
                sourceKind == DllPromotedLdstr ||
                sourceKind == DerivedDisplayFragment ||
                sourceKind == DerivedTemplateInstantiation ||
@@ -32,6 +38,7 @@ public static class CandidateSourceKind
     {
         return sourceKind == StreamingJsonString ||
                sourceKind == AssetTextAssetString ||
-               sourceKind == AssetReviewString;
+               sourceKind == AssetReviewString ||
+               sourceKind == StaticSceneTmpText;
     }
 }

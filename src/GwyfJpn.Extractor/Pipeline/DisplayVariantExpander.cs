@@ -16,16 +16,10 @@ internal static class DisplayVariantExpander
     {
         var entryList = entries.ToList();
         var seenSources = new HashSet<string>(
-            entryList.Select(e => e.Source ?? string.Empty),
+            entryList
+                .Where(IsMergeableSourceKind)
+                .Select(e => e.Source ?? string.Empty),
             StringComparer.Ordinal);
-
-        foreach (var variant in ExpandLiteralVariants(entryList, mapping))
-        {
-            if (seenSources.Add(variant.Source))
-            {
-                yield return variant;
-            }
-        }
 
         foreach (var entry in entryList)
         {
@@ -41,40 +35,10 @@ internal static class DisplayVariantExpander
         }
     }
 
-    private static IEnumerable<CandidateEntry> ExpandLiteralVariants(
-        IReadOnlyList<CandidateEntry> entries,
-        DisplaySinkMapping mapping)
+    private static bool IsMergeableSourceKind(CandidateEntry entry)
     {
-        if (mapping.Document.DisplayLiteralVariants.Count == 0)
-        {
-            yield break;
-        }
-
-        var bySource = entries
-            .GroupBy(e => e.Source ?? string.Empty, StringComparer.Ordinal)
-            .ToDictionary(g => g.Key, g => g.First(), StringComparer.Ordinal);
-
-        foreach (var literalVariant in mapping.Document.DisplayLiteralVariants)
-        {
-            if (!bySource.TryGetValue(literalVariant.Base, out var parent))
-            {
-                continue;
-            }
-
-            foreach (var variantSource in literalVariant.Variants)
-            {
-                if (string.IsNullOrWhiteSpace(variantSource))
-                {
-                    continue;
-                }
-
-                yield return DerivedVariant(
-                    parent,
-                    variantSource,
-                    CandidateSourceKind.DerivedDisplayFragment,
-                    literalVariant.Base);
-            }
-        }
+        return CandidateSourceKind.IsAssetSource(entry.SourceKind) ||
+               CandidateSourceKind.IsTrusted(entry.SourceKind);
     }
 
     private static IEnumerable<CandidateEntry> ExpandRules(CandidateEntry parent, DisplaySinkMapping mapping)
@@ -87,7 +51,7 @@ internal static class DisplayVariantExpander
 
         foreach (var rule in mapping.Document.DisplayVariantRules)
         {
-            if (!MatchesRuleScope(parent, source, rule))
+            if (!MatchesRuleScope(parent, source, rule, mapping))
             {
                 continue;
             }
@@ -109,11 +73,20 @@ internal static class DisplayVariantExpander
         }
     }
 
-    private static bool MatchesRuleScope(CandidateEntry parent, string source, DisplayVariantRuleMapping rule)
+    private static bool MatchesRuleScope(
+        CandidateEntry parent,
+        string source,
+        DisplayVariantRuleMapping rule,
+        DisplaySinkMapping mapping)
     {
         if (rule.SourceKinds != null &&
             rule.SourceKinds.Count > 0 &&
             !rule.SourceKinds.Contains(parent.SourceKind ?? string.Empty, StringComparer.Ordinal))
+        {
+            return false;
+        }
+
+        if (!MatchesConfiguredSourceSet(parent, rule, mapping))
         {
             return false;
         }
@@ -124,6 +97,13 @@ internal static class DisplayVariantExpander
         }
 
         if (rule.RequiresTranslatableEnglish == true && !TextNormalizer.LooksTranslatableEnglish(source))
+        {
+            return false;
+        }
+
+        if (UsesMatchAsScope(rule.Kind) &&
+            !string.IsNullOrWhiteSpace(rule.Match) &&
+            !Regex.IsMatch(source, rule.Match, RegexOptions.CultureInvariant | RegexOptions.IgnoreCase))
         {
             return false;
         }
@@ -143,6 +123,30 @@ internal static class DisplayVariantExpander
         }
 
         return true;
+    }
+
+    private static bool MatchesConfiguredSourceSet(
+        CandidateEntry parent,
+        DisplayVariantRuleMapping rule,
+        DisplaySinkMapping mapping)
+    {
+        if (string.IsNullOrWhiteSpace(rule.SourceSet))
+        {
+            return true;
+        }
+
+        var sourceSet = mapping.Document.DisplaySourceSets
+            .FirstOrDefault(candidate =>
+                string.Equals(candidate.Id, rule.SourceSet, StringComparison.Ordinal));
+        return sourceSet != null && DisplaySourceSetMatcher.Matches(parent, sourceSet);
+    }
+
+    private static bool UsesMatchAsScope(string? kind)
+    {
+        return string.Equals(kind, "prefix", StringComparison.Ordinal) ||
+               string.Equals(kind, "suffix", StringComparison.Ordinal) ||
+               string.Equals(kind, "wrap", StringComparison.Ordinal) ||
+               string.Equals(kind, "wrapSuffix", StringComparison.Ordinal);
     }
 
     private static IEnumerable<string> ApplyRule(

@@ -195,13 +195,10 @@ public sealed class DisplaySinkMappingDocument
     [DataMember(Name = "displayVariantRules", Order = 10, EmitDefaultValue = false)]
     public List<DisplayVariantRuleMapping> DisplayVariantRules { get; set; } = new();
 
-    [DataMember(Name = "displayLiteralVariants", Order = 11, EmitDefaultValue = false)]
-    public List<DisplayLiteralVariantMapping> DisplayLiteralVariants { get; set; } = new();
-
-    [DataMember(Name = "displaySourceSets", Order = 12, EmitDefaultValue = false)]
+    [DataMember(Name = "displaySourceSets", Order = 11, EmitDefaultValue = false)]
     public List<DisplaySourceSetMapping> DisplaySourceSets { get; set; } = new();
 
-    [DataMember(Name = "displayTemplateInstantiations", Order = 13, EmitDefaultValue = false)]
+    [DataMember(Name = "displayTemplateInstantiations", Order = 12, EmitDefaultValue = false)]
     public List<DisplayTemplateInstantiationMapping> DisplayTemplateInstantiations { get; set; } = new();
 }
 
@@ -357,33 +354,23 @@ public sealed class DisplayVariantRuleMapping
     [DataMember(Name = "sourceKinds", Order = 9, EmitDefaultValue = false)]
     public List<string>? SourceKinds { get; set; }
 
-    [DataMember(Name = "maxLength", Order = 10, EmitDefaultValue = false)]
+    [DataMember(Name = "sourceSet", Order = 10, EmitDefaultValue = false)]
+    public string? SourceSet { get; set; }
+
+    [DataMember(Name = "maxLength", Order = 11, EmitDefaultValue = false)]
     public int? MaxLength { get; set; }
 
-    [DataMember(Name = "skipIfSourceStartsWith", Order = 11, EmitDefaultValue = false)]
+    [DataMember(Name = "skipIfSourceStartsWith", Order = 12, EmitDefaultValue = false)]
     public List<string>? SkipIfSourceStartsWith { get; set; }
 
-    [DataMember(Name = "skipIfSourceContains", Order = 12, EmitDefaultValue = false)]
+    [DataMember(Name = "skipIfSourceContains", Order = 13, EmitDefaultValue = false)]
     public List<string>? SkipIfSourceContains { get; set; }
 
-    [DataMember(Name = "requiresTranslatableEnglish", Order = 13, EmitDefaultValue = false)]
+    [DataMember(Name = "requiresTranslatableEnglish", Order = 14, EmitDefaultValue = false)]
     public bool? RequiresTranslatableEnglish { get; set; }
 
-    [DataMember(Name = "resultKind", Order = 14, EmitDefaultValue = false)]
+    [DataMember(Name = "resultKind", Order = 15, EmitDefaultValue = false)]
     public string? ResultKind { get; set; }
-}
-
-/// <summary>
-/// Explicit base source to known runtime variant strings.
-/// </summary>
-[DataContract]
-public sealed class DisplayLiteralVariantMapping
-{
-    [DataMember(Name = "base", Order = 0)]
-    public string Base { get; set; } = string.Empty;
-
-    [DataMember(Name = "variants", Order = 1)]
-    public List<string> Variants { get; set; } = new();
 }
 
 /// <summary>

@@ -210,52 +210,6 @@
       "^[a-z][A-Za-z0-9_]*$"
     ]
   },
-  "displayLiteralVariants": [
-    {
-      "base": "Yes, quit",
-      "variants": ["<noparse></noparse>Yes, quit"]
-    },
-    {
-      "base": "Yes, I am",
-      "variants": ["<noparse></noparse>Yes, I am"]
-    },
-    {
-      "base": "Spin for a chance to revert your last <color=red>loss $</color>.",
-      "variants": ["<noparse></noparse>Spin for a chance to revert your last <color=red>loss $</color>."]
-    },
-    {
-      "base": "Gives <rainb>random</rainb> item.",
-      "variants": ["Gives random item.", "<noparse></noparse>Gives random item."]
-    },
-    {
-      "base": "No, cancel",
-      "variants": ["<noparse></noparse>No, cancel"]
-    },
-    {
-      "base": "DAY X ENDED",
-      "variants": ["<noparse></noparse>DAY X ENDED"]
-    },
-    {
-      "base": "Reroll",
-      "variants": ["<noparse></noparse>Reroll", " Reroll"]
-    },
-    {
-      "base": "Double or nothing",
-      "variants": ["Double \nor\nnothing\n\n"]
-    },
-    {
-      "base": "Pay your debt",
-      "variants": ["Pay \nyour \ndebt\n", "Pay\n"]
-    },
-    {
-      "base": "Quota Excess Reward ({0}%)",
-      "variants": ["<noparse></noparse>Quota Excess Reward ({0}%)"]
-    },
-    {
-      "base": "Stats for day {0}",
-      "variants": ["<noparse></noparse>Stats for day {0}"]
-    }
-  ],
   "displaySourceSets": [
     {
       "id": "challengeTitles",
@@ -266,6 +220,15 @@
       "rawStringIndex": 1,
       "contextType": "Challenge",
       "contextField": "challengeName"
+    },
+    {
+      "id": "itemDescriptions",
+      "file": "resources.assets",
+      "classId": 114,
+      "scriptId": "0a58d6974ceb06681575be0310f84c94",
+      "oldTypeHash": "d5bca531f9e3f17afd6f39bebaf5ec95",
+      "contextType": "ItemDescriptionSettings/ItemDescriptionData",
+      "contextField": "description"
     }
   ],
   "displayTemplateInstantiations": [
@@ -278,6 +241,48 @@
     }
   ],
   "displayVariantRules": [
+    {
+      "id": "noparse-confirmation-dll-labels",
+      "kind": "wrap",
+      "wrapper": "noparse",
+      "match": "^(?:Yes, quit|Yes, I am|No, cancel)$",
+      "sourceKinds": ["dll_display_flow_template"]
+    },
+    {
+      "id": "noparse-day-ended-label",
+      "kind": "wrap",
+      "wrapper": "noparse",
+      "match": "^DAY X ENDED$",
+      "sourceKinds": ["asset_review_string"]
+    },
+    {
+      "id": "noparse-item-description-labels",
+      "kind": "wrap",
+      "wrapper": "noparse",
+      "sourceSet": "itemDescriptions",
+      "sourceKinds": ["asset_review_string"]
+    },
+    {
+      "id": "noparse-day-summary-dll-templates",
+      "kind": "wrap",
+      "wrapper": "noparse",
+      "match": "^(?:Quota Excess Reward \\(\\{0\\}%\\)|Stats for day \\{0\\})$",
+      "sourceKinds": ["dll_display_flow_template"]
+    },
+    {
+      "id": "reroll-static-noparse",
+      "kind": "wrap",
+      "wrapper": "noparse",
+      "match": "^Reroll$",
+      "sourceKinds": ["asset_review_string"]
+    },
+    {
+      "id": "reroll-static-leading-space",
+      "kind": "prefix",
+      "prefix": " ",
+      "match": "^Reroll$",
+      "sourceKinds": ["asset_review_string"]
+    },
     {
       "id": "leading-space-fragment",
       "kind": "prefix",
@@ -319,6 +324,34 @@
       "kind": "regexReplace",
       "match": "<rainb>(.*?)</rainb>",
       "replace": "$1"
+    },
+    {
+      "id": "rainb-strip-noparse",
+      "kind": "regexReplace",
+      "match": "^Gives <rainb>(.*?)</rainb> item\\.$",
+      "replace": "<noparse></noparse>Gives $1 item.",
+      "sourceKinds": ["asset_review_string"]
+    },
+    {
+      "id": "double-or-nothing-sign-newlines",
+      "kind": "literalWhenMatch",
+      "match": "^Double or nothing$",
+      "literal": "Double \nor\nnothing\n\n",
+      "sourceKinds": ["asset_review_string"]
+    },
+    {
+      "id": "pay-your-debt-sign-newlines",
+      "kind": "literalWhenMatch",
+      "match": "^Pay your debt$",
+      "literal": "Pay \nyour \ndebt\n",
+      "sourceKinds": ["asset_review_string"]
+    },
+    {
+      "id": "pay-your-debt-button-newline",
+      "kind": "literalWhenMatch",
+      "match": "^Pay your debt$",
+      "literal": "Pay\n",
+      "sourceKinds": ["asset_review_string"]
     },
     {
       "id": "reroll-challenge-newline",

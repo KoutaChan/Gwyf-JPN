@@ -39,8 +39,7 @@
 | `knownDisplayFields` | 表示に紐づくフィールドのシード |
 | `promotedDisplayTypes` | 型単位で ldstr を昇格 |
 | `supplementalDisplaySources` | ランタイム観測から手動追加する文字列 |
-| `displayVariantRules` | テンプレート・正規表現による派生候補 |
-| `displayLiteralVariants` | 既知 base からの表記ゆれ |
+| `displayVariantRules` | テンプレート・正規表現・表示レイアウトによる派生候補 |
 | `displaySourceSets` | Unity serialized type と raw string index で選ぶ source 集合 |
 | `displayTemplateInstantiations` | source 集合と display template から具体的な runtime 文字列を生成 |
 
@@ -81,6 +80,7 @@ C# にハードコードせず、**JSON が唯一の正**です。
 ## source set と template instantiation
 
 `displaySourceSets` は serialized asset の型情報で source を選ぶ。Challenge 名のように、object 内の field 位置が安定しているものは `classId`、`scriptId`、`oldTypeHash`、`rawStringIndex` を指定する。
+`displayVariantRules[].sourceSet` から同じ source set を参照すると、特定の serialized type 由来の文字列だけに `<noparse>` や改行レイアウトなどの表示ゆれを派生できる。
 
 ```json
 {
@@ -104,11 +104,12 @@ C# にハードコードせず、**JSON が唯一の正**です。
 **trusted（翻訳エクスポート対象）**
 
 - `dll_display_flow_template`
+- `static_scene_tmp_text`
 - `configured_display_source`
 - `dll_promoted_ldstr`
 - `derived_display_fragment`
 - `derived_template_instantiation`
-- `runtime_display_sink`
+- `runtime_display_sink`（`--seen` 指定時の診断候補）
 
 **review のみ**
 

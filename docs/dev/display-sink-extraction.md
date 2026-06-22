@@ -1,6 +1,6 @@
 # 表示シンクログの収集
 
-アセットを推測で分類するより、**実際に表示 API に届いた文字列だけ**を記録する方式です。英文の allow/block リストは使いません。
+静的抽出で拾えない表示を調べるため、**実際に表示 API に届いた文字列**を記録する診断ログです。英文の allow/block リストは使いません。
 
 ## この文書で分かること
 
@@ -15,7 +15,7 @@
 
 - 画面に出ているのに静的抽出で拾えない文字列を調べたい
 - 手動プレイではなく全シーンを自動巡回してログを取りたい
-- `supplementalDisplaySources` に追加する根拠を集めたい
+- 静的 source set / DLL 表示フロー / `displayVariantRules` に戻す根拠を集めたい
 
 ## 出力先
 
@@ -66,14 +66,15 @@ sh ./scripts/import-seen.sh
 
 出力: `translations/pipeline/runtime.seen.candidates.json`
 
-通常の `extract` は、`--seen` が指定された場合、またはゲームフォルダ配下にこのログが存在する場合、自動で `merged.candidates.json` にマージします。
+通常の `extract` は、`--seen` が指定された場合だけ `merged.candidates.json` にマージします。
+ゲームフォルダ配下にこのログが残っていても自動では読みません。
 `import-seen.sh` はログだけを確認したいときのレビュー用です。
 
 ## 役割分担
 
 | 経路 | 役割 |
 |------|------|
-| `display_seen.jsonl` | シーン UI の実表示文字列 |
+| `display_seen.jsonl` | 静的抽出漏れを確認する実表示ログ |
 | DLL 表示フロー | コード生成テキスト |
-| アセット review | 未到達の初期テキスト補助 |
+| 静的 TMP / アセット | serialized された初期テキスト |
 | `runtime_unknown.jsonl` | 翻訳 DB にない表示の差分 |

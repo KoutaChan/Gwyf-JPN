@@ -23,6 +23,9 @@ internal static class SourceTextClassifier
     private static readonly Regex RichTextTagWithText = new(
         @"<(?<tag>[A-Za-z][A-Za-z0-9_-]*)\b[^>]*>[^<>]*[A-Za-z][^<>]*</\k<tag>>",
         RegexOptions.Compiled);
+    private static readonly Regex EmptyNoParsePrefixWithText = new(
+        @"^<noparse>\s*</noparse>\s*\S",
+        RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
     public static string NormalizeCandidate(string? value)
     {
@@ -102,7 +105,8 @@ internal static class SourceTextClassifier
         if (!value.Any(char.IsWhiteSpace) &&
             value.Length >= 10 &&
             value.Any(ch => ch == '_' || ch == '/' || ch == '\\') &&
-            !RichTextTagWithText.IsMatch(value))
+            !RichTextTagWithText.IsMatch(value) &&
+            !EmptyNoParsePrefixWithText.IsMatch(value))
         {
             return true;
         }

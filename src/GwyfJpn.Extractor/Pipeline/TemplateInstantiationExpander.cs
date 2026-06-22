@@ -65,50 +65,11 @@ internal static class TemplateInstantiationExpander
         var seenSources = new HashSet<string>(StringComparer.Ordinal);
         foreach (var candidate in entries)
         {
-            if (MatchesCandidateScope(candidate, sourceSet) && seenSources.Add(candidate.Source))
+            if (DisplaySourceSetMatcher.Matches(candidate, sourceSet) && seenSources.Add(candidate.Source))
             {
                 yield return candidate;
             }
         }
-    }
-
-    private static bool MatchesCandidateScope(CandidateEntry candidate, DisplaySourceSetMapping sourceSet)
-    {
-        var context = candidate.Context;
-        if (context == null)
-        {
-            return false;
-        }
-
-        if (!string.IsNullOrWhiteSpace(sourceSet.File) &&
-            !string.Equals(context.File, sourceSet.File, StringComparison.OrdinalIgnoreCase))
-        {
-            return false;
-        }
-
-        if (sourceSet.ClassId.HasValue && context.ClassId != sourceSet.ClassId.Value)
-        {
-            return false;
-        }
-
-        if (!string.IsNullOrWhiteSpace(sourceSet.ScriptId) &&
-            !string.Equals(context.ScriptId, sourceSet.ScriptId, StringComparison.OrdinalIgnoreCase))
-        {
-            return false;
-        }
-
-        if (!string.IsNullOrWhiteSpace(sourceSet.OldTypeHash) &&
-            !string.Equals(context.OldTypeHash, sourceSet.OldTypeHash, StringComparison.OrdinalIgnoreCase))
-        {
-            return false;
-        }
-
-        if (sourceSet.RawStringIndex.HasValue && context.RawStringIndex != sourceSet.RawStringIndex.Value)
-        {
-            return false;
-        }
-
-        return true;
     }
 
     private static CandidateEntry CreateCandidate(

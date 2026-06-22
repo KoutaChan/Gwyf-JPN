@@ -199,6 +199,16 @@ internal static class DllTextExtractor
                 strings);
         }
 
+        foreach (var literal in result.DisplayTemplateLiterals)
+        {
+            TryAddString(
+                type,
+                method,
+                literal,
+                CandidateSourceKind.DllDisplayFlowLiteral,
+                strings);
+        }
+
         foreach (var literal in result.ReviewLiterals
                      .Except(result.DisplayTemplateLiterals, StringComparer.Ordinal)
                      .Except(result.HierarchyPathLiterals, StringComparer.Ordinal))

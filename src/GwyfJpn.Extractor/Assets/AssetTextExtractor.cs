@@ -34,6 +34,14 @@ internal static class AssetTextExtractor
             records.AddRange(ExtractSerializedFile(file, dataDir, excludes));
         }
 
+        var inputBindingFiles = EnumerateSerializedAssetFiles(
+            dataDir,
+            new HashSet<string>(StringComparer.OrdinalIgnoreCase));
+        foreach (var file in inputBindingFiles)
+        {
+            records.AddRange(ExtractInputBindingLabels(file, dataDir));
+        }
+
         var streamingAssets = Path.Combine(dataDir, "StreamingAssets");
         if (Directory.Exists(streamingAssets))
         {
@@ -82,6 +90,31 @@ internal static class AssetTextExtractor
         var rel = ToSlash(PathUtil.RelativeTo(dataDir, path));
         var seen = new HashSet<string>(StringComparer.Ordinal);
         foreach (var candidate in SerializedAssetStringExtractor.Extract(path, rel, excludes))
+        {
+            if (!seen.Add(candidate.Id))
+            {
+                continue;
+            }
+
+            yield return candidate;
+        }
+
+        foreach (var candidate in StaticSceneTmpTextExtractor.Extract(path, rel, excludes))
+        {
+            if (!seen.Add(candidate.Id))
+            {
+                continue;
+            }
+
+            yield return candidate;
+        }
+    }
+
+    private static IEnumerable<CandidateEntry> ExtractInputBindingLabels(string path, string dataDir)
+    {
+        var rel = ToSlash(PathUtil.RelativeTo(dataDir, path));
+        var seen = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var candidate in InputBindingDisplayLabelExtractor.Extract(path, rel))
         {
             if (!seen.Add(candidate.Id))
             {

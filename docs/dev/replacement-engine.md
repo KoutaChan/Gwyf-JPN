@@ -71,7 +71,7 @@ normalized sourceはまず大小文字を区別して検索し、見つからな
 
 ### RuntimeSeenLogger
 
-TMP/UI表示sinkへ到達した英文を `display_seen.jsonl` に書く。これは翻訳対象取得の本命経路であり、英文内容のallow/block listではなく「実際に表示コードへ到達した」という事実を根拠にする。
+TMP/UI表示sinkへ到達した英文を `display_seen.jsonl` に書く。これは静的抽出の漏れを見つけるための診断ログであり、通常の翻訳候補生成では自動マージしない。英文内容のallow/block listではなく「実際に表示コードへ到達した」という事実を根拠に、必要なものを静的抽出へ戻す。
 
 ## 置換の優先順位
 
@@ -85,7 +85,7 @@ TMP/UI表示sinkへ到達した英文を `display_seen.jsonl` に書く。これ
 6. 置換なし
 7. 未知英文ならログ
 
-この処理とは別に、置換前の原文は `display_seen.jsonl` にも記録される。翻訳が既に存在する文字列も含め、表示sinkへ来た文字列を取得するためである。
+この処理とは別に、置換前の原文は `display_seen.jsonl` にも記録できる。翻訳が既に存在する文字列も含め、表示sinkへ来た文字列を監査するためである。
 
 初期段階では、静的asset IDと実行時object pathは完全一致しない場合がある。そのため実用上はsource fallbackが主に効く。将来的にGameObject hierarchyの復元精度を上げると、context ID優先の価値が上がる。
 

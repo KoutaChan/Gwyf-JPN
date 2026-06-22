@@ -75,12 +75,15 @@ internal static class Program
         var fragmentCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DerivedDisplayFragment);
         var supplementalCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.ConfiguredDisplaySource);
         var templateCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DllDisplayFlowTemplate);
+        var displayLiteralCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DllDisplayFlowLiteral);
+        var inputBindingLabelCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.InputBindingDisplayLabel);
         var instantiatedTemplateCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.DerivedTemplateInstantiation);
+        var staticSceneTmpCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.StaticSceneTmpText);
         var runtimeSeenCount = enriched.Count(e => e.SourceKind == CandidateSourceKind.RuntimeDisplaySink);
         var mappingVariantCount = enriched.Count(e =>
             (e.Id ?? string.Empty).StartsWith("mapping-variant:", StringComparison.Ordinal));
         Console.WriteLine(
-            $"Enriched merge inputs: +{promotedCount} promoted ldstr, +{fragmentCount} derived fragments, +{instantiatedTemplateCount} template instantiations, +{supplementalCount} inferred/configured sources, +{runtimeSeenCount} runtime seen sources, +{templateCount} display templates, +{mappingVariantCount} mapping variants");
+            $"Enriched merge inputs: +{promotedCount} promoted ldstr, +{fragmentCount} derived fragments, +{instantiatedTemplateCount} template instantiations, +{supplementalCount} inferred/configured sources, +{staticSceneTmpCount} static TMP sources, +{runtimeSeenCount} runtime seen sources, +{templateCount} display templates, +{displayLiteralCount} display literals, +{inputBindingLabelCount} input binding labels, +{mappingVariantCount} mapping variants");
 
         var merged = CandidateMerger.MergeAll(enriched, mapping);
         JsonIO.WriteJson(paths.MergedOut, merged);
@@ -101,9 +104,16 @@ internal static class Program
 
     private static List<CandidateEntry> LoadRuntimeSeenCandidates(ExtractionPaths paths, CliOptions options)
     {
-        var seenPath = ResolveSeenPath(paths, options);
+        var seenPath = ResolveSeenPath(options);
         if (string.IsNullOrWhiteSpace(seenPath))
         {
+            var empty = new MergedCandidateDocument
+            {
+                Entries = new List<CandidateEntry>(),
+                Counts = new CandidateCounts { Entries = 0 }
+            };
+            JsonIO.WriteJson(paths.RuntimeSeenOut, empty);
+            Console.WriteLine($"Wrote 0 runtime display-sink candidates: {paths.RuntimeSeenOut} (use --seen to import display_seen.jsonl)");
             return new List<CandidateEntry>();
         }
 
@@ -118,20 +128,9 @@ internal static class Program
         return seen.Entries;
     }
 
-    private static string? ResolveSeenPath(ExtractionPaths paths, CliOptions options)
+    private static string? ResolveSeenPath(CliOptions options)
     {
-        if (!string.IsNullOrWhiteSpace(options.Seen))
-        {
-            return options.Seen;
-        }
-
-        var defaultSeenPath = Path.Combine(
-            paths.GameDir,
-            "BepInEx",
-            "config",
-            "GwyfJpn",
-            "display_seen.jsonl");
-        return File.Exists(defaultSeenPath) ? defaultSeenPath : null;
+        return string.IsNullOrWhiteSpace(options.Seen) ? null : options.Seen;
     }
 
     private static int ImportSeen(CliOptions options)

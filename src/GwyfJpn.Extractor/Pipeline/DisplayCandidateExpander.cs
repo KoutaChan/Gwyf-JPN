@@ -28,8 +28,10 @@ internal static class DisplayCandidateExpander
         var withEnrichment = baseCandidates.Concat(enrichment).ToList();
         var fragments = InteractionFragmentDeriver.Expand(withEnrichment);
         var withFragments = withEnrichment.Concat(fragments).ToList();
-        var inferredSupplementalSources = InferredSupplementalSources.Expand(withFragments, mapping);
-        var withInferredSupplementalSources = withFragments.Concat(inferredSupplementalSources).ToList();
+        var templateFragments = DisplayTemplateFragmentDeriver.Expand(withFragments);
+        var withTemplateFragments = withFragments.Concat(templateFragments).ToList();
+        var inferredSupplementalSources = InferredSupplementalSources.Expand(withTemplateFragments);
+        var withInferredSupplementalSources = withTemplateFragments.Concat(inferredSupplementalSources).ToList();
         var templateInstantiations = TemplateInstantiationExpander.Expand(withInferredSupplementalSources, mapping);
         var withTemplateInstantiations = withInferredSupplementalSources.Concat(templateInstantiations).ToList();
 
@@ -71,6 +73,17 @@ internal static class DisplayCandidateExpander
                 Id = $"derived-fragment:{StableId.Hash(parent.Id)}:{StableId.Hash(fragment)}",
                 Source = fragment,
                 SourceKind = CandidateSourceKind.DerivedDisplayFragment,
+                Context = parent.Context
+            };
+        }
+
+        public static CandidateEntry DerivedDisplayTemplate(CandidateEntry parent, string template, string ruleId)
+        {
+            return new CandidateEntry
+            {
+                Id = $"derived-template-fragment:{StableId.Hash(ruleId)}:{StableId.Hash(parent.Id)}:{StableId.Hash(template)}",
+                Source = template,
+                SourceKind = CandidateSourceKind.DllDisplayFlowTemplate,
                 Context = parent.Context
             };
         }
@@ -179,42 +192,98 @@ internal static class DisplayCandidateExpander
         }
     }
 
-    private static class InferredSupplementalSources
+    private static class DisplayTemplateFragmentDeriver
     {
-        private static readonly Regex BracketToken = new(
-            @"\[([^\]]+)\]",
+        private static readonly Regex Placeholder = new(
+            @"\{(?<index>\d+)(?<format>:[^}]*)?\}",
             RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
-        public static IEnumerable<CandidateEntry> Expand(
-            IReadOnlyList<CandidateEntry> entries,
-            DisplaySinkMapping mapping)
+        public static IEnumerable<CandidateEntry> Expand(IEnumerable<CandidateEntry> entries)
         {
-            var mergeableSources = entries
-                .Where(entry =>
-                    CandidateSourceKind.IsAssetSource(entry.SourceKind) ||
-                    CandidateSourceKind.IsTrusted(entry.SourceKind))
-                .Select(entry => entry.Source ?? string.Empty)
-                .Where(source => !string.IsNullOrWhiteSpace(source))
-                .ToHashSet(StringComparer.Ordinal);
-            var inferredSources = new HashSet<string>(StringComparer.Ordinal);
-
-            foreach (var source in InferInputBindingLabels(entries, mapping))
+            var seenSources = new HashSet<string>(StringComparer.Ordinal);
+            foreach (var entry in entries)
             {
-                var normalized = SourceTextClassifier.NormalizeConfiguredDisplay(source);
-                if (string.IsNullOrWhiteSpace(normalized) ||
-                    !inferredSources.Add(normalized))
+                if (entry.SourceKind != CandidateSourceKind.DllDisplayFlowTemplate)
                 {
                     continue;
                 }
 
-                yield return CandidateFactories.ConfiguredSource(normalized);
+                foreach (var template in DeriveLeadingDelimiterTemplates(entry.Source))
+                {
+                    if (!seenSources.Add(template))
+                    {
+                        continue;
+                    }
+
+                    yield return CandidateFactories.DerivedDisplayTemplate(
+                        entry,
+                        template,
+                        "leading-delimiter-template");
+                }
+            }
+        }
+
+        private static IEnumerable<string> DeriveLeadingDelimiterTemplates(string? source)
+        {
+            var normalized = SourceTextClassifier.NormalizeConfiguredDisplay(source);
+            if (string.IsNullOrWhiteSpace(normalized))
+            {
+                yield break;
             }
 
-            foreach (var source in InferCompatibilityFragments(entries))
+            var firstPlaceholder = Placeholder.Match(normalized);
+            if (!firstPlaceholder.Success || firstPlaceholder.Index != 0)
+            {
+                yield break;
+            }
+
+            var remainder = normalized[firstPlaceholder.Length..];
+            if (!remainder.StartsWith(" | ", StringComparison.Ordinal))
+            {
+                yield break;
+            }
+
+            var renumbered = RenumberPlaceholders(remainder);
+            if (IsUsableDerivedSource(renumbered))
+            {
+                yield return renumbered;
+            }
+        }
+
+        private static string RenumberPlaceholders(string source)
+        {
+            var nextIndex = 0;
+            var indexMap = new Dictionary<string, int>(StringComparer.Ordinal);
+            return Placeholder.Replace(source, match =>
+            {
+                var originalIndex = match.Groups["index"].Value;
+                if (!indexMap.TryGetValue(originalIndex, out var mappedIndex))
+                {
+                    mappedIndex = nextIndex++;
+                    indexMap.Add(originalIndex, mappedIndex);
+                }
+
+                return "{" + mappedIndex + match.Groups["format"].Value + "}";
+            });
+        }
+
+        private static bool IsUsableDerivedSource(string source)
+        {
+            return !string.IsNullOrWhiteSpace(source) &&
+                   SourceTextClassifier.IsMechanicallyReadableText(source);
+        }
+    }
+
+    private static class InferredSupplementalSources
+    {
+        public static IEnumerable<CandidateEntry> Expand(IReadOnlyList<CandidateEntry> entries)
+        {
+            var inferredSources = new HashSet<string>(StringComparer.Ordinal);
+
+            foreach (var source in InferInputPromptLabels(entries))
             {
                 var normalized = SourceTextClassifier.NormalizeConfiguredDisplay(source);
                 if (string.IsNullOrWhiteSpace(normalized) ||
-                    mergeableSources.Contains(normalized) ||
                     !inferredSources.Add(normalized))
                 {
                     continue;
@@ -224,89 +293,13 @@ internal static class DisplayCandidateExpander
             }
         }
 
-        private static IEnumerable<string> InferInputBindingLabels(
-            IReadOnlyList<CandidateEntry> entries,
-            DisplaySinkMapping mapping)
+        private static IEnumerable<string> InferInputPromptLabels(IReadOnlyList<CandidateEntry> entries)
         {
-            var observedBracketTokens = entries
-                .SelectMany(entry => ExtractBracketTokens(entry.Source))
-                .ToHashSet(StringComparer.Ordinal);
-            var configuredBracketTokens = (mapping.Document.PlaceholderGuard?.BracketTokens ?? new List<string>())
-                .Where(token => !string.IsNullOrWhiteSpace(token));
-
-            foreach (var token in observedBracketTokens.Concat(configuredBracketTokens).Distinct(StringComparer.Ordinal))
-            {
-                foreach (var label in ToInputDisplayLabels(token))
-                {
-                    yield return label;
-                }
-            }
-
             if (entries.Any(entry => (entry.Source ?? string.Empty)
                     .IndexOf("Press [", StringComparison.OrdinalIgnoreCase) >= 0))
             {
                 yield return "Press";
                 yield return "<noparse></noparse>Press ";
-            }
-        }
-
-        private static IEnumerable<string> InferCompatibilityFragments(IReadOnlyList<CandidateEntry> entries)
-        {
-            var sources = entries
-                .Select(entry => entry.Source ?? string.Empty)
-                .Where(source => !string.IsNullOrWhiteSpace(source))
-                .ToList();
-
-            if (sources.Any(source => string.Equals(source, "'s Lobby", StringComparison.Ordinal)))
-            {
-                yield return "'s Lobby";
-            }
-
-            if (sources.Any(source =>
-                    string.Equals(source, "{0} | {1}'s Lobby", StringComparison.Ordinal) ||
-                    source.EndsWith("'s Lobby", StringComparison.Ordinal)))
-            {
-                yield return " | {0}'s Lobby";
-            }
-        }
-
-        private static IEnumerable<string> ExtractBracketTokens(string? source)
-        {
-            if (string.IsNullOrWhiteSpace(source))
-            {
-                yield break;
-            }
-
-            foreach (Match match in BracketToken.Matches(source))
-            {
-                var token = match.Groups[1].Value.Trim();
-                if (!string.IsNullOrWhiteSpace(token))
-                {
-                    yield return token;
-                }
-            }
-        }
-
-        private static IEnumerable<string> ToInputDisplayLabels(string token)
-        {
-            switch (token)
-            {
-                case "LMB":
-                    yield return "Left Button";
-                    break;
-                case "RMB":
-                    yield return "Right Button";
-                    break;
-                case "MMB":
-                    yield return "Middle Button";
-                    break;
-                case "Ctrl":
-                    yield return "Control";
-                    break;
-                case "Space":
-                case "Shift":
-                    yield return token;
-                    break;
             }
         }
     }
