@@ -4,7 +4,7 @@
 
 ![メインメニュー（日本語化の例）](docs/screenshots/main-menu.png)
 
-## 対応バージョン（MOD バージョン v0.2.1 現在）
+## 対応バージョン（MOD バージョン v0.2.2 現在）
 
 - ゲームバージョン **1.0.11** で動作確認
 - BepInEx 5
@@ -14,6 +14,14 @@
 - メインメニュー、設定、ロビー、ゲーム内 UI の日本語表示
 - TextMeshPro（`TMP_Text`）の表示文字列を Harmony でフックして置換
 - 未翻訳文字列を `runtime_unknown.jsonl` に記録
+
+## v0.2.2 の主な更新
+
+- 翻訳DBを **1,775 件** に更新（v0.2.1 から追加 **83 件**、削除 **49 件**、純増 **34 件**）
+- `display_seen.jsonl` の自動取り込みを停止し、ランタイム観測ログを診断用途に整理
+- TextMeshPro の serialized text を静的抽出し、runtime-seen 由来だった表示を静的候補へ移行
+- 入力バインド表示名や `<noparse></noparse>` 付き item/UI variant の抽出を強化
+- `Big Spender (Challenge)` など、source set と DLL template から生成する動的表示候補を改善
 
 ## v0.2.1 の主な更新
 
@@ -40,7 +48,7 @@
 | カジノゲーム UI | 約 75% |
 | アイテム・ショップ | 約 100% |
 
-翻訳エントリ数は **1,741 件**。プレイ体験ベースの推定値です。
+翻訳エントリ数は **1,775 件**。プレイ体験ベースの推定値です。
 
 完全な翻訳ではありません。英語が残る場合は [Issue](https://github.com/KoutaChan/Gwyf-JPN/issues) または `runtime_unknown.jsonl` の共有をお願いします。
 

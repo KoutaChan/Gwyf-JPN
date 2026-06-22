@@ -2,7 +2,7 @@
 set -eu
 
 game_dir='D:/SteamLibrary/steamapps/common/Gamble With Your Friends'
-version='0.2.1'
+version='0.2.2'
 
 usage() {
     printf '%s\n' \
@@ -91,7 +91,7 @@ rm -f "$zip_path"
     cd "$dist_dir"
     if command -v zip >/dev/null 2>&1; then
         zip -r "GwyfJpn-v$version.zip" GwyfJpn
-    else
+    elif command -v python3 >/dev/null 2>&1; then
         python3 - "$zip_path" "$stage_dir" <<'PY'
 import sys
 import zipfile
@@ -102,8 +102,21 @@ root = Path(sys.argv[2])
 with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as archive:
     for path in sorted(root.rglob("*")):
         if path.is_file():
-            archive.write(path, path.relative_to(root.parent).as_posix())
+                archive.write(path, path.relative_to(root.parent).as_posix())
 PY
+    elif command -v powershell.exe >/dev/null 2>&1; then
+        ps_zip_path=$zip_path
+        ps_stage_dir=$stage_dir
+        if command -v cygpath >/dev/null 2>&1; then
+            ps_zip_path=$(cygpath -w "$zip_path")
+            ps_stage_dir=$(cygpath -w "$stage_dir")
+        fi
+
+        ZIP_PATH=$ps_zip_path STAGE_DIR=$ps_stage_dir powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \
+            'Compress-Archive -Path $env:STAGE_DIR -DestinationPath $env:ZIP_PATH -Force'
+    else
+        printf 'Could not find zip, python3, or powershell.exe for archive creation.\n' >&2
+        exit 1
     fi
 )
 
