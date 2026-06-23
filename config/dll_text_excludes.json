@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "description": "DLL extraction noise excludes. Rules apply to DLL candidates by source kind, type, method, and source text; input binding labels are intentionally not covered here.",
+  "exactIds": [],
+  "exactSources": [],
+  "sourcePatterns": [],
+  "rules": [
+    {
+      "id": "new-console-template-fragments",
+      "reason": "Developer console labels that are emitted as fragments next to fuller templates.",
+      "typePattern": "^NewConsole$",
+      "sourceKinds": ["dll_display_flow_literal"],
+      "sourcePattern": "^(?:\\(No challenges for floor|Active:|Teleport to|Unlocked:)$"
+    },
+    {
+      "id": "settings-field-fragments",
+      "reason": "Settings debug field prefixes are not useful standalone translation rows.",
+      "typePattern": "^GameSettingsManager$",
+      "sourceKinds": ["dll_display_flow_literal"],
+      "sourcePattern": "^(?:[ABGRYZ]:|settings are not assigned!)$"
+    },
+    {
+      "id": "bug-report-status-fragments",
+      "reason": "Bug report status prefixes are covered by fuller messages.",
+      "typePattern": "^BugReportFormUI$",
+      "sourceKinds": ["dll_display_flow_literal"],
+      "sourcePattern": "^(?:Failed:|Report submitted\\. Card:)$"
+    },
+    {
+      "id": "version-mismatch-prefix",
+      "reason": "Version prefix is covered by Version: {0}.",
+      "typePattern": "^VersionMismatchDisplay$",
+      "sourceKinds": ["dll_display_flow_literal"],
+      "sourcePattern": "^Version:$"
+    },
+    {
+      "id": "steam-retry-prefix",
+      "reason": "Retry prefix is covered by Steam initialization failed. Retrying... ({0}/{1}).",
+      "typePattern": "^GoOnlineClient$",
+      "methodPattern": "^UpdateRetryUI$",
+      "sourceKinds": ["dll_display_flow_literal"],
+      "sourcePattern": "^Steam initialization failed\\. Retrying\\.\\.\\. \\($"
+    }
+  ]
+}

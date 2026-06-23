@@ -39,9 +39,14 @@ internal static class CandidateMerger
     private static List<CandidateEntry> BuildMergedSet(IEnumerable<CandidateEntry> entries, DisplaySinkMapping mapping)
     {
         var excludes = AssetTextExcludeMapping.LoadDefault();
-        var merged = entries
+        var dllExcludes = DllTextExcludeMapping.LoadDefault();
+        var entryList = entries.ToList();
+        var dllDisplayLiteralFilter = DllDisplayLiteralFilter.Build(entryList);
+        var merged = entryList
             .Where(e => !string.IsNullOrWhiteSpace(e.Id))
             .Where(e => !excludes.IsExcludedId(e.Id))
+            .Where(e => !dllExcludes.IsExcluded(e))
+            .Where(e => !dllDisplayLiteralFilter.ShouldExclude(e))
             .Where(e =>
                 CandidateSourceKind.ConfiguredDisplaySource == e.SourceKind ||
                 SourceTextClassifier.IsMechanicallyReadableText(e.Source))

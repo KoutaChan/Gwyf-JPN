@@ -806,15 +806,6 @@
       }
     },
     {
-      "id": "dll-text:WebSocketManager:UpdateUI:eb7f5b4b",
-      "source": "'s Lobby",
-      "ja": "のロビー",
-      "context": {
-        "method": "UpdateUI",
-        "type": "WebSocketManager"
-      }
-    },
-    {
       "id": "asset-text:level0:208:980:918ff3bc",
       "source": "\"Alea Iacta Est\" -Julius Caesar",
       "ja": "「賽は投げられた」 - ユリウス・カエサル",
@@ -917,7 +908,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level0:143:88:ff8a4e38",
+      "id": "asset-text:level0:143:88:ff8a4e38",
       "source": "\"Don't come back home until you are a millionaire\" -Mom",
       "ja": "「億万長者になるまで帰ってくるんじゃないよ」 - 母",
       "context": {
@@ -925,8 +916,7 @@
         "pathId": 143,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 14,
         "scriptTypeIndex": 30,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -1890,12 +1880,20 @@
       }
     },
     {
-      "id": "dll-text:KenoButton:UserCode_RpcChangeMaterial__Boolean:6f5dc218",
+      "id": "asset-text:level9:15581:72:6f5dc218",
       "source": "[E] Select",
       "ja": "[E] 選択",
       "context": {
-        "method": "UserCode_RpcChangeMaterial__Boolean",
-        "type": "KenoButton"
+        "file": "level9",
+        "pathId": 15581,
+        "classId": 114,
+        "stringOffset": 72,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 31,
+        "scriptTypeIndex": 15,
+        "scriptId": "be15124fac0d08366fe837a4faf103f9",
+        "oldTypeHash": "20324c68637d182b32846e762149ea54",
+        "rawStringIndex": 0
       }
     },
     {
@@ -2047,12 +2045,12 @@
       }
     },
     {
-      "id": "dll-text:AllPlayersTriggerZone:UserCode_RpcUpdateCountdownText__Boolean:378a23d9",
+      "id": "dll-text:AllPlayersTriggerZone/<CountdownTextRoutine>d__22:MoveNext:378a23d9",
       "source": "{0}",
       "ja": "{0}",
       "context": {
-        "method": "UserCode_RpcUpdateCountdownText__Boolean",
-        "type": "AllPlayersTriggerZone"
+        "method": "MoveNext",
+        "type": "AllPlayersTriggerZone/<CountdownTextRoutine>d__22"
       }
     },
     {
@@ -3715,7 +3713,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level2:146:88:3e666226",
+      "id": "asset-text:level2:146:88:3e666226",
       "source": "<WAVE>COIN FLIP, ON FAIL IT CLOSES THE GAME!!!</>",
       "ja": "<WAVE>コイントス。失敗するとゲームが閉じる!!!</>",
       "context": {
@@ -3723,8 +3721,7 @@
         "pathId": 146,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 14,
         "scriptTypeIndex": 49,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -3769,7 +3766,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66849:88:d103cc0e",
+      "id": "asset-text:resources.assets:66849:88:d103cc0e",
       "source": "$1.25K",
       "ja": "$1.25K",
       "context": {
@@ -3777,8 +3774,7 @@
         "pathId": 66849,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -3787,7 +3783,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59701:88:f808864f",
+      "id": "asset-text:resources.assets:59701:88:f808864f",
       "source": "$1.2K",
       "ja": "$1.2K",
       "context": {
@@ -3795,8 +3791,7 @@
         "pathId": 59701,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -3805,7 +3800,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59959:88:2c739597",
+      "id": "asset-text:resources.assets:59959:88:2c739597",
       "source": "$1K",
       "ja": "$1K",
       "context": {
@@ -3813,8 +3808,7 @@
         "pathId": 59959,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -3823,7 +3817,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:60925:88:6285d9bc",
+      "id": "asset-text:resources.assets:60925:88:6285d9bc",
       "source": "$20M",
       "ja": "$20M",
       "context": {
@@ -3831,8 +3825,7 @@
         "pathId": 60925,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -3841,7 +3834,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62323:88:068025b8",
+      "id": "asset-text:resources.assets:62323:88:068025b8",
       "source": "$4m",
       "ja": "$4m",
       "context": {
@@ -3849,8 +3842,7 @@
         "pathId": 62323,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -3859,7 +3851,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15414:88:323fc133",
+      "id": "asset-text:level9:15414:88:323fc133",
       "source": "$bet x multiplier $payout",
       "ja": "$bet × 倍率 = $payout",
       "context": {
@@ -3867,8 +3859,7 @@
         "pathId": 15414,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -3886,7 +3877,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14919:88:c615ad6a",
+      "id": "asset-text:level12:14919:88:c615ad6a",
       "source": "0 TICKETS",
       "ja": "チケット0枚",
       "context": {
@@ -3894,8 +3885,7 @@
         "pathId": 14919,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -3931,7 +3921,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15435:88:da725789",
+      "id": "asset-text:level9:15435:88:da725789",
       "source": "1P Poker",
       "ja": "1Pポーカー",
       "context": {
@@ -3939,8 +3929,7 @@
         "pathId": 15435,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -3949,7 +3938,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15298:88:ccddf416",
+      "id": "asset-text:level9:15298:88:ccddf416",
       "source": "1st 12",
       "ja": "1-12",
       "context": {
@@ -3957,8 +3946,7 @@
         "pathId": 15298,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -3967,7 +3955,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15330:88:ca56dfdd",
+      "id": "asset-text:level9:15330:88:ca56dfdd",
       "source": "2 to 1",
       "ja": "横列",
       "context": {
@@ -3975,8 +3963,7 @@
         "pathId": 15330,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -3985,7 +3972,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15509:88:340a6712",
+      "id": "asset-text:level9:15509:88:340a6712",
       "source": "2nd 12",
       "ja": "13-24",
       "context": {
@@ -3993,8 +3980,7 @@
         "pathId": 15509,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4003,7 +3989,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15342:88:26c499f2",
+      "id": "asset-text:level9:15342:88:26c499f2",
       "source": "3 Mines",
       "ja": "地雷3個",
       "context": {
@@ -4011,8 +3997,7 @@
         "pathId": 15342,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4055,7 +4040,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15475:88:15d39b57",
+      "id": "asset-text:level9:15475:88:15d39b57",
       "source": "3rd 12",
       "ja": "25-36",
       "context": {
@@ -4063,8 +4048,7 @@
         "pathId": 15475,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4073,7 +4057,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59138:88:c59c3758",
+      "id": "asset-text:resources.assets:59138:88:c59c3758",
       "source": "60s",
       "ja": "60秒",
       "context": {
@@ -4081,8 +4065,7 @@
         "pathId": 59138,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4091,7 +4074,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2932:88:3d261ff4",
+      "id": "asset-text:level10:2932:88:3d261ff4",
       "source": "A GAME MADE BY",
       "ja": "制作",
       "context": {
@@ -4099,8 +4082,7 @@
         "pathId": 2932,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4186,7 +4168,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8846:88:84b3d09f",
+      "id": "asset-text:level3:8846:88:84b3d09f",
       "source": "Accessibility",
       "ja": "アクセシビリティ",
       "context": {
@@ -4194,8 +4176,7 @@
         "pathId": 8846,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4265,7 +4246,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62899:88:75afe364",
+      "id": "asset-text:resources.assets:62899:88:75afe364",
       "source": "All",
       "ja": "すべて",
       "context": {
@@ -4273,8 +4254,7 @@
         "pathId": 62899,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4328,7 +4308,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66105:88:c1cf922b",
+      "id": "asset-text:resources.assets:66105:88:c1cf922b",
       "source": "amount to invest",
       "ja": "投資額",
       "context": {
@@ -4336,8 +4316,7 @@
         "pathId": 66105,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4458,7 +4437,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level1:212:88:522322e3",
+      "id": "asset-text:level1:212:88:522322e3",
       "source": "Are you feeling lucky?",
       "ja": "ツイてる気がする？",
       "context": {
@@ -4466,8 +4445,7 @@
         "pathId": 212,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 20,
         "scriptTypeIndex": 42,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4494,7 +4472,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8812:88:7eed4007",
+      "id": "asset-text:level3:8812:88:7eed4007",
       "source": "Are you the friend with the best computer and network connection?",
       "ja": "一番いいPCと回線を持っている友達ですか？",
       "context": {
@@ -4502,8 +4480,7 @@
         "pathId": 8812,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4597,7 +4574,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8843:88:88971439",
+      "id": "asset-text:level3:8843:88:88971439",
       "source": "Audio",
       "ja": "オーディオ",
       "context": {
@@ -4605,8 +4582,7 @@
         "pathId": 8843,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4632,7 +4608,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:60493:88:65227494",
+      "id": "asset-text:resources.assets:60493:88:65227494",
       "source": "AvG. WR",
       "ja": "平均勝率",
       "context": {
@@ -4640,8 +4616,7 @@
         "pathId": 60493,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4650,7 +4625,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15434:88:918ae284",
+      "id": "asset-text:level9:15434:88:918ae284",
       "source": "Baccarat",
       "ja": "バカラ",
       "context": {
@@ -4658,8 +4633,7 @@
         "pathId": 15434,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4668,7 +4642,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8855:88:074a6822",
+      "id": "asset-text:level3:8855:88:074a6822",
       "source": "BACK",
       "ja": "戻る",
       "context": {
@@ -4676,8 +4650,7 @@
         "pathId": 8855,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4695,7 +4668,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:65939:88:4b7a788b",
+      "id": "asset-text:resources.assets:65939:88:4b7a788b",
       "source": "Balance",
       "ja": "残高",
       "context": {
@@ -4703,8 +4676,7 @@
         "pathId": 65939,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -4885,7 +4857,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15481:88:4dcfb1ec",
+      "id": "asset-text:level9:15481:88:4dcfb1ec",
       "source": "Banker",
       "ja": "バンカー",
       "context": {
@@ -4893,8 +4865,7 @@
         "pathId": 15481,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -4920,7 +4891,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8791:88:1567b8ba",
+      "id": "asset-text:level3:8791:88:1567b8ba",
       "source": "Bankrupt",
       "ja": "破産",
       "context": {
@@ -4928,8 +4899,7 @@
         "pathId": 8791,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 25,
         "scriptTypeIndex": 54,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -5057,7 +5027,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62568:88:c8887d35",
+      "id": "asset-text:resources.assets:62568:88:c8887d35",
       "source": "Beard",
       "ja": "あごひげ",
       "context": {
@@ -5065,8 +5035,7 @@
         "pathId": 62568,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -5810,7 +5779,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15308:88:2b043744",
+      "id": "asset-text:level9:15308:88:2b043744",
       "source": "Black",
       "ja": "黒",
       "context": {
@@ -5818,8 +5787,7 @@
         "pathId": 15308,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -5828,7 +5796,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15485:88:f5dadde7",
+      "id": "asset-text:level9:15485:88:f5dadde7",
       "source": "Blackjack",
       "ja": "ブラックジャック",
       "context": {
@@ -5836,8 +5804,7 @@
         "pathId": 15485,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -5863,7 +5830,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level4:18373:88:8607d9e4",
+      "id": "asset-text:level4:18373:88:8607d9e4",
       "source": "Blackjack Dealer",
       "ja": "ブラックジャックディーラー",
       "context": {
@@ -5871,8 +5838,7 @@
         "pathId": 18373,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 77,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -5983,7 +5949,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:64832:88:428a1095",
+      "id": "asset-text:resources.assets:64832:88:428a1095",
       "source": "Body",
       "ja": "体",
       "context": {
@@ -5991,8 +5957,7 @@
         "pathId": 64832,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -6052,12 +6017,20 @@
       }
     },
     {
-      "id": "dll-text:UpgradeEntryUI:SetUpgradeEntry:eb4b78ee",
+      "id": "asset-text:resources.assets:61362:88:eb4b78ee",
       "source": "Bonus Draw",
       "ja": "ボーナス抽選",
       "context": {
-        "method": "SetUpgradeEntry",
-        "type": "UpgradeEntryUI"
+        "file": "resources.assets",
+        "pathId": 61362,
+        "classId": 114,
+        "stringOffset": 88,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 389,
+        "scriptTypeIndex": 179,
+        "scriptId": "5c8259172ee674e4f20873ec299150af",
+        "oldTypeHash": "3443eb1d8b9e17a5efb19091b8bb636e",
+        "rawStringIndex": 1
       }
     },
     {
@@ -6105,7 +6078,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level5:36841:88:3869ad2c",
+      "id": "asset-text:level5:36841:88:3869ad2c",
       "source": "Boss",
       "ja": "ボス",
       "context": {
@@ -6113,8 +6086,7 @@
         "pathId": 36841,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 24,
         "scriptTypeIndex": 27,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -6448,16 +6420,16 @@
       }
     },
     {
-      "id": "dll-text:BodyShreddingMachine:UserCode_RpcToggleLever__Boolean:cada780b",
+      "id": "derived-fragment:4128be8f:cada780b",
       "source": "Buy",
       "ja": "購入",
       "context": {
-        "method": "UserCode_RpcToggleLever__Boolean",
-        "type": "BodyShreddingMachine"
+        "method": "ServerOnHover",
+        "type": "MerchantBuyButton"
       }
     },
     {
-      "id": "static-scene-tmp:level12:14927:88:ea8af88b",
+      "id": "asset-text:level12:14927:88:ea8af88b",
       "source": "BUY",
       "ja": "購入",
       "context": {
@@ -6465,8 +6437,7 @@
         "pathId": 14927,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -6518,7 +6489,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63129:88:aa37e782",
+      "id": "asset-text:resources.assets:63129:88:aa37e782",
       "source": "Buy Cosmetic",
       "ja": "コスメ購入",
       "context": {
@@ -6526,8 +6497,7 @@
         "pathId": 63129,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -6750,7 +6720,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66504:88:4e84062a",
+      "id": "asset-text:resources.assets:66504:88:4e84062a",
       "source": "Can reproduce",
       "ja": "再現できる",
       "context": {
@@ -6758,8 +6728,7 @@
         "pathId": 66504,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -6768,21 +6737,20 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66085:88:35afca3b",
+      "id": "asset-text:level9:15578:76:35afca3b",
       "source": "Cancel",
       "ja": "キャンセル",
       "context": {
-        "file": "resources.assets",
-        "pathId": 66085,
+        "file": "level9",
+        "pathId": 15578,
         "classId": 114,
-        "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
-        "serializedTypeId": 234,
-        "scriptTypeIndex": 467,
-        "scriptId": "9d78549f3bcd9676722727d2a69755b2",
-        "oldTypeHash": "fef7b1de2fd1557ad8228e9840b78b9c",
-        "rawStringIndex": 0
+        "stringOffset": 76,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 28,
+        "scriptTypeIndex": 26,
+        "scriptId": "eafad4b54d3c8f8ed8f2ce4231376da2",
+        "oldTypeHash": "9104447b683bf70406fa01f12ecb564a",
+        "rawStringIndex": 3
       }
     },
     {
@@ -6846,7 +6814,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15356:88:b3e28b07",
+      "id": "asset-text:level9:15356:88:b3e28b07",
       "source": "Cash-out",
       "ja": "キャッシュアウト",
       "context": {
@@ -6854,8 +6822,7 @@
         "pathId": 15356,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -7017,7 +6984,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61621:88:afb3e591",
+      "id": "asset-text:resources.assets:61621:88:afb3e591",
       "source": "Category",
       "ja": "カテゴリ",
       "context": {
@@ -7025,8 +6992,7 @@
         "pathId": 61621,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -7035,7 +7001,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61274:88:5dd0311e",
+      "id": "asset-text:resources.assets:61274:88:5dd0311e",
       "source": "CHALLENGE",
       "ja": "チャレンジ",
       "context": {
@@ -7043,8 +7009,7 @@
         "pathId": 61274,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -7062,7 +7027,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:65375:88:729d01bd",
+      "id": "asset-text:resources.assets:65375:88:729d01bd",
       "source": "change",
       "ja": "変更",
       "context": {
@@ -7070,8 +7035,7 @@
         "pathId": 65375,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -7312,7 +7276,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61409:88:16842f6d",
+      "id": "asset-text:resources.assets:61409:88:16842f6d",
       "source": "Clothing",
       "ja": "服",
       "context": {
@@ -7320,8 +7284,7 @@
         "pathId": 61409,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -7348,7 +7311,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level7:10960:88:b25471ff",
+      "id": "asset-text:level7:10960:88:b25471ff",
       "source": "Coin Flip",
       "ja": "コイントス",
       "context": {
@@ -7356,8 +7319,7 @@
         "pathId": 10960,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 27,
         "scriptTypeIndex": 33,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -7409,7 +7371,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63776:88:c1f9a242",
+      "id": "asset-text:resources.assets:63776:88:c1f9a242",
       "source": "COMPLETE",
       "ja": "達成",
       "context": {
@@ -7417,8 +7379,7 @@
         "pathId": 63776,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -7445,7 +7406,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8883:88:aae0ccf9",
+      "id": "asset-text:level3:8883:88:aae0ccf9",
       "source": "connect",
       "ja": "接続",
       "context": {
@@ -7453,8 +7414,7 @@
         "pathId": 8883,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -7523,7 +7483,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61559:88:dd687cb4",
+      "id": "asset-text:resources.assets:61559:88:dd687cb4",
       "source": "CONTRIBUTIONS",
       "ja": "協力",
       "context": {
@@ -7531,8 +7491,7 @@
         "pathId": 61559,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -11242,12 +11201,20 @@
       }
     },
     {
-      "id": "dll-text:NewConsole:ShowMainMenu:7fde638f",
+      "id": "asset-text:resources.assets:57505:28:7fde638f",
       "source": "Cosmetics",
       "ja": "コスメ",
       "context": {
-        "method": "ShowMainMenu",
-        "type": "NewConsole"
+        "file": "resources.assets",
+        "pathId": 57505,
+        "classId": 114,
+        "stringOffset": 28,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 64,
+        "scriptTypeIndex": 136,
+        "scriptId": "dc32633d27e433354bf390b096367dce",
+        "oldTypeHash": "37267fac128134fb990d5132482daa17",
+        "rawStringIndex": 0
       }
     },
     {
@@ -11302,7 +11269,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15523:88:a6bc1278",
+      "id": "asset-text:level9:15523:88:a6bc1278",
       "source": "Crash",
       "ja": "クラッシュ",
       "context": {
@@ -11310,8 +11277,7 @@
         "pathId": 15523,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -11320,7 +11286,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8864:88:90ed8475",
+      "id": "asset-text:level3:8864:88:90ed8475",
       "source": "CREDITS",
       "ja": "クレジット",
       "context": {
@@ -11328,8 +11294,7 @@
         "pathId": 8864,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -11338,7 +11303,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8808:88:0f9ade75",
+      "id": "asset-text:level3:8808:88:0f9ade75",
       "source": "Credits",
       "ja": "クレジット",
       "context": {
@@ -11346,8 +11311,7 @@
         "pathId": 8808,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -11536,7 +11500,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62932:88:5b521ae2",
+      "id": "asset-text:resources.assets:62932:88:5b521ae2",
       "source": "day 1",
       "ja": "1日目",
       "context": {
@@ -11544,8 +11508,7 @@
         "pathId": 62932,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -11554,7 +11517,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61889:88:ae8a9b82",
+      "id": "asset-text:resources.assets:61889:88:ae8a9b82",
       "source": "Day 1",
       "ja": "1日目",
       "context": {
@@ -11562,8 +11525,7 @@
         "pathId": 61889,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -11589,7 +11551,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63151:88:dcf3deec",
+      "id": "asset-text:resources.assets:63151:88:dcf3deec",
       "source": "day ends ın",
       "ja": "一日終了まで",
       "context": {
@@ -11597,8 +11559,7 @@
         "pathId": 63151,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -11607,7 +11568,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62607:88:9517de55",
+      "id": "asset-text:resources.assets:62607:88:9517de55",
       "source": "DAY X ENDED",
       "ja": "X日目終了",
       "context": {
@@ -11615,8 +11576,7 @@
         "pathId": 62607,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -11625,7 +11585,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8827:88:5d72fcaa",
+      "id": "asset-text:level3:8827:88:5d72fcaa",
       "source": "Days",
       "ja": "日数",
       "context": {
@@ -11633,8 +11593,7 @@
         "pathId": 8827,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -12020,16 +11979,24 @@
       }
     },
     {
-      "id": "dll-text:SettingsApplier:IsWindowedDisplay:4569f715",
+      "id": "asset-text:resources.assets:57570:40:4569f715",
       "source": "display",
       "ja": "画面",
       "context": {
-        "method": "IsWindowedDisplay",
-        "type": "SettingsApplier"
+        "file": "resources.assets",
+        "pathId": 57570,
+        "classId": 114,
+        "stringOffset": 40,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 1
       }
     },
     {
-      "id": "static-scene-tmp:level3:8862:88:5a05d9b5",
+      "id": "asset-text:level3:8862:88:5a05d9b5",
       "source": "Display",
       "ja": "画面",
       "context": {
@@ -12037,8 +12004,7 @@
         "pathId": 8862,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -12064,7 +12030,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63934:88:3cda0b2d",
+      "id": "asset-text:resources.assets:63934:88:3cda0b2d",
       "source": "dodo",
       "ja": "ドードー",
       "context": {
@@ -12072,8 +12038,7 @@
         "pathId": 63934,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -12176,7 +12141,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15346:88:df980448",
+      "id": "asset-text:level9:15346:88:df980448",
       "source": "DOUBLE",
       "ja": "ダブル",
       "context": {
@@ -12184,8 +12149,7 @@
         "pathId": 15346,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12228,7 +12192,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level7:10940:88:ecec1000",
+      "id": "asset-text:level7:10940:88:ecec1000",
       "source": "Double or nothing",
       "ja": "倍か無か",
       "context": {
@@ -12236,8 +12200,7 @@
         "pathId": 10940,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 27,
         "scriptTypeIndex": 33,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12263,7 +12226,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15321:88:c615680f",
+      "id": "asset-text:level9:15321:88:c615680f",
       "source": "Dragon Tower",
       "ja": "ドラゴンタワー",
       "context": {
@@ -12271,8 +12234,7 @@
         "pathId": 15321,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12359,7 +12321,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14917:88:8250062f",
+      "id": "asset-text:level12:14917:88:8250062f",
       "source": "Drinking",
       "ja": "飲酒",
       "context": {
@@ -12367,8 +12329,7 @@
         "pathId": 14917,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12394,7 +12355,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8822:88:4adbb7f0",
+      "id": "asset-text:level3:8822:88:4adbb7f0",
       "source": "Drop DOwn",
       "ja": "ドロップダウン",
       "context": {
@@ -12402,8 +12363,7 @@
         "pathId": 8822,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -12412,7 +12372,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15322:88:d512c84d",
+      "id": "asset-text:level9:15322:88:d512c84d",
       "source": "Duck Race",
       "ja": "ダックレース",
       "context": {
@@ -12420,8 +12380,7 @@
         "pathId": 15322,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12447,7 +12406,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15277:88:6317c4af",
+      "id": "asset-text:level9:15277:88:6317c4af",
       "source": "EARN MONEY",
       "ja": "金を稼げ",
       "context": {
@@ -12455,8 +12414,7 @@
         "pathId": 15277,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12482,7 +12440,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8780:88:9c39abb0",
+      "id": "asset-text:level3:8780:88:9c39abb0",
       "source": "Emergency Only",
       "ja": "緊急時のみ",
       "context": {
@@ -12490,8 +12448,7 @@
         "pathId": 8780,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 25,
         "scriptTypeIndex": 54,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12552,12 +12509,20 @@
       }
     },
     {
-      "id": "dll-text:SaveSlotUI:.ctor:8f89e5ee",
+      "id": "asset-text:level3:9201:140:8f89e5ee",
       "source": "Empty Slot",
       "ja": "空きスロット",
       "context": {
-        "method": ".ctor",
-        "type": "SaveSlotUI"
+        "file": "level3",
+        "pathId": 9201,
+        "classId": 114,
+        "stringOffset": 140,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 86,
+        "scriptTypeIndex": 1,
+        "scriptId": "3001ef433bc9f90f972b7bd200e9f27d",
+        "oldTypeHash": "aa477084d36c0ab7baef2800ed02bf5d",
+        "rawStringIndex": 0
       }
     },
     {
@@ -12613,7 +12578,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8847:88:88929276",
+      "id": "asset-text:level3:8847:88:88929276",
       "source": "Enter text...",
       "ja": "テキストを入力してください...",
       "context": {
@@ -12621,8 +12586,7 @@
         "pathId": 8847,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -12648,7 +12612,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15291:88:cc354641",
+      "id": "asset-text:level9:15291:88:cc354641",
       "source": "ERlaf",
       "ja": "エルラフ",
       "context": {
@@ -12656,8 +12620,7 @@
         "pathId": 15291,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12709,7 +12672,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15455:88:51bc2351",
+      "id": "asset-text:level9:15455:88:51bc2351",
       "source": "Even",
       "ja": "偶数",
       "context": {
@@ -12717,8 +12680,7 @@
         "pathId": 15455,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12727,7 +12689,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63477:88:f0adedba",
+      "id": "asset-text:resources.assets:63477:88:f0adedba",
       "source": "Eye",
       "ja": "目",
       "context": {
@@ -12735,8 +12697,7 @@
         "pathId": 63477,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12754,7 +12715,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63063:88:36e21672",
+      "id": "asset-text:resources.assets:63063:88:36e21672",
       "source": "Eye 7 Ticket Mouth 5 Ticket Body 10 Ticket",
       "ja": "目 チケット7枚 口 チケット5枚 体 チケット10枚",
       "context": {
@@ -12762,8 +12723,7 @@
         "pathId": 63063,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12823,7 +12783,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61360:88:19a0b52f",
+      "id": "asset-text:resources.assets:61360:88:19a0b52f",
       "source": "Facewear",
       "ja": "フェイスウェア",
       "context": {
@@ -12831,8 +12791,7 @@
         "pathId": 61360,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -12893,7 +12852,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15316:88:eb16297e",
+      "id": "asset-text:level9:15316:88:eb16297e",
       "source": "Faruk",
       "ja": "ファルク",
       "context": {
@@ -12901,8 +12860,7 @@
         "pathId": 15316,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -13109,20 +13067,19 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66532:88:5f6f87a2",
+      "id": "asset-text:resources.assets:57556:28:5f6f87a2",
       "source": "Floor 1",
       "ja": "1階",
       "context": {
         "file": "resources.assets",
-        "pathId": 66532,
+        "pathId": 57556,
         "classId": 114,
-        "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
-        "serializedTypeId": 234,
-        "scriptTypeIndex": 467,
-        "scriptId": "9d78549f3bcd9676722727d2a69755b2",
-        "oldTypeHash": "fef7b1de2fd1557ad8228e9840b78b9c",
+        "stringOffset": 28,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 64,
+        "scriptTypeIndex": 136,
+        "scriptId": "dc32633d27e433354bf390b096367dce",
+        "oldTypeHash": "37267fac128134fb990d5132482daa17",
         "rawStringIndex": 0
       }
     },
@@ -13144,12 +13101,20 @@
       }
     },
     {
-      "id": "dll-text:NewConsole:ShowChallengesMenu:5e6f860f",
+      "id": "asset-text:resources.assets:57557:28:5e6f860f",
       "source": "Floor 2",
       "ja": "2階",
       "context": {
-        "method": "ShowChallengesMenu",
-        "type": "NewConsole"
+        "file": "resources.assets",
+        "pathId": 57557,
+        "classId": 114,
+        "stringOffset": 28,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 64,
+        "scriptTypeIndex": 136,
+        "scriptId": "dc32633d27e433354bf390b096367dce",
+        "oldTypeHash": "37267fac128134fb990d5132482daa17",
+        "rawStringIndex": 0
       }
     },
     {
@@ -13170,12 +13135,20 @@
       }
     },
     {
-      "id": "dll-text:NewConsole:ShowChallengesMenu:5d6f847c",
+      "id": "asset-text:resources.assets:57558:28:5d6f847c",
       "source": "Floor 3",
       "ja": "3階",
       "context": {
-        "method": "ShowChallengesMenu",
-        "type": "NewConsole"
+        "file": "resources.assets",
+        "pathId": 57558,
+        "classId": 114,
+        "stringOffset": 28,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 64,
+        "scriptTypeIndex": 136,
+        "scriptId": "dc32633d27e433354bf390b096367dce",
+        "oldTypeHash": "37267fac128134fb990d5132482daa17",
+        "rawStringIndex": 0
       }
     },
     {
@@ -13196,12 +13169,20 @@
       }
     },
     {
-      "id": "dll-text:NewConsole:ShowChallengesMenu:5c6f82e9",
+      "id": "asset-text:resources.assets:57559:28:5c6f82e9",
       "source": "Floor 4",
       "ja": "4階",
       "context": {
-        "method": "ShowChallengesMenu",
-        "type": "NewConsole"
+        "file": "resources.assets",
+        "pathId": 57559,
+        "classId": 114,
+        "stringOffset": 28,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 64,
+        "scriptTypeIndex": 136,
+        "scriptId": "dc32633d27e433354bf390b096367dce",
+        "oldTypeHash": "37267fac128134fb990d5132482daa17",
+        "rawStringIndex": 0
       }
     },
     {
@@ -13231,7 +13212,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8816:88:a759b384",
+      "id": "asset-text:level3:8816:88:a759b384",
       "source": "Follow Us",
       "ja": "公式リンク",
       "context": {
@@ -13239,8 +13220,7 @@
         "pathId": 8816,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13249,7 +13229,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level13:210:88:16e61adf",
+      "id": "asset-text:level13:210:88:16e61adf",
       "source": "Follow US!",
       "ja": "公式リンク！",
       "context": {
@@ -13257,8 +13237,7 @@
         "pathId": 210,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 15,
         "scriptTypeIndex": 37,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13319,7 +13298,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:58837:88:8d9206a1",
+      "id": "asset-text:resources.assets:58837:88:8d9206a1",
       "source": "Frequency",
       "ja": "頻度",
       "context": {
@@ -13327,8 +13306,7 @@
         "pathId": 58837,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13354,7 +13332,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8811:88:92c433fa",
+      "id": "asset-text:level3:8811:88:92c433fa",
       "source": "FRIENDS",
       "ja": "フレンド",
       "context": {
@@ -13362,8 +13340,7 @@
         "pathId": 8811,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13381,12 +13358,20 @@
       }
     },
     {
-      "id": "dll-text:SettingsApplier/<>c:<SetDisplayDefault>b__35_0:3d2aca78",
+      "id": "asset-text:resources.assets:57570:68:3d2aca78",
       "source": "Fullscreen",
       "ja": "フルスクリーン",
       "context": {
-        "method": "<SetDisplayDefault>b__35_0",
-        "type": "SettingsApplier/<>c"
+        "file": "resources.assets",
+        "pathId": 57570,
+        "classId": 114,
+        "stringOffset": 68,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 3
       }
     },
     {
@@ -13433,7 +13418,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8815:88:30aff659",
+      "id": "asset-text:level3:8815:88:30aff659",
       "source": "gamble",
       "ja": "ギャンブル",
       "context": {
@@ -13441,8 +13426,7 @@
         "pathId": 8815,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13485,7 +13469,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61521:88:e46b40ad",
+      "id": "asset-text:resources.assets:61521:88:e46b40ad",
       "source": "Gambler's Confidence",
       "ja": "ギャンブラーの自信",
       "context": {
@@ -13493,8 +13477,7 @@
         "pathId": 61521,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13529,7 +13512,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14923:88:4c1cf36a",
+      "id": "asset-text:level12:14923:88:4c1cf36a",
       "source": "Gambling",
       "ja": "ギャンブル",
       "context": {
@@ -13537,8 +13520,7 @@
         "pathId": 14923,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -13565,7 +13547,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66987:88:73cbe046",
+      "id": "asset-text:resources.assets:66987:88:73cbe046",
       "source": "Game Name",
       "ja": "ゲーム名",
       "context": {
@@ -13573,8 +13555,7 @@
         "pathId": 66987,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -13592,7 +13573,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63078:88:da17c1ef",
+      "id": "asset-text:resources.assets:63078:88:da17c1ef",
       "source": "GAME OVER",
       "ja": "ゲームオーバー",
       "context": {
@@ -13600,8 +13581,7 @@
         "pathId": 63078,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13636,7 +13616,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15280:88:7190a5fc",
+      "id": "asset-text:level9:15280:88:7190a5fc",
       "source": "GAMES",
       "ja": "ゲーム",
       "context": {
@@ -13644,8 +13624,7 @@
         "pathId": 15280,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -13663,7 +13642,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8840:88:5561fd0b",
+      "id": "asset-text:level3:8840:88:5561fd0b",
       "source": "General",
       "ja": "一般",
       "context": {
@@ -13671,8 +13650,7 @@
         "pathId": 8840,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13849,7 +13827,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8866:88:f47b356e",
+      "id": "asset-text:level3:8866:88:f47b356e",
       "source": "GET HELP (GAMBLE HOTLINE)",
       "ja": "助けを呼ぶ（ギャンブル相談窓口）",
       "context": {
@@ -13857,8 +13835,7 @@
         "pathId": 8866,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -13867,7 +13844,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level6:51755:88:8dc502ca",
+      "id": "asset-text:level6:51755:88:8dc502ca",
       "source": "GET IN!!!!",
       "ja": "入れ!!!!",
       "context": {
@@ -13875,8 +13852,7 @@
         "pathId": 51755,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 22,
         "scriptTypeIndex": 17,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -14417,7 +14393,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8829:88:b62b9fa8",
+      "id": "asset-text:level3:8829:88:b62b9fa8",
       "source": "Graphics",
       "ja": "グラフィック",
       "context": {
@@ -14425,8 +14401,7 @@
         "pathId": 8829,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -14573,7 +14548,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:61299:88:54e455d9",
+      "id": "asset-text:resources.assets:61299:88:54e455d9",
       "source": "Hair",
       "ja": "髪",
       "context": {
@@ -14581,8 +14556,7 @@
         "pathId": 61299,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -15152,21 +15126,20 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:64351:88:53fe97c3",
+      "id": "asset-text:resources.assets:59900:88:53fe97c3",
       "source": "Hats",
       "ja": "帽子",
       "context": {
         "file": "resources.assets",
-        "pathId": 64351,
+        "pathId": 59900,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
-        "serializedTypeId": 236,
-        "scriptTypeIndex": 282,
-        "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
-        "oldTypeHash": "999ec126b5cbe7a9728c32f41b049731",
-        "rawStringIndex": 0
+        "type": "MonoBehaviour",
+        "serializedTypeId": 248,
+        "scriptTypeIndex": 417,
+        "scriptId": "e692b8c214fb613489fd97fbd44610fe",
+        "oldTypeHash": "18250c010f733be4816cd50e187aa37c",
+        "rawStringIndex": 1
       }
     },
     {
@@ -15272,7 +15245,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8809:88:c490a657",
+      "id": "asset-text:level3:8809:88:c490a657",
       "source": "heads or taıls?",
       "ja": "表か裏か？",
       "context": {
@@ -15280,8 +15253,7 @@
         "pathId": 8809,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -15376,12 +15348,20 @@
       }
     },
     {
-      "id": "dll-text:VoiceManipulatorItem:OnStartClient:be0a061d",
+      "id": "asset-text:resources.assets:57597:72:be0a061d",
       "source": "High",
       "ja": "高",
       "context": {
-        "method": "OnStartClient",
-        "type": "VoiceManipulatorItem"
+        "file": "resources.assets",
+        "pathId": 57597,
+        "classId": 114,
+        "stringOffset": 72,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 3
       }
     },
     {
@@ -15551,7 +15531,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15433:88:2e6f35f7",
+      "id": "asset-text:level9:15433:88:2e6f35f7",
       "source": "HiLo Game",
       "ja": "ハイロー",
       "context": {
@@ -15559,8 +15539,7 @@
         "pathId": 15433,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -15569,7 +15548,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15494:88:45accfca",
+      "id": "asset-text:level9:15494:88:45accfca",
       "source": "HIT",
       "ja": "ヒット",
       "context": {
@@ -15577,8 +15556,7 @@
         "pathId": 15494,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -15604,7 +15582,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2931:88:adc649b8",
+      "id": "asset-text:level10:2931:88:adc649b8",
       "source": "hold",
       "ja": "長押し",
       "context": {
@@ -15612,8 +15590,7 @@
         "pathId": 2931,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -15622,7 +15599,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2915:88:2df295d8",
+      "id": "asset-text:level10:2915:88:2df295d8",
       "source": "Hold",
       "ja": "長押し",
       "context": {
@@ -15630,8 +15607,7 @@
         "pathId": 2915,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -15853,7 +15829,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8877:88:e1a9cd8f",
+      "id": "asset-text:level3:8877:88:e1a9cd8f",
       "source": "HOST game",
       "ja": "ゲームをホスト",
       "context": {
@@ -15861,8 +15837,7 @@
         "pathId": 8877,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -16113,7 +16088,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8852:88:9f93e11b",
+      "id": "asset-text:level3:8852:88:9f93e11b",
       "source": "Input",
       "ja": "入力",
       "context": {
@@ -16121,8 +16096,7 @@
         "pathId": 8852,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -16199,12 +16173,20 @@
       }
     },
     {
-      "id": "dll-text:Upgrade:Start:1ed7e947",
+      "id": "asset-text:resources.assets:63563:88:1ed7e947",
       "source": "Insurance",
       "ja": "保険",
       "context": {
-        "method": "Start",
-        "type": "Upgrade"
+        "file": "resources.assets",
+        "pathId": 63563,
+        "classId": 114,
+        "stringOffset": 88,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 389,
+        "scriptTypeIndex": 179,
+        "scriptId": "5c8259172ee674e4f20873ec299150af",
+        "oldTypeHash": "3443eb1d8b9e17a5efb19091b8bb636e",
+        "rawStringIndex": 1
       }
     },
     {
@@ -16225,19 +16207,19 @@
       }
     },
     {
-      "id": "derived-fragment:7b6ad208:1e2eb9ef",
+      "id": "asset-text:resources.assets:57576:28:1e2eb9ef",
       "source": "Interact",
       "ja": "操作",
       "context": {
         "file": "resources.assets",
-        "pathId": 59861,
+        "pathId": 57576,
         "classId": 114,
-        "stringOffset": 72,
+        "stringOffset": 28,
         "type": "MonoBehaviour",
-        "serializedTypeId": 339,
-        "scriptTypeIndex": 318,
-        "scriptId": "f8bf3136363a950d6489168af9e42914",
-        "oldTypeHash": "63f4d78b9dc5964c5967d6e59466adcb",
+        "serializedTypeId": 76,
+        "scriptTypeIndex": 46,
+        "scriptId": "b7ad68398ed66b94346ea0d60fdba655",
+        "oldTypeHash": "d3bf9d72a4f1da323bff196022c641c6",
         "rawStringIndex": 0
       }
     },
@@ -16328,7 +16310,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62451:88:73f83ab8",
+      "id": "asset-text:resources.assets:62451:88:73f83ab8",
       "source": "Invest",
       "ja": "投資",
       "context": {
@@ -16336,8 +16318,7 @@
         "pathId": 62451,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -16346,21 +16327,37 @@
       }
     },
     {
-      "id": "dll-text:LobbyModeDropdownButton:ApplyVisual:39e0a282",
+      "id": "asset-text:resources.assets:57580:100:39e0a282",
       "source": "Invite Only",
       "ja": "招待のみ",
       "context": {
-        "method": "ApplyVisual",
-        "type": "LobbyModeDropdownButton"
+        "file": "resources.assets",
+        "pathId": 57580,
+        "classId": 114,
+        "stringOffset": 100,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 4
       }
     },
     {
-      "id": "dll-text:InteractableBase:.ctor:1f648006",
+      "id": "asset-text:resources.assets:57726:88:1f648006",
       "source": "Item",
       "ja": "アイテム",
       "context": {
-        "method": ".ctor",
-        "type": "InteractableBase"
+        "file": "resources.assets",
+        "pathId": 57726,
+        "classId": 114,
+        "stringOffset": 88,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 130,
+        "scriptTypeIndex": 260,
+        "scriptId": "84115767237a55d9c3a3795ae2c8c47e",
+        "oldTypeHash": "9eafe7d59cd2882392ab2e1e615c0f88",
+        "rawStringIndex": 1
       }
     },
     {
@@ -16373,7 +16370,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15491:88:48ff2e2d",
+      "id": "asset-text:level9:15491:88:48ff2e2d",
       "source": "Jabin",
       "ja": "ジャビン",
       "context": {
@@ -16381,8 +16378,7 @@
         "pathId": 15491,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -16666,7 +16662,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:sharedassets3.assets:212:88:74b902f9",
+      "id": "asset-text:sharedassets3.assets:212:88:74b902f9",
       "source": "JOIN",
       "ja": "参加",
       "context": {
@@ -16674,8 +16670,7 @@
         "pathId": 212,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 25,
         "scriptTypeIndex": 21,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -16771,7 +16766,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15319:88:444fd7b2",
+      "id": "asset-text:level9:15319:88:444fd7b2",
       "source": "Keno",
       "ja": "キノ",
       "context": {
@@ -16779,8 +16774,7 @@
         "pathId": 15319,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -16849,7 +16843,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2934:88:a7dba9f9",
+      "id": "asset-text:level10:2934:88:a7dba9f9",
       "source": "Kiwick Studios (Art Support)",
       "ja": "Kiwick Studios (アートサポート)",
       "context": {
@@ -16857,8 +16851,7 @@
         "pathId": 2934,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -16998,7 +16991,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14913:88:e61a2f38",
+      "id": "asset-text:level12:14913:88:e61a2f38",
       "source": "Loan Shark Is Calling...",
       "ja": "高利貸しから着信中...",
       "context": {
@@ -17006,8 +16999,7 @@
         "pathId": 14913,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -17016,23 +17008,22 @@
       }
     },
     {
-      "id": "static-scene-tmp:level5:36839:88:a8c8cb73",
+      "id": "asset-text:level5:36839:88:a8c8cb73",
       "source": "Lobby",
       "ja": "ロビー",
+      "fontScale": 0.5,
       "context": {
         "file": "level5",
         "pathId": 36839,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 24,
         "scriptTypeIndex": 27,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
         "oldTypeHash": "999ec126b5cbe7a9728c32f41b049731",
         "rawStringIndex": 0
-      },
-      "fontScale": 0.5
+      }
     },
     {
       "id": "dll-text:PublicLobbyListUI:AddEntry:e21198df",
@@ -17156,7 +17147,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15278:88:8fd1d684",
+      "id": "asset-text:level9:15278:88:8fd1d684",
       "source": "LOCKED DOOR $10K TO PLAY",
       "ja": "プレイに$10K必要",
       "context": {
@@ -17164,8 +17155,7 @@
         "pathId": 15278,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -17251,7 +17241,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15384:88:f13b3cd1",
+      "id": "asset-text:level9:15384:88:f13b3cd1",
       "source": "Lose on:",
       "ja": "負け条件:",
       "context": {
@@ -17259,8 +17249,7 @@
         "pathId": 15384,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -17269,16 +17258,24 @@
       }
     },
     {
-      "id": "dll-text:VoiceManipulatorItem:OnStartClient:b1dd9521",
+      "id": "asset-text:resources.assets:57597:92:b1dd9521",
       "source": "Low",
       "ja": "低",
       "context": {
-        "method": "OnStartClient",
-        "type": "VoiceManipulatorItem"
+        "file": "resources.assets",
+        "pathId": 57597,
+        "classId": 114,
+        "stringOffset": 92,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 5
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:65348:88:d22be661",
+      "id": "asset-text:resources.assets:65348:88:d22be661",
       "source": "LOW",
       "ja": "低",
       "context": {
@@ -17286,8 +17283,7 @@
         "pathId": 65348,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -17453,7 +17449,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2914:88:9fa86720",
+      "id": "asset-text:level10:2914:88:9fa86720",
       "source": "MADE WITH",
       "ja": "使用素材",
       "context": {
@@ -17461,8 +17457,7 @@
         "pathId": 2914,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -17802,12 +17797,20 @@
       }
     },
     {
-      "id": "dll-promoted:HeldItemActionPanel:ShowDefaultActions:53c93800",
+      "id": "asset-text:level4:18623:116:53c93800",
       "source": "Middle Click",
       "ja": "中クリック",
       "context": {
-        "method": "ShowDefaultActions",
-        "type": "HeldItemActionPanel"
+        "file": "level4",
+        "pathId": 18623,
+        "classId": 114,
+        "stringOffset": 116,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 60,
+        "scriptTypeIndex": 74,
+        "scriptId": "0bdf1588fea747beb1a5ea71b0169415",
+        "oldTypeHash": "bf3a9a1c85d7568bd1dea9d109c5a530",
+        "rawStringIndex": 2
       }
     },
     {
@@ -17862,7 +17865,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:64190:88:0e45f4b7",
+      "id": "asset-text:resources.assets:64190:88:0e45f4b7",
       "source": "MIN",
       "ja": "最小",
       "context": {
@@ -17870,8 +17873,7 @@
         "pathId": 64190,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -17880,27 +17882,26 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:60568:88:5f6d6dfd",
+      "id": "asset-text:resources.assets:60568:88:5f6d6dfd",
       "source": "MIN $500 MAX $5.000",
       "ja": "最小 $500\n最大 $5.000",
+      "fontScale": 1.25,
+      "textColor": "#FFE84A",
+      "outlineColor": "#000000",
+      "outlineWidth": 0.04,
+      "fontWeight": "bold",
       "context": {
         "file": "resources.assets",
         "pathId": 60568,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
         "oldTypeHash": "999ec126b5cbe7a9728c32f41b049731",
         "rawStringIndex": 0
-      },
-      "fontScale": 1.25,
-      "textColor": "#FFE84A",
-      "outlineColor": "#000000",
-      "outlineWidth": 0.04,
-      "fontWeight": "bold"
+      }
     },
     {
       "id": "dll-text:Keypad:ApplyInput:d57f3909",
@@ -17915,18 +17916,18 @@
       "id": "dll-text:Keypad:UpdateMinMaxBetText:27504e70",
       "source": "Min: {0} Max: {1}",
       "ja": "最低 {0}\n最高 {1}",
-      "context": {
-        "method": "UpdateMinMaxBetText",
-        "type": "Keypad"
-      },
       "fontScale": 1.6,
       "textColor": "#FFFFFF",
       "outlineColor": "#FFE84A",
       "outlineWidth": 0.12,
-      "fontWeight": "bold"
+      "fontWeight": "bold",
+      "context": {
+        "method": "UpdateMinMaxBetText",
+        "type": "Keypad"
+      }
     },
     {
-      "id": "static-scene-tmp:level9:15349:88:b54e40c9",
+      "id": "asset-text:level9:15349:88:b54e40c9",
       "source": "Mine Sweeper",
       "ja": "マインスイーパー",
       "context": {
@@ -17934,8 +17935,7 @@
         "pathId": 15349,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -17995,7 +17995,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15283:88:10dbb325",
+      "id": "asset-text:level9:15283:88:10dbb325",
       "source": "MISC.",
       "ja": "その他",
       "context": {
@@ -18003,8 +18003,7 @@
         "pathId": 15283,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -18030,25 +18029,24 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62534:88:ec6ee012",
+      "id": "asset-text:resources.assets:57720:1160:ec6ee012",
       "source": "mode",
       "ja": "モード",
       "context": {
         "file": "resources.assets",
-        "pathId": 62534,
+        "pathId": 57720,
         "classId": 114,
-        "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
-        "serializedTypeId": 236,
-        "scriptTypeIndex": 282,
-        "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
-        "oldTypeHash": "999ec126b5cbe7a9728c32f41b049731",
-        "rawStringIndex": 0
+        "stringOffset": 1160,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 125,
+        "scriptTypeIndex": 490,
+        "scriptId": "44c89e77a962a2c971a0fe7b56a8d888",
+        "oldTypeHash": "c1700bb521b507427546e59ebf660d81",
+        "rawStringIndex": 33
       }
     },
     {
-      "id": "static-scene-tmp:level3:8821:88:b34b4bef",
+      "id": "asset-text:level3:8821:88:b34b4bef",
       "source": "Money",
       "ja": "お金",
       "context": {
@@ -18056,8 +18054,7 @@
         "pathId": 8821,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -18066,7 +18063,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:60521:88:06a7f9a0",
+      "id": "asset-text:resources.assets:60521:88:06a7f9a0",
       "source": "Money collected",
       "ja": "集まったお金",
       "context": {
@@ -18074,8 +18071,7 @@
         "pathId": 60521,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -18084,7 +18080,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15370:88:e8e627a4",
+      "id": "asset-text:level9:15370:88:e8e627a4",
       "source": "Money Wheel",
       "ja": "マネーホイール",
       "context": {
@@ -18092,8 +18088,7 @@
         "pathId": 15370,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -18204,7 +18199,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62972:88:4620047c",
+      "id": "asset-text:resources.assets:62972:88:4620047c",
       "source": "Mouth",
       "ja": "口",
       "context": {
@@ -18212,8 +18207,7 @@
         "pathId": 62972,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -18460,21 +18454,20 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63812:88:ccac198f",
+      "id": "asset-text:resources.assets:59427:88:ccac198f",
       "source": "Mustache",
       "ja": "口ひげ",
       "context": {
         "file": "resources.assets",
-        "pathId": 63812,
+        "pathId": 59427,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
-        "serializedTypeId": 236,
-        "scriptTypeIndex": 282,
-        "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
-        "oldTypeHash": "999ec126b5cbe7a9728c32f41b049731",
-        "rawStringIndex": 0
+        "type": "MonoBehaviour",
+        "serializedTypeId": 248,
+        "scriptTypeIndex": 417,
+        "scriptId": "e692b8c214fb613489fd97fbd44610fe",
+        "oldTypeHash": "18250c010f733be4816cd50e187aa37c",
+        "rawStringIndex": 1
       }
     },
     {
@@ -18837,21 +18830,20 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:65762:88:cc25a532",
+      "id": "asset-text:resources.assets:61443:88:cc25a532",
       "source": "Neck",
       "ja": "ネック",
       "context": {
         "file": "resources.assets",
-        "pathId": 65762,
+        "pathId": 61443,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
-        "serializedTypeId": 236,
-        "scriptTypeIndex": 282,
-        "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
-        "oldTypeHash": "999ec126b5cbe7a9728c32f41b049731",
-        "rawStringIndex": 0
+        "type": "MonoBehaviour",
+        "serializedTypeId": 248,
+        "scriptTypeIndex": 417,
+        "scriptId": "e692b8c214fb613489fd97fbd44610fe",
+        "oldTypeHash": "18250c010f733be4816cd50e187aa37c",
+        "rawStringIndex": 1
       }
     },
     {
@@ -18872,16 +18864,24 @@
       }
     },
     {
-      "id": "dll-text:SaveSlotUI:.ctor:9aad9c31",
+      "id": "asset-text:level3:9201:156:9aad9c31",
       "source": "New Game",
       "ja": "新規ゲーム",
       "context": {
-        "method": ".ctor",
-        "type": "SaveSlotUI"
+        "file": "level3",
+        "pathId": 9201,
+        "classId": 114,
+        "stringOffset": 156,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 86,
+        "scriptTypeIndex": 1,
+        "scriptId": "3001ef433bc9f90f972b7bd200e9f27d",
+        "oldTypeHash": "aa477084d36c0ab7baef2800ed02bf5d",
+        "rawStringIndex": 1
       }
     },
     {
-      "id": "static-scene-tmp:level3:8818:88:3e66719e",
+      "id": "asset-text:level3:8818:88:3e66719e",
       "source": "news & stuff",
       "ja": "ニュースとその他",
       "context": {
@@ -18889,8 +18889,7 @@
         "pathId": 8818,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -18899,7 +18898,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:60522:88:08a797c3",
+      "id": "asset-text:resources.assets:60522:88:08a797c3",
       "source": "Next Page",
       "ja": "次のページ",
       "context": {
@@ -18907,8 +18906,7 @@
         "pathId": 60522,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -18917,7 +18915,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level1:214:88:62366ffa",
+      "id": "asset-text:level1:214:88:62366ffa",
       "source": "no",
       "ja": "いいえ",
       "context": {
@@ -18925,8 +18923,7 @@
         "pathId": 214,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 20,
         "scriptTypeIndex": 42,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -19410,7 +19407,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15539:88:0fcb34fe",
+      "id": "asset-text:level9:15539:88:0fcb34fe",
       "source": "Odd",
       "ja": "奇数",
       "context": {
@@ -19418,8 +19415,7 @@
         "pathId": 15539,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -19428,12 +19424,20 @@
       }
     },
     {
-      "id": "dll-text:AnisotropicFilteringSettingItem:.cctor:0dc6b4aa",
+      "id": "asset-text:resources.assets:57560:108:0dc6b4aa",
       "source": "Off",
       "ja": "オフ",
       "context": {
-        "method": ".cctor",
-        "type": "AnisotropicFilteringSettingItem"
+        "file": "resources.assets",
+        "pathId": 57560,
+        "classId": 114,
+        "stringOffset": 108,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 72,
+        "scriptTypeIndex": 115,
+        "scriptId": "e9f135cbc522868a91ee3ef3c6e3f013",
+        "oldTypeHash": "4dd795523ea1a4773750f3735cc9b9b7",
+        "rawStringIndex": 3
       }
     },
     {
@@ -19498,7 +19502,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14920:88:285123a7",
+      "id": "asset-text:level12:14920:88:285123a7",
       "source": "OPEN every day 04:14-13:33 19:14-02:14",
       "ja": "毎日営業 04:14-13:33 19:14-02:14",
       "context": {
@@ -19506,8 +19510,7 @@
         "pathId": 14920,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -19516,12 +19519,20 @@
       }
     },
     {
-      "id": "dll-text:LobbyModeDropdownButton:ApplyVisual:4ff63f57",
+      "id": "asset-text:resources.assets:57580:80:4ff63f57",
       "source": "Open To Friends",
       "ja": "フレンドに公開",
       "context": {
-        "method": "ApplyVisual",
-        "type": "LobbyModeDropdownButton"
+        "file": "resources.assets",
+        "pathId": 57580,
+        "classId": 114,
+        "stringOffset": 80,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 3
       }
     },
     {
@@ -19542,7 +19553,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8835:88:44301d87",
+      "id": "asset-text:level3:8835:88:44301d87",
       "source": "Option A",
       "ja": "オプションA",
       "context": {
@@ -19550,8 +19561,7 @@
         "pathId": 8835,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -19662,7 +19672,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15285:88:b224312f",
+      "id": "asset-text:level9:15285:88:b224312f",
       "source": "Over",
       "ja": "オーバー",
       "context": {
@@ -19670,8 +19680,7 @@
         "pathId": 15285,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -19740,7 +19749,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level7:10951:88:c35b0729",
+      "id": "asset-text:level7:10951:88:c35b0729",
       "source": "Pay",
       "ja": "支払う",
       "context": {
@@ -19748,8 +19757,7 @@
         "pathId": 10951,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 27,
         "scriptTypeIndex": 33,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -19843,7 +19851,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level7:10942:88:d6b77685",
+      "id": "asset-text:level7:10942:88:d6b77685",
       "source": "Pay your debt",
       "ja": "借金を返す",
       "context": {
@@ -19851,8 +19859,7 @@
         "pathId": 10942,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 27,
         "scriptTypeIndex": 33,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -19914,7 +19921,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15320:88:c4b53943",
+      "id": "asset-text:level9:15320:88:c4b53943",
       "source": "Penguin Cross",
       "ja": "ペンギンクロス",
       "context": {
@@ -19922,8 +19929,7 @@
         "pathId": 15320,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -20062,12 +20068,20 @@
       }
     },
     {
-      "id": "dll-text:HeldItemActionPanel:ShowDefaultActions:7fb7f0a9",
+      "id": "asset-text:resources.assets:57590:28:7fb7f0a9",
       "source": "Ping",
       "ja": "ピン",
       "context": {
-        "method": "ShowDefaultActions",
-        "type": "HeldItemActionPanel"
+        "file": "resources.assets",
+        "pathId": 57590,
+        "classId": 114,
+        "stringOffset": 28,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 76,
+        "scriptTypeIndex": 46,
+        "scriptId": "b7ad68398ed66b94346ea0d60fdba655",
+        "oldTypeHash": "d3bf9d72a4f1da323bff196022c641c6",
+        "rawStringIndex": 0
       }
     },
     {
@@ -20105,7 +20119,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8799:88:29ab6f83",
+      "id": "asset-text:level3:8799:88:29ab6f83",
       "source": "Play",
       "ja": "プレイ",
       "context": {
@@ -20113,8 +20127,7 @@
         "pathId": 8799,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 25,
         "scriptTypeIndex": 54,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -20123,7 +20136,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level7:10961:88:ac85eb63",
+      "id": "asset-text:level7:10961:88:ac85eb63",
       "source": "PLAY",
       "ja": "プレイ",
       "context": {
@@ -20131,8 +20144,7 @@
         "pathId": 10961,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 27,
         "scriptTypeIndex": 33,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -20158,7 +20170,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8806:88:4c3998d4",
+      "id": "asset-text:level3:8806:88:4c3998d4",
       "source": "PLAY OFFLINE",
       "ja": "オフラインでプレイ",
       "context": {
@@ -20166,8 +20178,7 @@
         "pathId": 8806,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -20176,7 +20187,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15279:88:bd490d80",
+      "id": "asset-text:level9:15279:88:bd490d80",
       "source": "PLAYER",
       "ja": "プレイヤー",
       "context": {
@@ -20184,8 +20195,7 @@
         "pathId": 15279,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -20194,7 +20204,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15446:88:1c70fc20",
+      "id": "asset-text:level9:15446:88:1c70fc20",
       "source": "Player",
       "ja": "プレイヤー",
       "context": {
@@ -20202,8 +20212,7 @@
         "pathId": 15446,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -20485,7 +20494,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2911:88:608a64cd",
+      "id": "asset-text:level10:2911:88:608a64cd",
       "source": "playtesters",
       "ja": "プレイテスター",
       "context": {
@@ -20493,8 +20502,7 @@
         "pathId": 2911,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -20512,7 +20520,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15417:88:a0e22b24",
+      "id": "asset-text:level9:15417:88:a0e22b24",
       "source": "Plinko",
       "ja": "プリンコ",
       "context": {
@@ -20520,8 +20528,7 @@
         "pathId": 15417,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -20687,12 +20694,20 @@
       }
     },
     {
-      "id": "dll-text:InteractableBase:.ctor:c949bf92",
+      "id": "asset-text:resources.assets:66322:72:c949bf92",
       "source": "Press [E] to Interact",
       "ja": "[E]で操作",
       "context": {
-        "method": ".ctor",
-        "type": "InteractableBase"
+        "file": "resources.assets",
+        "pathId": 66322,
+        "classId": 114,
+        "stringOffset": 72,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 414,
+        "scriptTypeIndex": 357,
+        "scriptId": "28c17c5e7a05cad71e783f2ad040d5dc",
+        "oldTypeHash": "d3301b550444ab454e00e69adfc263e7",
+        "rawStringIndex": 0
       }
     },
     {
@@ -20756,7 +20771,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59839:88:337dd783",
+      "id": "asset-text:resources.assets:59839:88:337dd783",
       "source": "Previous Page",
       "ja": "前のページ",
       "context": {
@@ -20764,8 +20779,7 @@
         "pathId": 59839,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -20774,7 +20788,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59194:88:a3017967",
+      "id": "asset-text:resources.assets:59194:88:a3017967",
       "source": "Profit",
       "ja": "利益",
       "context": {
@@ -20782,8 +20796,7 @@
         "pathId": 59194,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -20947,7 +20960,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8810:88:ccdfbfa0",
+      "id": "asset-text:level3:8810:88:ccdfbfa0",
       "source": "Public",
       "ja": "公開",
       "context": {
@@ -20955,8 +20968,7 @@
         "pathId": 8810,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -20965,7 +20977,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8850:88:b39c10ec",
+      "id": "asset-text:level3:8850:88:b39c10ec",
       "source": "PublIC LOBBIES",
       "ja": "公開ロビー",
       "context": {
@@ -20973,8 +20985,7 @@
         "pathId": 8850,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -20983,7 +20994,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2937:88:9acb9fb3",
+      "id": "asset-text:level10:2937:88:9acb9fb3",
       "source": "publıshed by tenstack",
       "ja": "TENSTACK 制作",
       "context": {
@@ -20991,8 +21002,7 @@
         "pathId": 2937,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -21095,7 +21105,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8869:88:84d9bc36",
+      "id": "asset-text:level3:8869:88:84d9bc36",
       "source": "QUIT",
       "ja": "終了",
       "context": {
@@ -21103,8 +21113,7 @@
         "pathId": 8869,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -21113,7 +21122,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59383:88:47878736",
+      "id": "asset-text:resources.assets:59383:88:47878736",
       "source": "quit",
       "ja": "やめる",
       "context": {
@@ -21121,8 +21130,7 @@
         "pathId": 59383,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -21131,7 +21139,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8833:88:56be502b",
+      "id": "asset-text:level3:8833:88:56be502b",
       "source": "Quota",
       "ja": "ノルマ",
       "context": {
@@ -21139,8 +21147,7 @@
         "pathId": 8833,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -21287,7 +21294,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8819:88:7865024c",
+      "id": "asset-text:level3:8819:88:7865024c",
       "source": "Recommended",
       "ja": "推奨",
       "context": {
@@ -21295,8 +21302,7 @@
         "pathId": 8819,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -21305,7 +21311,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15527:88:a37f187c",
+      "id": "asset-text:level9:15527:88:a37f187c",
       "source": "Red",
       "ja": "赤",
       "context": {
@@ -21313,8 +21319,7 @@
         "pathId": 15527,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -21409,7 +21414,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:64960:88:410cdb3a",
+      "id": "asset-text:resources.assets:64960:88:410cdb3a",
       "source": "Report a Bug",
       "ja": "バグを報告する",
       "context": {
@@ -21417,8 +21422,7 @@
         "pathId": 64960,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -21471,7 +21475,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14932:88:4d39c0cb",
+      "id": "asset-text:level12:14932:88:4d39c0cb",
       "source": "Reroll",
       "ja": "リロール",
       "context": {
@@ -21479,8 +21483,7 @@
         "pathId": 14932,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -21549,7 +21552,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14916:88:0ac8a560",
+      "id": "asset-text:level12:14916:88:0ac8a560",
       "source": "Reset",
       "ja": "リセット",
       "context": {
@@ -21557,8 +21560,7 @@
         "pathId": 14916,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -21593,7 +21595,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15464:88:62c94fcc",
+      "id": "asset-text:level9:15464:88:62c94fcc",
       "source": "Reset Bets",
       "ja": "ベットをリセット",
       "context": {
@@ -21601,8 +21603,7 @@
         "pathId": 15464,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -21706,7 +21707,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:60327:88:4ac0e87d",
+      "id": "asset-text:resources.assets:60327:88:4ac0e87d",
       "source": "Reset to defaults",
       "ja": "デフォルトにリセットする",
       "context": {
@@ -21714,8 +21715,7 @@
         "pathId": 60327,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -21724,12 +21724,20 @@
       }
     },
     {
-      "id": "dll-text:SettingsLayoutRuntimeUI:BuildDropdownOptions:1d215c8f",
+      "id": "asset-text:resources.assets:57599:44:1d215c8f",
       "source": "resolution",
       "ja": "解像度",
       "context": {
-        "method": "BuildDropdownOptions",
-        "type": "SettingsLayoutRuntimeUI"
+        "file": "resources.assets",
+        "pathId": 57599,
+        "classId": 114,
+        "stringOffset": 44,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 1
       }
     },
     {
@@ -21750,7 +21758,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14926:88:2ca1de69",
+      "id": "asset-text:level12:14926:88:2ca1de69",
       "source": "Retrieve",
       "ja": "回収",
       "context": {
@@ -21758,8 +21766,7 @@
         "pathId": 14926,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -21768,7 +21775,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14914:88:ea761e49",
+      "id": "asset-text:level12:14914:88:ea761e49",
       "source": "RETRIEVE",
       "ja": "回収",
       "context": {
@@ -21776,8 +21783,7 @@
         "pathId": 14914,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -21854,7 +21860,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level13:215:88:ea4f6a6b",
+      "id": "asset-text:level13:215:88:ea4f6a6b",
       "source": "return to menu",
       "ja": "メニューに戻る",
       "context": {
@@ -21862,8 +21868,7 @@
         "pathId": 215,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 15,
         "scriptTypeIndex": 37,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -22084,7 +22089,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15314:88:fb5eadc9",
+      "id": "asset-text:level9:15314:88:fb5eadc9",
       "source": "Roulette",
       "ja": "ルーレット",
       "context": {
@@ -22092,8 +22097,7 @@
         "pathId": 15314,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -22172,7 +22176,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8836:88:c19fad4b",
+      "id": "asset-text:level3:8836:88:c19fad4b",
       "source": "Save 1",
       "ja": "セーブ1",
       "context": {
@@ -22180,8 +22184,7 @@
         "pathId": 8836,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -22326,7 +22329,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8823:88:d07208cc",
+      "id": "asset-text:level3:8823:88:d07208cc",
       "source": "Seed",
       "ja": "シード",
       "context": {
@@ -22334,8 +22337,7 @@
         "pathId": 8823,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -22344,7 +22346,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8824:88:3e892b4d",
+      "id": "asset-text:level3:8824:88:3e892b4d",
       "source": "Select",
       "ja": "選択",
       "context": {
@@ -22352,8 +22354,7 @@
         "pathId": 8824,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -22397,7 +22398,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59497:88:de897825",
+      "id": "asset-text:resources.assets:59497:88:de897825",
       "source": "Sell",
       "ja": "売却",
       "context": {
@@ -22405,8 +22406,7 @@
         "pathId": 59497,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -22458,7 +22458,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14911:88:6b0a44d1",
+      "id": "asset-text:level12:14911:88:6b0a44d1",
       "source": "service & supply",
       "ja": "サービス・用品",
       "context": {
@@ -22466,8 +22466,7 @@
         "pathId": 14911,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -22510,7 +22509,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8871:88:611eac08",
+      "id": "asset-text:level3:8871:88:611eac08",
       "source": "SETTINGS",
       "ja": "設定",
       "context": {
@@ -22518,8 +22517,7 @@
         "pathId": 8871,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -22528,7 +22526,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:65577:88:68067b08",
+      "id": "asset-text:resources.assets:65577:88:68067b08",
       "source": "settings",
       "ja": "設定",
       "context": {
@@ -22536,8 +22534,7 @@
         "pathId": 65577,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -22546,7 +22543,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:63366:88:7080f2d2",
+      "id": "asset-text:resources.assets:63366:88:7080f2d2",
       "source": "Severity",
       "ja": "重大度",
       "context": {
@@ -22554,8 +22551,7 @@
         "pathId": 63366,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -23001,7 +22997,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15282:88:1bdfdbbc",
+      "id": "asset-text:level9:15282:88:1bdfdbbc",
       "source": "SHOP & UPGRADES",
       "ja": "ショップとアップグレード",
       "context": {
@@ -23009,8 +23005,7 @@
         "pathId": 15282,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -23106,7 +23101,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14910:88:bd35c0ba",
+      "id": "asset-text:level12:14910:88:bd35c0ba",
       "source": "SKETCHY GUY (SUSPICIOUS ITEMS & MORE)",
       "ja": "怪しい男（怪しいアイテムなど）",
       "context": {
@@ -23114,8 +23109,7 @@
         "pathId": 14910,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -23124,7 +23118,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62427:88:416b7bc2",
+      "id": "asset-text:resources.assets:62427:88:416b7bc2",
       "source": "skip",
       "ja": "スキップ",
       "context": {
@@ -23132,8 +23126,7 @@
         "pathId": 62427,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -23346,7 +23339,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8832:88:9b74c01c",
+      "id": "asset-text:level3:8832:88:9b74c01c",
       "source": "Slider",
       "ja": "スライダー",
       "context": {
@@ -23354,8 +23347,7 @@
         "pathId": 8832,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -23373,7 +23365,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15378:88:e2bbccc6",
+      "id": "asset-text:level9:15378:88:e2bbccc6",
       "source": "Slots",
       "ja": "スロット",
       "context": {
@@ -23381,8 +23373,7 @@
         "pathId": 15378,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -23408,7 +23399,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14930:88:7be9a9d1",
+      "id": "asset-text:level12:14930:88:7be9a9d1",
       "source": "Smoking",
       "ja": "喫煙",
       "context": {
@@ -23416,8 +23407,7 @@
         "pathId": 14930,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -23481,7 +23471,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2921:88:f8bd4e79",
+      "id": "asset-text:level10:2921:88:f8bd4e79",
       "source": "SPECIAL THANKS",
       "ja": "スペシャルサンクス",
       "context": {
@@ -23489,8 +23479,7 @@
         "pathId": 2921,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -23584,25 +23573,24 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15404:88:8bbb8d39",
+      "id": "asset-text:level3:9375:32:8bbb8d39",
       "source": "Spin",
       "ja": "スピン",
       "context": {
-        "file": "level9",
-        "pathId": 15404,
+        "file": "level3",
+        "pathId": 9375,
         "classId": 114,
-        "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
-        "serializedTypeId": 23,
-        "scriptTypeIndex": 45,
-        "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
-        "oldTypeHash": "999ec126b5cbe7a9728c32f41b049731",
+        "stringOffset": 32,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 81,
+        "scriptTypeIndex": 27,
+        "scriptId": "1acffc5ae98ba200a0aa74d09a33953e",
+        "oldTypeHash": "0adc857d7852b87679f4d14e64d53b35",
         "rawStringIndex": 0
       }
     },
     {
-      "id": "static-scene-tmp:level3:8781:88:3adef3c1",
+      "id": "asset-text:level3:8781:88:3adef3c1",
       "source": "Spin Again",
       "ja": "もう一度スピン",
       "context": {
@@ -23610,8 +23598,7 @@
         "pathId": 8781,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 25,
         "scriptTypeIndex": 54,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -23848,7 +23835,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15289:88:ddb26fc3",
+      "id": "asset-text:level9:15289:88:ddb26fc3",
       "source": "STAND",
       "ja": "スタンド",
       "context": {
@@ -23856,8 +23843,7 @@
         "pathId": 15289,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -23937,7 +23923,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15547:88:4771f92f",
+      "id": "asset-text:level9:15547:88:4771f92f",
       "source": "Step",
       "ja": "ステップ",
       "context": {
@@ -23945,8 +23931,7 @@
         "pathId": 15547,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -24008,7 +23993,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:65030:88:2e7e275a",
+      "id": "asset-text:resources.assets:65030:88:2e7e275a",
       "source": "Steps to reproduce",
       "ja": "再現手順",
       "context": {
@@ -24016,8 +24001,7 @@
         "pathId": 65030,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -24097,7 +24081,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15531:88:3d79215b",
+      "id": "asset-text:level9:15531:88:3d79215b",
       "source": "Street Craps",
       "ja": "ストリートクラップス",
       "context": {
@@ -24105,8 +24089,7 @@
         "pathId": 15531,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -24132,21 +24115,20 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:64580:88:4078e545",
+      "id": "asset-text:level9:15578:64:4078e545",
       "source": "Submit",
       "ja": "送信",
       "context": {
-        "file": "resources.assets",
-        "pathId": 64580,
+        "file": "level9",
+        "pathId": 15578,
         "classId": 114,
-        "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
-        "serializedTypeId": 234,
-        "scriptTypeIndex": 467,
-        "scriptId": "9d78549f3bcd9676722727d2a69755b2",
-        "oldTypeHash": "fef7b1de2fd1557ad8228e9840b78b9c",
-        "rawStringIndex": 0
+        "stringOffset": 64,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 28,
+        "scriptTypeIndex": 26,
+        "scriptId": "eafad4b54d3c8f8ed8f2ce4231376da2",
+        "oldTypeHash": "9104447b683bf70406fa01f12ecb564a",
+        "rawStringIndex": 2
       }
     },
     {
@@ -24533,7 +24515,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level4:18375:88:93e05f71",
+      "id": "asset-text:level4:18375:88:93e05f71",
       "source": "switch",
       "ja": "スイッチ",
       "context": {
@@ -24541,8 +24523,7 @@
         "pathId": 18375,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 77,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -24585,12 +24566,20 @@
       }
     },
     {
-      "id": "dll-text:MicrophoneDevicesProvider:.ctor:71d5c329",
+      "id": "asset-text:resources.assets:57592:64:71d5c329",
       "source": "System Default",
       "ja": "システムのデフォルト",
       "context": {
-        "method": ".ctor",
-        "type": "MicrophoneDevicesProvider"
+        "file": "resources.assets",
+        "pathId": 57592,
+        "classId": 114,
+        "stringOffset": 64,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 78,
+        "scriptTypeIndex": 66,
+        "scriptId": "81cc01eb252fe6ad35e9683f59857608",
+        "oldTypeHash": "d9e67ed24114eb218541a3055a6a7e05",
+        "rawStringIndex": 1
       }
     },
     {
@@ -24628,7 +24617,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66464:88:32608848",
+      "id": "asset-text:resources.assets:66464:88:32608848",
       "source": "target",
       "ja": "ターゲット",
       "context": {
@@ -24636,8 +24625,7 @@
         "pathId": 66464,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -24663,7 +24651,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14912:88:710acabf",
+      "id": "asset-text:level12:14912:88:710acabf",
       "source": "Team A",
       "ja": "チームA",
       "context": {
@@ -24671,8 +24659,7 @@
         "pathId": 14912,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -24681,7 +24668,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14924:88:720acc52",
+      "id": "asset-text:level12:14924:88:720acc52",
       "source": "Team B",
       "ja": "チームB",
       "context": {
@@ -24689,8 +24676,7 @@
         "pathId": 14924,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -24734,7 +24720,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8867:88:0542a404",
+      "id": "asset-text:level3:8867:88:0542a404",
       "source": "TENSTACK & KIWICK",
       "ja": "テンスタック＆キウィック",
       "context": {
@@ -24742,8 +24728,7 @@
         "pathId": 8867,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -24752,7 +24737,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level12:14909:88:1f5e4e1c",
+      "id": "asset-text:level12:14909:88:1f5e4e1c",
       "source": "TenWick Plaza",
       "ja": "テンウィック プラザ",
       "context": {
@@ -24760,8 +24745,7 @@
         "pathId": 14909,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 29,
         "scriptTypeIndex": 36,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -24779,7 +24763,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level13:207:88:52012c26",
+      "id": "asset-text:level13:207:88:52012c26",
       "source": "THANKS FOR PLAYING <3",
       "ja": "遊んでくれてありがとう <3",
       "context": {
@@ -24787,8 +24771,7 @@
         "pathId": 207,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 15,
         "scriptTypeIndex": 37,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -24797,7 +24780,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2918:88:d7ba3549",
+      "id": "asset-text:level10:2918:88:d7ba3549",
       "source": "THE END",
       "ja": "おしまい",
       "context": {
@@ -24805,8 +24788,7 @@
         "pathId": 2918,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -24815,7 +24797,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level11:49110:88:88ede863",
+      "id": "asset-text:level11:49110:88:88ede863",
       "source": "The leap of faith",
       "ja": "信仰の飛躍",
       "context": {
@@ -24823,8 +24805,7 @@
         "pathId": 49110,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 23,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -24876,7 +24857,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8826:88:9241e6c2",
+      "id": "asset-text:level3:8826:88:9241e6c2",
       "source": "Tickets",
       "ja": "チケット",
       "context": {
@@ -24884,8 +24865,7 @@
         "pathId": 8826,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -24894,7 +24874,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15521:88:4a47ab21",
+      "id": "asset-text:level9:15521:88:4a47ab21",
       "source": "TIE",
       "ja": "タイ",
       "context": {
@@ -24902,8 +24882,7 @@
         "pathId": 15521,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -25032,7 +25011,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level10:2928:88:4e4f9c6d",
+      "id": "asset-text:level10:2928:88:4e4f9c6d",
       "source": "to continue",
       "ja": "続ける",
       "context": {
@@ -25040,8 +25019,7 @@
         "pathId": 2928,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 28,
         "scriptTypeIndex": 44,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25093,7 +25071,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:59543:88:0cf2f82a",
+      "id": "asset-text:resources.assets:59543:88:0cf2f82a",
       "source": "to pick up",
       "ja": "拾う",
       "context": {
@@ -25101,8 +25079,7 @@
         "pathId": 59543,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25171,7 +25148,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8863:88:6cf1ba25",
+      "id": "asset-text:level3:8863:88:6cf1ba25",
       "source": "Toggle",
       "ja": "トグル",
       "context": {
@@ -25179,8 +25156,7 @@
         "pathId": 8863,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25206,7 +25182,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15511:88:29ac660e",
+      "id": "asset-text:level9:15511:88:29ac660e",
       "source": "Total Bet",
       "ja": "合計ベット",
       "context": {
@@ -25214,8 +25190,7 @@
         "pathId": 15511,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -25413,7 +25388,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8865:88:5374d92f",
+      "id": "asset-text:level3:8865:88:5374d92f",
       "source": "TUTORIAL",
       "ja": "チュートリアル",
       "context": {
@@ -25421,8 +25396,7 @@
         "pathId": 8865,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25500,7 +25474,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8814:88:baa97727",
+      "id": "asset-text:level3:8814:88:baa97727",
       "source": "ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence ultımate gamblıng experıence",
       "ja": "究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験 究極のギャンブル体験",
       "context": {
@@ -25508,8 +25482,7 @@
         "pathId": 8814,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25536,7 +25509,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15541:88:2ed63f6d",
+      "id": "asset-text:level9:15541:88:2ed63f6d",
       "source": "Under",
       "ja": "アンダー",
       "context": {
@@ -25544,8 +25517,7 @@
         "pathId": 15541,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -25606,12 +25578,20 @@
       }
     },
     {
-      "id": "dll-text:FramerateProvider:GetOptions:2d283a80",
+      "id": "asset-text:resources.assets:57582:128:2d283a80",
       "source": "Unlimited",
       "ja": "無制限",
       "context": {
-        "method": "GetOptions",
-        "type": "FramerateProvider"
+        "file": "resources.assets",
+        "pathId": 57582,
+        "classId": 114,
+        "stringOffset": 128,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 8
       }
     },
     {
@@ -25651,7 +25631,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level1:213:88:d133eff1",
+      "id": "asset-text:level1:213:88:d133eff1",
       "source": "Unlucky :( Closing the game now!",
       "ja": "不運… ゲームを終了します！",
       "context": {
@@ -25659,8 +25639,7 @@
         "pathId": 213,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 20,
         "scriptTypeIndex": 42,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25714,7 +25693,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:66895:88:459d414e",
+      "id": "asset-text:resources.assets:66895:88:459d414e",
       "source": "Unstuck",
       "ja": "スタック解除",
       "context": {
@@ -25722,8 +25701,7 @@
         "pathId": 66895,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25749,7 +25727,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:60090:88:0d423b17",
+      "id": "asset-text:resources.assets:60090:88:0d423b17",
       "source": "Upgrade",
       "ja": "アップグレード",
       "context": {
@@ -25757,8 +25735,7 @@
         "pathId": 60090,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 236,
         "scriptTypeIndex": 282,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -25767,7 +25744,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:64212:88:0f4e930c",
+      "id": "asset-text:resources.assets:64212:88:0f4e930c",
       "source": "UPGRADES",
       "ja": "アップグレード",
       "context": {
@@ -25775,8 +25752,7 @@
         "pathId": 64212,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25819,7 +25795,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:sharedassets3.assets:237:88:43e90d41",
+      "id": "asset-text:sharedassets3.assets:237:88:43e90d41",
       "source": "Version Mismatch:",
       "ja": "バージョンの不一致:",
       "context": {
@@ -25827,8 +25803,7 @@
         "pathId": 237,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 25,
         "scriptTypeIndex": 21,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -25837,7 +25812,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8807:88:d3eb184c",
+      "id": "asset-text:level3:8807:88:d3eb184c",
       "source": "VERSION NO.",
       "ja": "バージョン番号",
       "context": {
@@ -25845,8 +25820,7 @@
         "pathId": 8807,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -26111,7 +26085,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62584:88:d1943290",
+      "id": "asset-text:resources.assets:62584:88:d1943290",
       "source": "What Happened",
       "ja": "何が起きたか",
       "context": {
@@ -26119,8 +26093,7 @@
         "pathId": 62584,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -26129,7 +26102,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:62337:88:57dff08a",
+      "id": "asset-text:resources.assets:62337:88:57dff08a",
       "source": "What was expected",
       "ja": "期待していた動作",
       "context": {
@@ -26137,8 +26110,7 @@
         "pathId": 62337,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -26147,7 +26119,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8784:88:c2ee0d44",
+      "id": "asset-text:level3:8784:88:c2ee0d44",
       "source": "Wheel of Fortune",
       "ja": "ホイール・オブ・フォーチュン",
       "context": {
@@ -26155,8 +26127,7 @@
         "pathId": 8784,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 25,
         "scriptTypeIndex": 54,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -26531,7 +26502,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15513:88:b35129a4",
+      "id": "asset-text:level9:15513:88:b35129a4",
       "source": "Win on:",
       "ja": "勝利条件:",
       "context": {
@@ -26539,8 +26510,7 @@
         "pathId": 15513,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -26645,12 +26615,20 @@
       }
     },
     {
-      "id": "dll-text:SettingsApplier:IsWindowedDisplay:c0dc9b44",
+      "id": "asset-text:resources.assets:57570:84:c0dc9b44",
       "source": "Windowed",
       "ja": "ウィンドウ表示",
       "context": {
-        "method": "IsWindowedDisplay",
-        "type": "SettingsApplier"
+        "file": "resources.assets",
+        "pathId": 57570,
+        "classId": 114,
+        "stringOffset": 84,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 73,
+        "scriptTypeIndex": 157,
+        "scriptId": "dcce2f79a61cd6c2ec7221aea3641032",
+        "oldTypeHash": "f62fb228224a5219df4b67a1fffa26da",
+        "rawStringIndex": 4
       }
     },
     {
@@ -26680,7 +26658,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:resources.assets:65201:88:5dd26efa",
+      "id": "asset-text:resources.assets:65201:88:5dd26efa",
       "source": "Winner winner Chicken Dinner",
       "ja": "勝った勝った、チキンディナーだ",
       "context": {
@@ -26688,8 +26666,7 @@
         "pathId": 65201,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 234,
         "scriptTypeIndex": 467,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -26734,12 +26711,20 @@
       }
     },
     {
-      "id": "dll-text:Bank:UpdateModeLabel:1dba6cb7",
+      "id": "derived-fragment:2b0a0b1f:1dba6cb7",
       "source": "Withdraw",
       "ja": "引き出す",
       "context": {
-        "method": "UpdateModeLabel",
-        "type": "Bank"
+        "file": "level7",
+        "pathId": 11071,
+        "classId": 114,
+        "stringOffset": 72,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 52,
+        "scriptTypeIndex": 16,
+        "scriptId": "3c55aecfb79f37de985e61809fcfc798",
+        "oldTypeHash": "007be147b0441b14948c966a5676425d",
+        "rawStringIndex": 0
       }
     },
     {
@@ -26752,7 +26737,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8820:88:f19464a0",
+      "id": "asset-text:level3:8820:88:f19464a0",
       "source": "wıth your",
       "ja": "友達と",
       "context": {
@@ -26760,8 +26745,7 @@
         "pathId": 8820,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -26822,7 +26806,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level9:15359:88:c25b38d1",
+      "id": "asset-text:level9:15359:88:c25b38d1",
       "source": "Yarl",
       "ja": "ヤール",
       "context": {
@@ -26830,8 +26814,7 @@
         "pathId": 15359,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshPro",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 23,
         "scriptTypeIndex": 45,
         "scriptId": "adb8078c2115f88eb1f720b9ddd34dc0",
@@ -26910,7 +26893,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level1:215:88:4e9f3590",
+      "id": "asset-text:level1:215:88:4e9f3590",
       "source": "yes",
       "ja": "はい",
       "context": {
@@ -26918,8 +26901,7 @@
         "pathId": 215,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 20,
         "scriptTypeIndex": 42,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -26964,7 +26946,7 @@
       }
     },
     {
-      "id": "static-scene-tmp:level3:8817:88:7664011a",
+      "id": "asset-text:level3:8817:88:7664011a",
       "source": "You can use DISCORD to Invite and Join Friends!",
       "ja": "DISCORDでフレンドを招待・参加できます！",
       "context": {
@@ -26972,8 +26954,7 @@
         "pathId": 8817,
         "classId": 114,
         "stringOffset": 88,
-        "type": "TMPro.TextMeshProUGUI",
-        "field": "text",
+        "type": "MonoBehaviour",
         "serializedTypeId": 26,
         "scriptTypeIndex": 88,
         "scriptId": "9d78549f3bcd9676722727d2a69755b2",
@@ -27039,6 +27020,473 @@
         "scriptId": "b7ad68398ed66b94346ea0d60fdba655",
         "oldTypeHash": "d3bf9d72a4f1da323bff196022c641c6",
         "rawStringIndex": 1
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5032:5728677e",
+      "source": "Backquote",
+      "ja": "バッククォート",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5032,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:2580:d3a18f0e",
+      "source": "Button East",
+      "ja": "右ボタン",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 2580,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:3332:4beaf1f2",
+      "source": "Button North",
+      "ja": "上ボタン",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 3332,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:2392:6927f6d4",
+      "source": "Button South",
+      "ja": "下ボタン",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 2392,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:2960:483d0984",
+      "source": "Button West",
+      "ja": "左ボタン",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 2960,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:4488:5166508b",
+      "source": "D-Pad",
+      "ja": "十字キー",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 4488,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:5556:f4a831ac",
+      "source": "Down Arrow",
+      "ja": "下矢印",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 5556,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5128:b7bb7226",
+      "source": "Escape",
+      "ja": "Esc",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5128,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5532:13d2bb98",
+      "source": "F1",
+      "ja": "F1",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5532,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5620:16d2c051",
+      "source": "F2",
+      "ja": "F2",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5620,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5708:15d2bebe",
+      "source": "F3",
+      "ja": "F3",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5708,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5796:18d2c377",
+      "source": "F4",
+      "ja": "F4",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5796,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetProgressText:b796e517",
+      "source": "Get Rank",
+      "ja": "ランクを出す",
+      "context": {
+        "method": "GetProgressText",
+        "type": "PokerHandConditionData"
+      }
+    },
+    {
+      "id": "dll-text:RefreshRateProvider:GetOptions:56eb29f7",
+      "source": "Hz",
+      "ja": "Hz",
+      "context": {
+        "method": "GetOptions",
+        "type": "RefreshRateProvider"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:1132:5275bcc9",
+      "source": "Left Arrow",
+      "ja": "左矢印",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 1132,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:2212:e1d9a750",
+      "source": "Left Stick",
+      "ja": "左スティック",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 2212,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:3796:a09294bc",
+      "source": "Left Stick Down",
+      "ja": "左スティック下",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 3796,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:4024:a833a8b1",
+      "source": "Left Stick Left",
+      "ja": "左スティック左",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 4024,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:4256:1fa13f52",
+      "source": "Left Stick Right",
+      "ja": "左スティック右",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 4256,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:3572:96bd357d",
+      "source": "Left Stick Up",
+      "ja": "左スティック上",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 3572,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:2772:46c69cac",
+      "source": "Left Trigger",
+      "ja": "左トリガー",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 2772,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "dll-text:Minesweeper:OnMinesCountChanged:ca1bcfbf",
+      "source": "Mines",
+      "ja": "地雷",
+      "context": {
+        "method": "OnMinesCountChanged",
+        "type": "Minesweeper"
+      }
+    },
+    {
+      "id": "dll-text:PayoutAmountConditionData:GetProgressText:68d8fea3",
+      "source": "Payout",
+      "ja": "配当",
+      "context": {
+        "method": "GetProgressText",
+        "type": "PayoutAmountConditionData"
+      }
+    },
+    {
+      "id": "dll-text:PokerHandConditionData:GetHandRankName:2cc97d47",
+      "source": "Rank",
+      "ja": "ランク",
+      "context": {
+        "method": "GetHandRankName",
+        "type": "PokerHandConditionData"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:1356:38af8f9c",
+      "source": "Right Arrow",
+      "ja": "右矢印",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 1356,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:4632:2b04aa7b",
+      "source": "Right Shoulder",
+      "ja": "右ショルダー",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 4632,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:1672:82bb0459",
+      "source": "Right Stick",
+      "ja": "右スティック",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 1672,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:3752:1d5c1cd7",
+      "source": "Right Stick Down",
+      "ja": "右スティック下",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 3752,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:3856:1ba23a42",
+      "source": "Right Stick Left",
+      "ja": "右スティック左",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 3856,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5976:6a39f5e2",
+      "source": "Right Stick Press",
+      "ja": "右スティック押し込み",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5976,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:3964:1aa843af",
+      "source": "Right Stick Right",
+      "ja": "右スティック右",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 3964,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:3652:a4e19aee",
+      "source": "Right Stick Up",
+      "ja": "右スティック上",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 3652,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:4156:aaa03e21",
+      "source": "Right Trigger",
+      "ja": "右トリガー",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 4156,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:7148:25dca54c",
+      "source": "Scroll",
+      "ja": "スクロール",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 7148,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:4832:1656f470",
+      "source": "Scroll Down",
+      "ja": "下スクロール",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 4832,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:4936:05167c89",
+      "source": "Scroll Up",
+      "ja": "上スクロール",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 4936,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "input-binding-display:globalgamemanagers.assets:3751:5228:0ae8097f",
+      "source": "Start",
+      "ja": "スタート",
+      "context": {
+        "file": "globalgamemanagers.assets",
+        "pathId": 3751,
+        "classId": 114,
+        "stringOffset": 5228,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "asset-text:resources.assets:65984:88:a8cfdc0b",
+      "source": "Stats for day 2",
+      "ja": "2日目の統計",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 65984,
+        "classId": 114,
+        "stringOffset": 88,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 234,
+        "scriptTypeIndex": 467,
+        "scriptId": "9d78549f3bcd9676722727d2a69755b2",
+        "oldTypeHash": "fef7b1de2fd1557ad8228e9840b78b9c",
+        "rawStringIndex": 0
+      }
+    },
+    {
+      "id": "input-binding-display:sharedassets0.assets:64:5332:84cc17d9",
+      "source": "Up Arrow",
+      "ja": "上矢印",
+      "context": {
+        "file": "sharedassets0.assets",
+        "pathId": 64,
+        "classId": 114,
+        "stringOffset": 5332,
+        "type": "InputBinding"
+      }
+    },
+    {
+      "id": "dll-text:MerchantBuyButton:ServerOnHover:ed39a1e0",
+      "source": "[E] Buy",
+      "ja": "[E] 購入",
+      "context": {
+        "method": "ServerOnHover",
+        "type": "MerchantBuyButton"
       }
     }
   ]

@@ -311,15 +311,6 @@
       "skipIfSourceContains": [" "]
     },
     {
-      "id": "rebind-label-noparse-trailing-space",
-      "kind": "wrapSuffix",
-      "wrapper": "noparse",
-      "suffix": " ",
-      "sourceKinds": ["configured_display_source"],
-      "maxLength": 16,
-      "skipIfSourceContains": [" "]
-    },
-    {
       "id": "rainb-strip",
       "kind": "regexReplace",
       "match": "<rainb>(.*?)</rainb>",
@@ -354,37 +345,10 @@
       "sourceKinds": ["asset_review_string"]
     },
     {
-      "id": "reroll-challenge-newline",
-      "kind": "regexLiteral",
-      "match": "^Reroll Challenge \\((\\d+) Ticket\\)$",
-      "literal": "Reroll Challenge \n($1 Ticket)"
-    },
-    {
       "id": "bet-total-template",
       "kind": "template",
       "match": "^Bet a total of .+ across all games\\.?$",
       "template": "Bet a total of {0} across all games",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "min-max-template",
-      "kind": "template",
-      "match": "^Min: .+(?:\\n| )Max: .+$",
-      "template": "Min: {0} Max: {1}",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "buy-item-template",
-      "kind": "template",
-      "match": "^ ?Buy 1 Item\\(s\\) \\(.+ tickets\\)$",
-      "template": " Buy 1 Item(s) ({0} tickets)",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "ticket-count-template",
-      "kind": "template",
-      "match": "^\\d+ Tickets$",
-      "template": "{0} Tickets",
       "resultKind": "dll_display_flow_template"
     },
     {
@@ -402,27 +366,6 @@
       "resultKind": "dll_display_flow_template"
     },
     {
-      "id": "lobby-title-template",
-      "kind": "template",
-      "match": "^ \\| .+'s Lobby$",
-      "template": " | {0}'s Lobby",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "lobby-code-template",
-      "kind": "template",
-      "match": "^\\d+ \\| .+'s Lobby$",
-      "template": "{0} | {1}'s Lobby",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "buy-item-interaction-template",
-      "kind": "template",
-      "match": "^\\[E\\] Buy 1 Item\\(s\\) \\(.+ tickets\\)$",
-      "template": "[E] Buy 1 Item(s) ({0} tickets)",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
       "id": "challenge-bet-template",
       "kind": "template",
       "match": "^Bet at least .+ on roulette and profit$",
@@ -437,45 +380,10 @@
       "resultKind": "dll_display_flow_template"
     },
     {
-      "id": "day-instance-template",
-      "kind": "template",
-      "match": "^DAY \\d+$",
-      "template": "DAY {0}",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "floor-instance-template",
-      "kind": "template",
-      "match": "^FLOOR \\d+$",
-      "template": "FLOOR {0}",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
       "id": "floor-button-instance-template",
       "kind": "template",
       "match": "^FLOOR \\d+ BUTTON$",
       "template": "FLOOR {0} BUTTON",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "stats-day-instance-template",
-      "kind": "template",
-      "match": "^Stats for day \\d+$",
-      "template": "Stats for day {0}",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "quota-excess-template",
-      "kind": "template",
-      "match": "^Quota Excess Reward \\(.+%\\)$",
-      "template": "Quota Excess Reward ({0}%)",
-      "resultKind": "dll_display_flow_template"
-    },
-    {
-      "id": "buy-n-items-template",
-      "kind": "template",
-      "match": "^ ?Buy \\d+ Item\\(s\\) \\(.+ tickets\\)$",
-      "template": "Buy {0} Item(s) ({1} tickets)",
       "resultKind": "dll_display_flow_template"
     }
   ]

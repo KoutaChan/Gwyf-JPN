@@ -19,5 +19,8 @@
     <None Include="..\..\config\asset_text_excludes.json" Link="config\asset_text_excludes.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="..\..\config\dll_text_excludes.json" Link="config\dll_text_excludes.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>
