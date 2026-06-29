@@ -2,7 +2,7 @@
 set -eu
 
 game_dir='D:/SteamLibrary/steamapps/common/Gamble With Your Friends'
-version='0.2.2'
+version='0.2.3'
 
 usage() {
     printf '%s\n' \
