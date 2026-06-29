@@ -352,6 +352,13 @@
       "resultKind": "dll_display_flow_template"
     },
     {
+      "id": "bet-total-sentence-template",
+      "kind": "template",
+      "match": "^Bet a total of .+ across all games\\.?$",
+      "template": "Bet a total of {0} across all games.",
+      "resultKind": "dll_display_flow_template"
+    },
+    {
       "id": "ticket-count-singular-template",
       "kind": "template",
       "match": "^(?:[+-]\\s*)?\\d+ Ticket$",

@@ -5590,6 +5590,23 @@
       }
     },
     {
+      "id": "mapping-variant:ae006cf0:6f89477e:39a83ded",
+      "source": "Bet a total of {0} across all games.",
+      "ja": "全ゲーム合計で{0}をベットする。",
+      "context": {
+        "file": "resources.assets",
+        "pathId": 60845,
+        "classId": 114,
+        "stringOffset": 88,
+        "type": "MonoBehaviour",
+        "serializedTypeId": 234,
+        "scriptTypeIndex": 467,
+        "scriptId": "9d78549f3bcd9676722727d2a69755b2",
+        "oldTypeHash": "fef7b1de2fd1557ad8228e9840b78b9c",
+        "rawStringIndex": 0
+      }
+    },
+    {
       "id": "mapping-variant:0c7e1c8d:9e24e2e2:79240a0a",
       "source": "Bet at least {0} on roulette and profit",
       "ja": "ルーレットで{0}以上ベットして黒字にする",
